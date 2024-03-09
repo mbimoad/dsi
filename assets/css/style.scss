@@ -45,11 +45,7 @@ header {
 					opacity: 1;
 	
 				}
-
-				
-
 				height: 100%;
-				
 				width: 120px; 
 				position:relative; 
 				a {
@@ -285,16 +281,162 @@ header.active {
 		margin: 10px 0;
 	}
 }
+
+$titlefont: 50px; 
+
+
+
+img.img-support {
+	width: 800px;
+	position: absolute;
+} 
+
+img.img-support-background1 {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    height: 400px;
+    top: 0;
+    right: -56px;
+	top: -73px;
+	object-fit: cover;
+}
+img.img-support-background2 {
+	width: 350px;
+    position: absolute;
+    z-index: 1;
+    height: 340px;
+    left: -8px;
+    bottom: -54px;
+    -o-object-fit: cover;
+    object-fit: cover;
+} img.separate {
+	width: 100%;
+}
+
 .about {
-	h2 {
-		font-size: 3em;
-		font-weight: 600;
+
+	position:relative;
+	border: 1px solid red;
+	&-title {
+		h2 {
+			text-align:center; 
+			font-size: $titlefont;
+			font-weight: 600;
+			color: $darkgray; 
+		} .line {
+			width: 30px; 
+			height: 3px; 
+			display: block;
+			margin: 5px auto; 
+			background: $red1;
+		}
+		p {
+			margin: 25px auto; 
+			width: 600px; 
+			line-height: 2;
+			text-align:center;
+		}
 	}
-	p {
-		margin: 25px 0;
+
+	&-detail {
+		margin-top: 100px; 
+		display: flex;
+		justify-content: space-evenly;
+		gap: 50px; 
+		.images {
+			position:relative; 
+			img {
+				position:relative; 
+				z-index: 2;
+				width: 546px; 
+				height: 606px; 
+				object-fit: cover;
+				border-radius: 10px;
+			} 
+		}
+		.boxs { a {
+			color:$red3;
+		}
+		
+			.box:nth-child(1n+2) {
+				margin-top:20px; 
+			}
+			.box {
+				align-items: center;
+				display: flex;
+				gap: 20px;
+				padding: 20px 10px;
+				h5 {
+					font-size: 25px; 
+				} p {
+					font-size: 16px; 
+					margin: 10px 0;
+				} h2 {
+					font-size: ($titlefont)-10; 
+					
+				} .iconbox {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: $red1; 
+					$size: 80px; 
+					width: $size;
+					@include flexwidth($size);
+					height: 80px; 
+					svg {
+						filter: invert(100%) sepia(7%) saturate(7474%) hue-rotate(155deg) brightness(120%) contrast(102%);
+						width: 40px; 
+						height: 40px; 
+					}
+				}
+			}
+		}
 	}
 }
+
+
+@media screen and (max-width: 1400px) {
+	img.img-support-background1 {
+		width: 300px;
+		height: 300px;
+		right: -56px;
+		top: -73px;
+	}
+	img.img-support-background2 {
+		width: 250px;
+		height: 240px;
+		left: -8px;
+		bottom: -54px;
+	}
+
+	.about {
+		&-detail {
+			.images {
+				img {
+					width: 450px;
+					height: 550px;
+				}
+			} .boxs {
+				.box {
+					.iconbox {
+						$size: 60px; 
+						width: $size;
+						height: 60px; 
+						@include flexwidth($size);
+						svg {
+							width: 30px; 
+							height: 30px; 
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1100px) {
+	
 	header {
 		.nav-bar {
 			padding: 0 50px;
@@ -316,7 +458,120 @@ header.active {
 		bottom: 3em;
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	$titlefont: 40px;
+	img.img-support-background1 {
+		width: 200px;
+		height: 200px;
+		right: -56px;
+		top: -73px;
+	}
+	img.img-support-background2 {
+		width: 150px;
+		height: 140px;
+		left: -8px;
+		bottom: -54px;
+	}
+
+	.about {
+		&-title {
+			h2 {
+				font-size: $titlefont;
+			}
+		} &-detail {
+			gap: 30px; 
+			.images {
+				img {
+				    width: 400px;
+					height: 500px;
+				}
+			}
+			.boxs {
+				.box {
+					h2 {
+						font-size: ($titlefont)-10;
+					} h5 {
+						font-size: 20px; 
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.about {
+		&-title {
+			p {
+				font-size: 14px; 
+			}
+		} &-detail {
+			.images {
+				img {
+					width: 320px;
+					height: 480px;
+				}
+			}
+			.boxs {
+				.box {
+					p {
+						font-size: 14px; 
+					}
+				}
+			}
+		}
+	}
+}
+
+$p785: 20px; 
+
 @media screen and (max-width: 785px) {
+	img.img-support-background2 {
+		display:none;
+	}
+	.about {
+		
+		&-title {
+			margin-top: 70px; 
+			p {
+				font-size: $p785;
+			}
+		}
+		&-detail {
+			flex-direction:column; 
+			.images {
+				img {
+					width: 100%; 
+				}
+			} .boxs {
+				.box:first-child {
+					div {
+						margin: auto; 
+					}
+				}
+				
+				.box {
+					border-radius: 20px;
+					padding: 20px 0; 
+					text-align:center; 
+					flex-direction: column;
+					h2 {
+						font-size: 35px; 
+					}
+					p {
+						font-size: $p785; 
+					} .iconbox {
+						margin:auto; 
+						$size: 95px; 
+						width: $size;
+						@include flexwidth($size);
+						
+					}
+				}
+			}
+		}
+	}
 	header {
 		z-index: 9999;
 		.nav-bar {

@@ -4,9 +4,21 @@ $red3: #8E1B2F;
 $gray: #DBDCDB;
 $gray: #E2E2E2;
 $white: #F0EFEF;
-$darkgray: #B7B7B7;
+$darkgray: rgb(117, 117, 117);
 $darkblue: #043349;
 $black: #000000;
+
+
+@function pxToVw($px, $baseWidth) {
+    @return #{$px / $baseWidth * 100}vw;
+}
+
+@mixin flexwidth($w: unset) {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $w;
+}
+
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
@@ -60,8 +72,7 @@ section {
 	position: relative;
 }
 .section {
-	color: $color_1;
-	background: var(--section-bg-color);
+	overflow:hidden;
 	padding: 35px 90px;
 	transition: 0.3s ease;
 } .container {
