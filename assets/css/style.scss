@@ -314,11 +314,11 @@ img.img-support-background2 {
 	width: 100%;
 }
 
-.about {
-
+.section {
 	position:relative;
-	border: 1px solid red;
-	&-title {
+	padding: 100px 90px; 
+	.section-title {
+		
 		h2 {
 			text-align:center; 
 			font-size: $titlefont;
@@ -338,11 +338,17 @@ img.img-support-background2 {
 			text-align:center;
 		}
 	}
+}
+
+.about {
+
+	
 
 	&-detail {
 		margin-top: 100px; 
 		display: flex;
 		justify-content: space-evenly;
+		align-items:center;
 		gap: 50px; 
 		.images {
 			position:relative; 
@@ -363,7 +369,7 @@ img.img-support-background2 {
 				margin-top:20px; 
 			}
 			.box {
-				align-items: center;
+				// align-items: center;
 				display: flex;
 				gap: 20px;
 				padding: 20px 10px;
@@ -383,7 +389,6 @@ img.img-support-background2 {
 					$size: 80px; 
 					width: $size;
 					@include flexwidth($size);
-					height: 80px; 
 					svg {
 						filter: invert(100%) sepia(7%) saturate(7474%) hue-rotate(155deg) brightness(120%) contrast(102%);
 						width: 40px; 
@@ -396,7 +401,90 @@ img.img-support-background2 {
 }
 
 
+.service { 
+	
+	.service-boxs {
+		margin-top: 50px; 
+		display: flex;
+		gap: 60px; 
+		position:relative; 
+		z-index: 1;
+		.service-box:hover {
+			.service-overlay {
+				width: 100%; 
+				height: 100%; 
+				background: $red1; 
+			} .service-icon, h5, p {
+				z-index: 1;
+				color:white;
+			} .service-icon {
+				svg {
+					filter: invert(11) brightness(6.5);
+				}
+			}
+		}
+		.service-box {
+			position:relative;
+			.service-overlay {
+				transition: all 200ms ease 0s;
+				width: 70px; 
+				height: 70px; 
+				background: #ffc5cf;
+				position:absolute;
+				bottom:0; 
+				right: 0; 
+			}
+			box-shadow: 0 0 10px 0 #999;
+			background:white; 
+			padding: 70px 30px;
+			display: flex;
+			flex-direction:column;
+			justify-content: center;
+			align-items:center; 
+			text-align: center;
+			gap: 20px; 
+			.service-icon {
+				width: 70px; 
+				height: 70px; 
+				background: #ffc5cf; 
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				svg {
+					width: 50px; 
+					height: 50px; 
+	
+				} 
+			} h5 {
+				font-size: 21px;
+			} p {
+				font-size: 0.9em;
+			}
+		}
+		.service-box:nth-child(2) {
+			.service-icon {
+				svg {
+					width: 30px; 
+					height: 30px; 
+				}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1400px) {
+	.service {
+		.service-boxs {
+			gap: 20px; 
+			.service-box {
+				padding: 50px 20px;
+				.service-overlay {
+					width: 40px; 
+					height: 40px; 
+				} 
+			} 
+		}
+	}
 	img.img-support-background1 {
 		width: 300px;
 		height: 300px;
@@ -422,7 +510,6 @@ img.img-support-background2 {
 					.iconbox {
 						$size: 60px; 
 						width: $size;
-						height: 60px; 
 						@include flexwidth($size);
 						svg {
 							width: 30px; 
@@ -461,6 +548,27 @@ img.img-support-background2 {
 
 @media screen and (max-width: 1000px) {
 	$titlefont: 40px;
+
+	.service {
+		.service-boxs {
+			 .service-box {
+				.service-icon {
+					width: 60px; 
+					height: 60px; 
+					svg {
+						width: 40px; 
+						height: 40px;
+					}
+				} h5 {
+					font-size: 16px; 
+				} p {
+					font-size: 12px; 
+				}
+			}
+		}
+	}
+
+
 	img.img-support-background1 {
 		width: 200px;
 		height: 200px;
@@ -474,12 +582,16 @@ img.img-support-background2 {
 		bottom: -54px;
 	}
 
-	.about {
-		&-title {
+	.section {
+		.section-title {
 			h2 {
 				font-size: $titlefont;
 			}
-		} &-detail {
+		}
+	}
+
+	.about {
+		 &-detail {
 			gap: 30px; 
 			.images {
 				img {
@@ -501,12 +613,16 @@ img.img-support-background2 {
 }
 
 @media screen and (max-width: 860px) {
-	.about {
-		&-title {
+	
+	.section {
+		.section-title {
 			p {
 				font-size: 14px; 
 			}
-		} &-detail {
+		}
+	}
+	.about {
+		 &-detail {
 			.images {
 				img {
 					width: 320px;
@@ -529,15 +645,32 @@ $p785: 20px;
 @media screen and (max-width: 785px) {
 	img.img-support-background2 {
 		display:none;
-	}
-	.about {
-		
-		&-title {
+	} .section {
+		.section-title {
+		    z-index: 1;
+    		position: relative;
 			margin-top: 70px; 
-			p {
-				font-size: $p785;
+				p {
+					width:unset;
+					font-size: $p785;
+				}
+		}
+	}
+
+
+	.service {
+		.service-boxs {
+			flex-direction:column; 
+			.service-box {
+				width: 70%;
+				margin: auto;
 			}
 		}
+	}
+
+	.about {
+		
+		
 		&-detail {
 			flex-direction:column; 
 			.images {
@@ -729,7 +862,17 @@ $p785: 20px;
 		}
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 590px) {
+	.service {
+		.service-boxs {
+			flex-direction:column; 
+			.service-box {
+				width: 100%;
+				margin: auto;
+			}
+		}
+	}
+
 	.swiper-slide {
 		.text-content {
 			p {

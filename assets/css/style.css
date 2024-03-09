@@ -463,19 +463,19 @@ img.separate {
   width: 100%;
 }
 
-.about {
+.section {
   position: relative;
-  border: 1px solid red;
+  padding: 100px 90px;
 }
 
-.about-title h2 {
+.section .section-title h2 {
   text-align: center;
   font-size: 50px;
   font-weight: 600;
   color: #757575;
 }
 
-.about-title .line {
+.section .section-title .line {
   width: 30px;
   height: 3px;
   display: block;
@@ -483,7 +483,7 @@ img.separate {
   background: #C9313A;
 }
 
-.about-title p {
+.section .section-title p {
   margin: 25px auto;
   width: 600px;
   line-height: 2;
@@ -498,6 +498,9 @@ img.separate {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 50px;
 }
 
@@ -524,9 +527,6 @@ img.separate {
 }
 
 .about-detail .boxs .box {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -566,7 +566,6 @@ img.separate {
       flex-shrink: 0;
   -ms-flex-preferred-size: 80px;
       flex-basis: 80px;
-  height: 80px;
 }
 
 .about-detail .boxs .box .iconbox svg {
@@ -576,7 +575,110 @@ img.separate {
   height: 40px;
 }
 
+.service .service-boxs {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.service .service-boxs .service-box:hover .service-overlay {
+  width: 100%;
+  height: 100%;
+  background: #C9313A;
+}
+
+.service .service-boxs .service-box:hover .service-icon, .service .service-boxs .service-box:hover h5, .service .service-boxs .service-box:hover p {
+  z-index: 1;
+  color: white;
+}
+
+.service .service-boxs .service-box:hover .service-icon svg {
+  -webkit-filter: invert(11) brightness(6.5);
+          filter: invert(11) brightness(6.5);
+}
+
+.service .service-boxs .service-box {
+  position: relative;
+  -webkit-box-shadow: 0 0 10px 0 #999;
+          box-shadow: 0 0 10px 0 #999;
+  background: white;
+  padding: 70px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.service .service-boxs .service-box .service-overlay {
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+  width: 70px;
+  height: 70px;
+  background: #ffc5cf;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.service .service-boxs .service-box .service-icon {
+  width: 70px;
+  height: 70px;
+  background: #ffc5cf;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service .service-boxs .service-box .service-icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+.service .service-boxs .service-box h5 {
+  font-size: 21px;
+}
+
+.service .service-boxs .service-box p {
+  font-size: 0.9em;
+}
+
+.service .service-boxs .service-box:nth-child(2) .service-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
 @media screen and (max-width: 1400px) {
+  .service .service-boxs {
+    gap: 20px;
+  }
+  .service .service-boxs .service-box {
+    padding: 50px 20px;
+  }
+  .service .service-boxs .service-box .service-overlay {
+    width: 40px;
+    height: 40px;
+  }
   img.img-support-background1 {
     width: 300px;
     height: 300px;
@@ -595,7 +697,6 @@ img.separate {
   }
   .about-detail .boxs .box .iconbox {
     width: 60px;
-    height: 60px;
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -630,6 +731,20 @@ img.separate {
 }
 
 @media screen and (max-width: 1000px) {
+  .service .service-boxs .service-box .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .service .service-boxs .service-box .service-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  .service .service-boxs .service-box h5 {
+    font-size: 16px;
+  }
+  .service .service-boxs .service-box p {
+    font-size: 12px;
+  }
   img.img-support-background1 {
     width: 200px;
     height: 200px;
@@ -642,7 +757,7 @@ img.separate {
     left: -8px;
     bottom: -54px;
   }
-  .about-title h2 {
+  .section .section-title h2 {
     font-size: 40px;
   }
   .about-detail {
@@ -661,7 +776,7 @@ img.separate {
 }
 
 @media screen and (max-width: 860px) {
-  .about-title p {
+  .section .section-title p {
     font-size: 14px;
   }
   .about-detail .images img {
@@ -677,11 +792,24 @@ img.separate {
   img.img-support-background2 {
     display: none;
   }
-  .about-title {
+  .section .section-title {
+    z-index: 1;
+    position: relative;
     margin-top: 70px;
   }
-  .about-title p {
+  .section .section-title p {
+    width: unset;
     font-size: 20px;
+  }
+  .service .service-boxs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service .service-boxs .service-box {
+    width: 70%;
+    margin: auto;
   }
   .about-detail {
     -webkit-box-orient: vertical;
@@ -880,7 +1008,17 @@ img.separate {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 590px) {
+  .service .service-boxs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .service .service-boxs .service-box {
+    width: 100%;
+    margin: auto;
+  }
   .swiper-slide .text-content p {
     font-size: 0.8em;
   }
