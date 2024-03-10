@@ -79,8 +79,8 @@ $('.owl-carousel').owlCarousel({
         785:{
             items:2
         },
-        940:{
-            items:2
+        941: {
+            item: 3
         }
     }
 })
