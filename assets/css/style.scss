@@ -870,6 +870,21 @@ $p785: 20px;
 		}
 	} 
 	
+	.slogan {
+		ul {
+			li {
+				.title {
+					width: 70%; 
+				} .icon {
+					width: 5rem; 
+					svg {
+						width: 30px; 
+						height: 30px; 
+					}
+				}
+			}
+		}
+	}
 	
 	.projects {
 		.project-boxs {
@@ -904,6 +919,10 @@ $p785: 20px;
 	}
 	.about {
 		padding:unset;
+
+		&-title {
+			margin: 0 20px;
+		}
 		
 		&-detail {
 			margin-top: 50px;
@@ -918,6 +937,7 @@ $p785: 20px;
 					display:none;
 				}
 			} .boxs {
+				margin: 0 20px;
 				.box:first-child {
 					div {
 						margin: auto; 
@@ -1131,6 +1151,14 @@ $p785: 20px;
 		.project-boxs {
 			.project-box {
 				width: 70%;
+			}
+		}
+	}
+
+	.slogan {
+		ul {
+			li {
+				margin:auto;
 			}
 		}
 	}

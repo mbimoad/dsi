@@ -107,7 +107,7 @@ $('.owl2').owlCarousel({
             margin: 120,
         },
 
-        785: {
+        550: {
             center: true,
             items:3,
             loop:true,
@@ -123,6 +123,10 @@ $('.owl2').owlCarousel({
 
             autoWidth:true,
             margin: 90,
+        }, 0: {
+            items: 1,
+            autoWidth: false, 
+
         }
     }
     // responsive:{

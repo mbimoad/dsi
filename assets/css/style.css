@@ -1022,6 +1022,16 @@ img.separate {
     width: unset;
     font-size: 20px;
   }
+  .slogan ul li .title {
+    width: 70%;
+  }
+  .slogan ul li .icon {
+    width: 5rem;
+  }
+  .slogan ul li .icon svg {
+    width: 30px;
+    height: 30px;
+  }
   .projects .project-boxs .project-box.item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1053,6 +1063,9 @@ img.separate {
   .about {
     padding: unset;
   }
+  .about-title {
+    margin: 0 20px;
+  }
   .about-detail {
     margin-top: 50px;
     -webkit-box-orient: vertical;
@@ -1069,6 +1082,9 @@ img.separate {
   }
   .about-detail .images img {
     display: none;
+  }
+  .about-detail .boxs {
+    margin: 0 20px;
   }
   .about-detail .boxs .box:first-child div {
     margin: auto;
@@ -1280,6 +1296,9 @@ img.separate {
 @media screen and (max-width: 550px) {
   .projects .project-boxs .project-box {
     width: 70%;
+  }
+  .slogan ul li {
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
