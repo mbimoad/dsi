@@ -64,3 +64,23 @@ if(window.innerWidth > 785) {
      
     }))
 }
+
+console.log($(document))
+
+
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0: {
+            items:1,
+        },
+        785:{
+            items:2
+        },
+        940:{
+            items:2
+        }
+    }
+})
