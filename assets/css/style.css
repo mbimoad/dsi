@@ -1041,14 +1041,34 @@ img.separate {
     width: 70%;
     margin: auto;
   }
+  .service .service-boxs .service-box h5 {
+    font-size: 23px;
+  }
+  .service .service-boxs .service-box p {
+    font-size: 17px;
+  }
+  .about.section {
+    padding: unset;
+  }
+  .about {
+    padding: unset;
+  }
   .about-detail {
+    margin-top: 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .about-detail .images img {
+  .about-detail .images {
+    height: 700px;
     width: 100%;
+    background-image: url("../images/hero1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  .about-detail .images img {
+    display: none;
   }
   .about-detail .boxs .box:first-child div {
     margin: auto;

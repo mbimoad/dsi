@@ -883,24 +883,39 @@ $p785: 20px;
 	}
 
 
+
 	.service {
 		.service-boxs {
 			flex-direction:column; 
-			.service-box {
+			 .service-box {
 				width: 70%;
 				margin: auto;
+				.service-icon {
+				} h5 {
+					font-size: 23px; 
+				} p {
+					font-size: 17px; 
+				}
 			}
 		}
 	}
-
+	.about.section {
+		padding:unset;
+	}
 	.about {
-		
+		padding:unset;
 		
 		&-detail {
+			margin-top: 50px;
 			flex-direction:column; 
 			.images {
+				height: 700px; 
+				width: 100%; 
+				background-image: url('../images/hero1.jpg');
+				background-attachment: fixed;
+				background-size: cover;
 				img {
-					width: 100%; 
+					display:none;
 				}
 			} .boxs {
 				.box:first-child {
