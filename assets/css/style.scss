@@ -519,6 +519,88 @@ img.img-support-background2 {
 }
 
 
+
+
+.slogan {
+
+	ul {
+	margin-top: 90px;
+	width: 90%;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	justify-content: center;
+	gap: 2rem;
+	list-style: none;
+	li:nth-child(odd) {
+		.icon {
+			background: $gray;
+		}
+	}
+	li:nth-child(even) {
+		.icon {
+			background: $gray;
+		}
+	}
+
+
+	li {
+		// display: none;
+	  border: 2px solid white; 
+	  max-width: 13rem;
+	  justify-self: center;
+	  display: grid;
+	  grid-template: "icon" "line" "dot" "title" "descr" 1fr;
+	  justify-items: center;
+	  align-items: flex-start;
+	  text-align: center;
+	  .icon {
+		grid-area: icon;
+		width: 6rem;
+		aspect-ratio: 1;
+		display: grid;
+		place-items: center;
+		color: $color_1;
+		font-size: 2.5rem;
+		border: 0.4rem solid white;
+		border-radius: 50%;
+		// background:red;
+		box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45), inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+		svg {
+			width: 50px;
+			height: 50px; 
+		}
+	  }
+	  &::before {
+		content: "";
+		grid-area: line;
+		height: 2rem;
+		border-right: 2px dotted currentColor;
+	  }
+	  &::after {
+		content: "";
+		grid-area: dot;
+		width: 1rem;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background: var(--accent-color);
+		justify-self: center;
+		margin-bottom: 0.5rem;
+	  }
+	  .title {
+		grid-area: title;
+		margin-block: 0.5rem;
+		font-size: 1rem;
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+	  }
+	}
+  }
+  
+  }
+
+
 @media screen and (max-width: 1485px) {
 	.projects {
 		.project-boxs {

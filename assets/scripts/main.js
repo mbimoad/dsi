@@ -12,6 +12,7 @@ var swiper2 = new Swiper(".bg-slider", {
     },
 });
 
+
 //Navigation bar effects on scroll
 
 //Responsive navigation menu toggle
@@ -68,7 +69,7 @@ if(window.innerWidth > 785) {
 console.log($(document))
 
 
-$('.owl-carousel').owlCarousel({
+$('.owl1').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
@@ -83,4 +84,43 @@ $('.owl-carousel').owlCarousel({
             item: 3
         }
     }
+})
+
+
+$('.owl2').owlCarousel({
+   
+    responsive: {
+        1000: {
+            center: true,
+            items:3,
+            loop:true,
+            autoWidth:true,
+            margin: 120,
+            autoplay:true,
+            autoplayTimeout:2500,
+            autoplayHoverPause:true,
+        },
+
+        785: {
+            center: true,
+            items:2,
+            loop:true,
+            autoWidth:true,
+            margin: 90,
+            autoplay:true,
+            autoplayTimeout:2500,
+            autoplayHoverPause:true,
+        }
+    }
+    // responsive:{
+    //     0: {
+    //         items:1,
+    //     },
+    //     785:{
+    //         items:2
+    //     },
+    //     941: {
+    //         item: 3
+    //     }
+    // }
 })
