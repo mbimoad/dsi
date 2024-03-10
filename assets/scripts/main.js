@@ -141,3 +141,19 @@ $('.owl2').owlCarousel({
     //     }
     // }
 })
+
+$('.owl3').owlCarousel({
+    center: true,
+    items:3,
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay: true,
+    slideTransition: 'linear',
+    autoplayTimeout: 3000,
+    autoplaySpeed: 3000,
+    autoplayHoverPause: true,
+    autoWidth:true,
+    margin: 120,
+})

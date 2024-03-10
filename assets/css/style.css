@@ -823,6 +823,18 @@ img.separate {
   text-transform: uppercase;
 }
 
+.clients {
+  text-align: center;
+}
+
+.clients .images {
+  margin-top: 50px;
+}
+
+.clients .images img {
+  width: 120px;
+}
+
 @media screen and (max-width: 1485px) {
   .projects .project-boxs .project-box {
     width: 343px;

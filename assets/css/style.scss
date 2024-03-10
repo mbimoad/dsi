@@ -598,7 +598,18 @@ img.img-support-background2 {
 	}
   }
   
-  }
+}
+
+
+.clients {
+	text-align: center;
+	.images {
+		margin-top: 50px;
+		img {
+			width: 120px; 
+		}
+	}
+}
 
 
 @media screen and (max-width: 1485px) {
