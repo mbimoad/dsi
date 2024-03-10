@@ -94,22 +94,35 @@ $('.owl2').owlCarousel({
             center: true,
             items:3,
             loop:true,
+            margin:30,
+            nav:false,
+            dots:true,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 6000,
+            autoplaySpeed: 6000,
+            autoplayHoverPause: true,
+            
             autoWidth:true,
             margin: 120,
-            autoplay:true,
-            autoplayTimeout:2500,
-            autoplayHoverPause:true,
         },
 
         785: {
             center: true,
-            items:2,
+            items:3,
             loop:true,
+            margin:30,
+            nav:false,
+            dots:true,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 6000,
+            autoplaySpeed: 6000,
+            autoplayHoverPause: true,
+
+
             autoWidth:true,
             margin: 90,
-            autoplay:true,
-            autoplayTimeout:2500,
-            autoplayHoverPause:true,
         }
     }
     // responsive:{
