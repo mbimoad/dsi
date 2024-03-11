@@ -1,0 +1,165 @@
+@import './main';
+
+
+header {
+    backdrop-filter: unset;
+    background:unset;
+}
+
+.banner-hero {
+    height: 500px; 
+    background-image: linear-gradient(to bottom, #C23440, #A81925);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    p {
+        text-align: center;
+        width: 30%; 
+        font-size: 23px; 
+        color: #D99C9C; 
+    } h1 {
+        font-size: 60px; 
+        color:white; 
+    }
+
+    .bottom,
+    .left-triangle,
+    .right-triangle {
+        position:absolute; 
+    }
+
+    .bottom {
+        left: 0;
+        right: 0;
+        bottom: -120px;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    .left-triangle {
+        left: 0;
+        svg:nth-child(3) {
+            width: 150px; 
+            height: 150px; 
+        }  svg:nth-child(2) {
+            width: 70px; 
+            height: 70px; 
+            position: absolute;
+            right: -90px;
+            bottom: 40px;
+        }  svg:nth-child(1) {
+            width: 30px; 
+            height: 30px; 
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+        } 
+    }
+
+    .right-triangle {
+        right: 0;
+        -moz-transform: scale(-1, -1);
+        -o-transform: scale(-1, -1);
+        -webkit-transform: scale(-1, -1);
+        transform: scale(-1, -1);
+        svg:nth-child(3) {
+            width: 150px; 
+            height: 150px; 
+        }  svg:nth-child(2) {
+            width: 70px; 
+            height: 70px; 
+            position: absolute;
+            right: -90px;
+            bottom: 40px;
+        }  svg:nth-child(1) {
+            width: 30px; 
+            height: 30px; 
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+        } 
+    }
+}
+
+
+@media screen and (max-width: 1570px) {
+    .banner-hero {
+        p {
+            width: 40%; 
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .banner-hero {
+        p {
+            width: 50%; 
+            
+        }
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .banner-hero {
+        p {
+            width: 60%; 
+            
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .banner-hero {
+        p {
+            width: 70%; 
+            
+        }
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .banner-hero {
+        height: 370px;
+        p {
+            width: 50%;
+            font-size: 16px;
+        } h1 {
+            font-size: 40px;
+        }
+    }
+
+    header {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+    }
+
+}
+
+
+@media screen and (max-width: 666px) {
+    .banner-hero {
+        p {
+            width: 70%;
+            font-size: 16px;
+        } h1 {
+            font-size: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .banner-hero {
+        p {
+            width: 85%;
+            font-size: 16px;
+        } h1 {
+            font-size: 40px;
+        }
+    }
+}
