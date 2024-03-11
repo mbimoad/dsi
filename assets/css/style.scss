@@ -1417,10 +1417,11 @@ $p785: 20px;
 
 	.swiper-slide {
 		.text-content {
+			margin: 0 20% 0 5%;
 			.texts {
 				flex-direction: column;
 				span {
-					tranform:unset;
+					transform:unset;
 				}
 			}
 		}
