@@ -72,7 +72,7 @@ console.log($(document))
 $('.owl1').owlCarousel({
     loop:true,
     margin:10,
-    nav:true,
+    nav:false,
     responsive:{
         0: {
             items:1,
