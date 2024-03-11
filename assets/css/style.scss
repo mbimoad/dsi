@@ -353,8 +353,9 @@ img.img-support-background2 {
 		margin-top: 100px; 
 		display: flex;
 		justify-content: space-evenly;
-		align-items:center;
+		align-items:flex-start;
 		gap: 50px; 
+		
 		.images {
 			position:relative; 
 			img {
@@ -366,38 +367,77 @@ img.img-support-background2 {
 				border-radius: 10px;
 			} 
 		}
-		.boxs { a {
+		.boxs { 
+			
+			width: 49%;
+			height: 520px;
+			gap: 20px;
+			display: flex;
+			flex-direction: column;
+			position:relative;
+
+			a {
 			color:$red3;
 		}
 		
 			.box:nth-child(1n+2) {
 				margin-top:20px; 
+				transition: all 200ms ease 0s;
+				position:absolute;
+				
 			}
+			.box:first-child {
+				box-shadow:unset;
+				padding:unset; 
+			}
+
+			$size: 100px; 
+
+			.box:nth-child(2) {
+				top: $size;
+			} .box:nth-child(3) {
+				top: $size*2.6;
+			} .box:nth-child(4) {
+				top: $size*4.2;
+			}
+			.box:nth-child(1n+2):hover {
+				
+				transform: scale(1.02) translate(-2px, 0); 
+				box-shadow: 0px 5px 7px #999;
+			}
+
+			
 			.box {
 				// align-items: center;
+				border-radius: 15px;
+				padding: 25px 20px;
+				box-shadow: 0px 2px 7px #999;
+				width: 95%;
+				align-items:center; 
 				display: flex;
 				gap: 20px;
-				padding: 20px 10px;
 				h5 {
 					font-size: 25px; 
 				} p {
 					font-size: 16px; 
-					margin: 10px 0;
+					margin: 0 0;
 				} h2 {
 					font-size: ($titlefont)-10; 
 					
 				} .iconbox {
+					border-radius: 30px 0 30px 0;
 					display: flex;
 					justify-content: center;
 					align-items: center;
 					background: $red1; 
-					$size: 80px; 
+					$size: 60px; 
 					width: $size;
+					height: $size; 
 					@include flexwidth($size);
 					svg {
 						filter: invert(100%) sepia(7%) saturate(7474%) hue-rotate(155deg) brightness(120%) contrast(102%);
-						width: 40px; 
-						height: 40px; 
+						width: 30px; 
+						height: 30px; 
 					}
 				}
 			}
@@ -726,6 +766,22 @@ $iconbg : #383B3F;
 }
 
 
+@media screen and (max-width: 1520px) {
+	.about {
+		&-detail {
+			gap: 20px; 
+			.images {
+				img {
+					width: 470px;
+				}
+			}
+			.boxs {
+				width: 55%;
+			}
+		}
+	}
+
+}
 
 @media screen and (max-width: 1485px) {
 	.projects {
@@ -796,7 +852,7 @@ $iconbg : #383B3F;
 			.images {
 				img {
 					width: 450px;
-					height: 550px;
+					height: 580px;
 				}
 			} .boxs {
 				.box {
@@ -868,6 +924,9 @@ $iconbg : #383B3F;
 	}
 	.section {
 		padding: 25px 50px;
+	}
+	.about.section {
+		padding: 100px 50px; 
 	}
 	.media-icons {
 		right: 0;
@@ -958,12 +1017,13 @@ $iconbg : #383B3F;
 			gap: 30px; 
 			.images {
 				img {
-				    width: 400px;
-					height: 500px;
+				    width: 350px;
+					height: 572px;
 				}
 			}
 			.boxs {
 				.box {
+					width: 100%; 
 					h2 {
 						font-size: ($titlefont)-10;
 					} h5 {
@@ -980,6 +1040,39 @@ $iconbg : #383B3F;
 		grid-template-columns: 250px 148px 196px;
 	}
 
+	.about {
+		&-detail {
+		   gap: 30px; 
+		   .images {
+			   img {
+				   width: 350px;
+				   height: 566px;
+			   }
+		   }
+		   .boxs {
+			   .box {
+				   width: 100%; 
+				   h2 {
+					   font-size: 30px;
+				   } h5 {
+					   font-size: 18px; 
+				   } p {
+					   font-size: 14px; 
+				   } .iconbox {
+						$size: 50px; 
+						width: $size;
+						height: $size; 
+						@include flexwidth($size);
+						svg {
+							width: 20px; 
+							height: 20px; 
+						}
+				   } 
+			   }
+		   }
+	   }
+   }
+
 }
 
 @media screen and (max-width: 860px) {
@@ -995,8 +1088,8 @@ $iconbg : #383B3F;
 		 &-detail {
 			.images {
 				img {
-					width: 320px;
-					height: 480px;
+					width: 290px;
+					height: 561px;
 				}
 			}
 			.boxs {
@@ -1140,6 +1233,7 @@ $p785: 20px;
 		&-detail {
 			margin-top: 50px;
 			flex-direction:column; 
+			padding-bottom: 10px;
 			.images {
 				height: 700px; 
 				width: 100%; 
@@ -1150,7 +1244,9 @@ $p785: 20px;
 					display:none;
 				}
 			} .boxs {
-				margin: 0 20px;
+			    margin: auto;
+    			width: 80%;
+				height: unset; 
 				.box:first-child {
 					div {
 						margin: auto; 
@@ -1159,6 +1255,12 @@ $p785: 20px;
 				// .box:nth-child(1n+2) {
 				// 	box-shadow: 0 14px 2px #eee;
 				// }
+
+				.box:nth-child(1n+2) {
+				
+					position:static;
+					
+				}
 				.box {
 					border-radius: 20px;
 					padding: 20px 0; 
@@ -1445,7 +1547,13 @@ $p785: 20px;
 			}
 		}
 	}
-
+	.about {
+		&-detail {
+			.boxs {
+				width: 85%; 
+			}
+		}
+	}
 }
 
 
