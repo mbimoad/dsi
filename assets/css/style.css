@@ -1326,6 +1326,15 @@ img.separate {
     margin: 10px 30px;
     width: 80%;
   }
+  .triangle-line {
+    height: 71px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-image: url(../dsi/component2.png);
+    background-size: 127px;
+    background-position: 62px 90px;
+    margin: 50px 0 0px;
+  }
   .footer__col:first-child {
     margin-top: 40px;
   }
@@ -1353,6 +1362,7 @@ img.separate {
     height: 100px;
     right: -8px;
     top: -16px;
+    display: none;
   }
   img.img-support-background2 {
     display: none;
