@@ -718,6 +718,142 @@ header {
   background: unset;
 }
 
+.mwave {
+  display: none;
+}
+
+@-webkit-keyframes trianglebig1920 {
+  0% {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglebig1920 {
+  0% {
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes trianglemedium1920 {
+  0% {
+    -webkit-transform: translate(0, 30px);
+            transform: translate(0, 30px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglemedium1920 {
+  0% {
+    -webkit-transform: translate(0, 30px);
+            transform: translate(0, 30px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes trianglesmall1920 {
+  0% {
+    -webkit-transform: translate(0, -60px);
+            transform: translate(0, -60px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglesmall1920 {
+  0% {
+    -webkit-transform: translate(0, -60px);
+            transform: translate(0, -60px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes trianglebig1000 {
+  0% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglebig1000 {
+  0% {
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes trianglemedium1000 {
+  0% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglemedium1000 {
+  0% {
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes trianglesmall1000 {
+  0% {
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes trianglesmall1000 {
+  0% {
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .banner-hero {
   height: 500px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#C23440), to(#A81925));
@@ -773,6 +909,10 @@ header {
 .banner-hero .left-triangle svg:nth-child(3) {
   width: 150px;
   height: 150px;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  -webkit-animation: trianglebig1920 1s ease 0s infinite alternate;
+          animation: trianglebig1920 1s ease 0s infinite alternate;
 }
 
 .banner-hero .left-triangle svg:nth-child(2) {
@@ -781,6 +921,10 @@ header {
   position: absolute;
   right: -90px;
   bottom: 40px;
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+  -webkit-animation: trianglemedium1920 1s ease 1s infinite alternate;
+          animation: trianglemedium1920 1s ease 1s infinite alternate;
 }
 
 .banner-hero .left-triangle svg:nth-child(1) {
@@ -789,6 +933,10 @@ header {
   position: absolute;
   right: -20px;
   bottom: -30px;
+  -webkit-transform: translate(0, -60px);
+          transform: translate(0, -60px);
+  -webkit-animation: trianglesmall1920 1s ease 2s infinite alternate;
+          animation: trianglesmall1920 1s ease 2s infinite alternate;
 }
 
 .banner-hero .right-triangle {
@@ -800,6 +948,10 @@ header {
 .banner-hero .right-triangle svg:nth-child(3) {
   width: 150px;
   height: 150px;
+  -webkit-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+  -webkit-animation: trianglebig1920 1s ease 2s infinite alternate;
+          animation: trianglebig1920 1s ease 2s infinite alternate;
 }
 
 .banner-hero .right-triangle svg:nth-child(2) {
@@ -808,6 +960,10 @@ header {
   position: absolute;
   right: -90px;
   bottom: 40px;
+  -webkit-transform: translate(0, 30px);
+          transform: translate(0, 30px);
+  -webkit-animation: trianglemedium1920 1s ease 1s infinite alternate;
+          animation: trianglemedium1920 1s ease 1s infinite alternate;
 }
 
 .banner-hero .right-triangle svg:nth-child(1) {
@@ -816,6 +972,65 @@ header {
   position: absolute;
   right: -20px;
   bottom: -30px;
+  -webkit-transform: translate(0, -60px);
+          transform: translate(0, -60px);
+  -webkit-animation: trianglesmall1920 1s ease 0s infinite alternate;
+          animation: trianglesmall1920 1s ease 0s infinite alternate;
+}
+
+.descriptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.descriptions .description {
+  width: 60%;
+  border: 1px solid red;
+}
+
+.descriptions .description h2 {
+  font-size: 40px;
+  color: #043349;
+}
+
+.descriptions .description .line {
+  width: 90px;
+  height: 4px;
+  display: inline-block;
+  margin: auto;
+  background: #C9313A;
+}
+
+.descriptions .description p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 2;
+  text-align: justify;
+}
+
+.descriptions .images {
+  border: 1px solid red;
+  position: relative;
+}
+
+.descriptions .images img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.descriptions .images img.img-float {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 9;
+  left: 0;
+  top: 18%;
 }
 
 @media screen and (max-width: 1570px) {
@@ -827,6 +1042,62 @@ header {
 @media screen and (max-width: 1220px) {
   .banner-hero p {
     width: 50%;
+  }
+  .banner-hero .bottom {
+    bottom: -80px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-hero .left-triangle svg:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+    -webkit-animation: trianglebig1000 1s ease 0s infinite alternate;
+            animation: trianglebig1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .left-triangle svg:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    right: -70px;
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+    -webkit-animation: trianglemedium1000 1s ease 0s infinite alternate;
+            animation: trianglemedium1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .left-triangle svg:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+    -webkit-animation: trianglesmall1000 1s ease 0s infinite alternate;
+            animation: trianglesmall1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+    -webkit-animation: trianglebig1000 1s ease 0s infinite alternate;
+            animation: trianglebig1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    right: -70px;
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+    -webkit-animation: trianglemedium1000 1s ease 0s infinite alternate;
+            animation: trianglemedium1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+    -webkit-animation: trianglesmall1000 1s ease 0s infinite alternate;
+            animation: trianglesmall1000 1s ease 0s infinite alternate;
   }
 }
 
@@ -843,6 +1114,14 @@ header {
 }
 
 @media screen and (max-width: 785px) {
+  .mwave {
+    display: block;
+    left: 0;
+    right: 0;
+    top: -10px;
+    -webkit-transform: translate(0, -10px);
+            transform: translate(0, -10px);
+  }
   .banner-hero {
     height: 370px;
   }
@@ -853,10 +1132,84 @@ header {
   .banner-hero h1 {
     font-size: 40px;
   }
+  .banner-hero .bottom {
+    display: none;
+  }
+  .banner-hero .left-triangle svg:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+    -webkit-animation: trianglebig1000 1s ease 0s infinite alternate;
+            animation: trianglebig1000 1s ease 0s infinite alternate;
+  }
+  .banner-hero .left-triangle svg:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    right: -70px;
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+    -webkit-animation: trianglemedium1000 1s ease 1s infinite alternate;
+            animation: trianglemedium1000 1s ease 1s infinite alternate;
+  }
+  .banner-hero .left-triangle svg:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+    -webkit-animation: trianglesmall1000 1s ease 2s infinite alternate;
+            animation: trianglesmall1000 1s ease 2s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    -webkit-transform: translate(0, -5px);
+            transform: translate(0, -5px);
+    -webkit-animation: trianglebig1000 1s ease 2s infinite alternate;
+            animation: trianglebig1000 1s ease 2s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    right: -70px;
+    -webkit-transform: translate(0, 15px);
+            transform: translate(0, 15px);
+    -webkit-animation: trianglemedium1000 1s ease 1s infinite alternate;
+            animation: trianglemedium1000 1s ease 1s infinite alternate;
+  }
+  .banner-hero .right-triangle svg:nth-child(1) {
+    width: 20px;
+    height: 20px;
+    -webkit-transform: translate(0, -30px);
+            transform: translate(0, -30px);
+    -webkit-animation: trianglesmall1000 1s ease 0s infinite alternate;
+            animation: trianglesmall1000 1s ease 0s infinite alternate;
+  }
   header {
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(4px);
             backdrop-filter: blur(4px);
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .banner-hero .left-triangle svg:nth-child(3),
+  .banner-hero .right-triangle svg:nth-child(3) {
+    position: absolute;
+    right: -50px;
+    width: 70px;
+    height: 70px;
+  }
+  .banner-hero .left-triangle svg:nth-child(2),
+  .banner-hero .right-triangle svg:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    right: -40px;
+  }
+  .banner-hero .left-triangle svg:nth-child(1),
+  .banner-hero .right-triangle svg:nth-child(1) {
+    width: 10px;
+    height: 10px;
   }
 }
 
