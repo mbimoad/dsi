@@ -513,6 +513,15 @@ header.active {
   }
 }
 
+@media screen and (max-width: 880px) {
+  header {
+    height: 75px;
+  }
+  header .nav-bar .logo img {
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .section .section-title p {
     font-size: 14px;
@@ -522,9 +531,15 @@ header.active {
 @media screen and (max-width: 785px) {
   header {
     z-index: 9999;
+    height: unset;
+    height: 70px;
+    background: #C9313A;
   }
   header .nav-bar {
     padding: 25px 20px;
+  }
+  header .nav-bar .logo img {
+    width: 115px;
   }
   header .nav-bar .navigation.active {
     visibility: visible;
@@ -726,12 +741,6 @@ header.active {
     width: 10px;
     height: 10px;
   }
-}
-
-header {
-  -webkit-backdrop-filter: unset;
-          backdrop-filter: unset;
-  background: unset;
 }
 
 .mwave {
@@ -1215,13 +1224,37 @@ header {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
+  .banner-hero {
+    height: 300px;
+  }
+  .banner-hero h1 {
+    font-size: 30px;
+  }
   .banner-hero p {
-    width: 70%;
+    width: 48%;
+    font-size: 16px;
+  }
+  .banner-hero .bottom {
+    bottom: -115px;
+  }
+  .banner-hero .left-triangle svg:nth-child(3),
+  .banner-hero .right-triangle svg:nth-child(3) {
+    width: 70px;
+    height: 70px;
+  }
+  .banner-hero .left-triangle svg:nth-child(2),
+  .banner-hero .right-triangle svg:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    right: -40px;
   }
 }
 
 @media screen and (max-width: 785px) {
+  .banner-hero {
+    display: none;
+  }
   .mwave {
     display: block;
     left: 0;
@@ -1246,8 +1279,14 @@ header {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .plan__container {
+    margin-top: 45px;
+  }
   .plan__container.pln2.section {
     padding: 0 20px;
+  }
+  .plan__container.pln2 {
+    margin-top: unset;
   }
   .plan__container.pln2 .plan__grid {
     display: unset;
@@ -1361,11 +1400,6 @@ header {
             transform: translate(0, -30px);
     -webkit-animation: trianglesmall1000 1s ease 0s infinite alternate;
             animation: trianglesmall1000 1s ease 0s infinite alternate;
-  }
-  header {
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
   }
 }
 

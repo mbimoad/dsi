@@ -513,6 +513,15 @@ header.active {
   }
 }
 
+@media screen and (max-width: 880px) {
+  header {
+    height: 75px;
+  }
+  header .nav-bar .logo img {
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 860px) {
   .section .section-title p {
     font-size: 14px;
@@ -522,9 +531,15 @@ header.active {
 @media screen and (max-width: 785px) {
   header {
     z-index: 9999;
+    height: unset;
+    height: 70px;
+    background: #C9313A;
   }
   header .nav-bar {
     padding: 25px 20px;
+  }
+  header .nav-bar .logo img {
+    width: 115px;
   }
   header .nav-bar .navigation.active {
     visibility: visible;

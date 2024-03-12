@@ -454,6 +454,20 @@ $iconbg : #383B3F;
 
 }
 
+@media screen and (max-width: 880px) {
+	header {
+		height: 75px;
+		.nav-bar {
+			.logo {
+				img {
+					width: 120px;
+				}
+			}
+		}
+	} 
+
+}
+
 @media screen and (max-width: 860px) {
 	.section {
 		.section-title {
@@ -463,13 +477,24 @@ $iconbg : #383B3F;
 		}
 	}
 
+
+	
+
 }
 
 @media screen and (max-width: 785px) {
 	
 	header {
 		z-index: 9999;
+		height: unset;
+		height: 70px; 
+		background:$red1; 
 		.nav-bar {
+			.logo {
+				img {
+					width: 115px;
+				}
+			}
 			padding: 25px 20px;
 			.navigation.active {
 				visibility: visible;
@@ -584,8 +609,8 @@ $iconbg : #383B3F;
 				}
 			}
 		}
-	}
-
+	} 
+	
 	.footer__col:first-child {
 		margin-top: 40px;
 	}

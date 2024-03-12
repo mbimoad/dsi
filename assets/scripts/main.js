@@ -25,11 +25,13 @@ navmenu.addEventListener('click', function() {
 
 
 window.addEventListener("scroll", (event) => {
-    let scroll = this.scrollY;
-    if(scroll > 530) {
-        document.querySelector('header').classList.add('active');
-    } else {
-        document.querySelector('header').classList.remove('active');
+    if(window.innerWidth >= 785) {
+        let scroll = this.scrollY;
+        if(scroll > 530) {
+            document.querySelector('header').classList.add('active');
+        } else {
+            document.querySelector('header').classList.remove('active');
+        }
     }
 });
 
