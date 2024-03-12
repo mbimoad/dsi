@@ -520,6 +520,22 @@ header.active {
 }
 
 @media screen and (max-width: 785px) {
+  .nav-menu-btn {
+    display: block;
+    color: #eee;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .nav-close-btn {
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3em;
+    margin: 10px;
+    cursor: pointer;
+  }
   header {
     z-index: 9999;
   }
