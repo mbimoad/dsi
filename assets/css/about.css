@@ -1001,6 +1001,7 @@ header {
 
 .plan__container.pln2.section {
   padding: 0 90px;
+  overflow: unset;
 }
 
 .plan__container .section__header {
