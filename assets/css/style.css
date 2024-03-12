@@ -1673,10 +1673,10 @@ header.active {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-left: 90px;
-  color: white;
 }
 
 .media-icons a {
+  color: white;
   font-size: 1.7em;
   margin: 10px 0;
 }
