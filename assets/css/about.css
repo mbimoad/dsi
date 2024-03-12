@@ -1419,15 +1419,18 @@ header {
     width: 10px;
     height: 10px;
   }
-}
-
-@media screen and (max-width: 666px) {
   .banner-hero p {
     width: 70%;
-    font-size: 16px;
+    font-size: 13px;
   }
   .banner-hero h1 {
-    font-size: 40px;
+    font-size: 30px;
+  }
+  .plan__content p {
+    font-size: 13px;
+  }
+  .plan__container .section__header {
+    font-size: 30px;
   }
 }
 
