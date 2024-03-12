@@ -520,22 +520,6 @@ header.active {
 }
 
 @media screen and (max-width: 785px) {
-  .nav-menu-btn {
-    display: block;
-    color: #eee;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-  .nav-close-btn {
-    display: block;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1.3em;
-    margin: 10px;
-    cursor: pointer;
-  }
   header {
     z-index: 9999;
   }
@@ -549,6 +533,22 @@ header.active {
     -webkit-transform: translate(0%, 0);
             transform: translate(0%, 0);
     opacity: 1;
+  }
+  header .nav-bar .nav-menu-btn {
+    display: block;
+    color: #eee;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  header .nav-bar .nav-close-btn {
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3em;
+    margin: 10px;
+    cursor: pointer;
   }
   header .nav-bar .navigation {
     -webkit-transition: all 200ms ease 0s;
