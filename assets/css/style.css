@@ -1507,7 +1507,7 @@ header.active {
 .swiper-slide .text-content {
   position: absolute;
   top: 25%;
-  color: var(--text-dark);
+  color: white;
   margin: 0 200px;
 }
 
@@ -1553,7 +1553,7 @@ header.active {
   border: none;
   outline: none;
   background: var(--white-color);
-  color: var(--text-light);
+  color: black;
   font-size: 1em;
   font-weight: 500;
   padding: 8px 25px;
@@ -1673,10 +1673,10 @@ header.active {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin-left: 90px;
+  color: white;
 }
 
 .media-icons a {
-  color: var(--text-dark);
   font-size: 1.7em;
   margin: 10px 0;
 }

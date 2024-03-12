@@ -38,7 +38,7 @@
 	.text-content {
 		position: absolute;
 		top: 25%;
-		color: $color_1;
+		color: white;
 		margin: 0 200px;
 		// bimo transition: 0.3s ease;
 		.texts {
@@ -75,7 +75,7 @@
 			border: none;
 			outline: none;
 			background: var(--white-color);
-			color: $color_2;
+			color: black;
 			font-size: 1em;
 			font-weight: 500;
 			padding: 8px 25px;
@@ -169,8 +169,8 @@
 	top: 50%;
 	transform: translateY(-50%);
 	margin-left: 90px;
+	color:white; 
 	a {
-		color: $color_1;
 		font-size: 1.7em;
 		margin: 10px 0;
 	}
