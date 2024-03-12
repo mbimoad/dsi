@@ -1681,6 +1681,10 @@ header.active {
   margin: 10px 0;
 }
 
+.media-icons a:active {
+  color: white;
+}
+
 .about-detail {
   margin-top: 100px;
   display: -webkit-box;
