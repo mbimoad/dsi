@@ -690,6 +690,12 @@ header.active {
   margin-top: 1rem;
 }
 
+.plan__container .section__description {
+  font-size: 18px;
+  width: 60%;
+  margin-top: 20px;
+}
+
 .plan__container .line {
   width: 70px;
   height: 4px;
@@ -778,6 +784,12 @@ header.active {
 @media screen and (max-width: 1570px) {
   .banner-hero p {
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .plan__container .section__description {
+    width: 71%;
   }
 }
 
@@ -893,6 +905,9 @@ header.active {
 }
 
 @media screen and (max-width: 1000px) {
+  .plan__container .section__description {
+    width: 71%;
+  }
   .section .section-title h2 {
     font-size: 40px;
   }
@@ -963,6 +978,9 @@ header.active {
 @media screen and (max-width: 960px) {
   .banner-hero p {
     width: 60%;
+  }
+  .plan__container .section__description {
+    font-size: 16px;
   }
   .plan__container .section__header {
     font-size: 2rem;

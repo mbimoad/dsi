@@ -690,6 +690,12 @@ header.active {
   margin-top: 1rem;
 }
 
+.plan__container .section__description {
+  font-size: 18px;
+  width: 60%;
+  margin-top: 20px;
+}
+
 .plan__container .line {
   width: 70px;
   height: 4px;
@@ -778,6 +784,12 @@ header.active {
 @media screen and (max-width: 1570px) {
   .banner-hero p {
     width: 40%;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .plan__container .section__description {
+    width: 71%;
   }
 }
 
@@ -893,6 +905,9 @@ header.active {
 }
 
 @media screen and (max-width: 1000px) {
+  .plan__container .section__description {
+    width: 71%;
+  }
   .section .section-title h2 {
     font-size: 40px;
   }
@@ -963,6 +978,9 @@ header.active {
 @media screen and (max-width: 960px) {
   .banner-hero p {
     width: 60%;
+  }
+  .plan__container .section__description {
+    font-size: 16px;
   }
   .plan__container .section__header {
     font-size: 2rem;
@@ -1468,6 +1486,173 @@ header.active {
 .missionvalues {
   margin-top: 50px;
   padding: 0 90px;
+}
+
+.missionvalues .olcards {
+  margin-top: 50px;
+  list-style: none;
+  counter-reset: cardCount;
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  --cardsGap: 1rem;
+  gap: var(--cardsGap);
+  padding-bottom: var(--cardsGap);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.missionvalues .olcards li {
+  counter-increment: cardCount;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  --labelOffset: 1rem;
+  --arrowClipSize: 1.5rem;
+  margin-top: var(--labelOffset);
+  width: 45%;
+}
+
+.missionvalues .olcards li:last-child {
+  width: 100%;
+}
+
+.missionvalues .olcards li::before {
+  content: counter(cardCount, decimal-leading-zero);
+  background: #8E1B2F;
+  color: white;
+  font-size: 2em;
+  font-weight: 700;
+  -webkit-transform: translateY(calc(-1 * var(--labelOffset)));
+          transform: translateY(calc(-1 * var(--labelOffset)));
+  margin-right: calc(-1 * var(--labelOffset));
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 0.5em;
+  width: 50px;
+  height: 80px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50px;
+          flex: 0 0 50px;
+  -webkit-box-shadow: -8px 6px 5px gray;
+          box-shadow: -8px 6px 5px gray;
+}
+
+.missionvalues .olcards li .content {
+  background-color: #C9313A;
+  --inlinePadding: 1em;
+  --boxPadding: 0.5em;
+  display: -ms-grid;
+  display: grid;
+  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+      grid-template-areas: "icon text" "icon text";
+  gap: 0.25em 1em;
+  -webkit-clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
+          clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.missionvalues .olcards li .content::before {
+  content: "";
+  position: absolute;
+  width: var(--labelOffset);
+  height: var(--labelOffset);
+  background: var(--cardColor);
+  left: 0;
+  bottom: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+  -webkit-filter: brightness(0.75);
+          filter: brightness(0.75);
+}
+
+.missionvalues .olcards li .content::after {
+  content: "";
+  position: absolute;
+  height: var(--cardsGap);
+  width: var(--cardsGap);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), color-stop(50%, transparent));
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+  left: 0;
+  top: 100%;
+}
+
+.missionvalues .olcards li .icon {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: icon;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2em;
+}
+
+.missionvalues .olcards li .content .title {
+  grid-area: title;
+  font-size: 1.25em;
+  /* font-weight: 700; */
+}
+
+.missionvalues .olcards li .content .text {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: text;
+}
+
+.visi {
+  padding: 80px 0;
+  background: #C9313A;
+  color: white;
+}
+
+.visi .inner-box {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.visi .inner-box svg {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+
+.visi .inner-box h5 {
+  font-size: 35px;
+  text-align: justify;
+}
+
+.visi .inner-box p {
+  margin-top: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.visi .inner-box svg:first-child {
+  left: -70px;
+  top: -40px;
 }
 
 .cards {
