@@ -1646,5 +1646,8 @@ header.active {
   .cards .card .card-body p {
     text-align: center;
   }
+  .cards .card:hover .card-body {
+    width: unset;
+  }
 }
 /*# sourceMappingURL=about.css.map */
