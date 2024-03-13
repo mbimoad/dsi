@@ -1464,4 +1464,187 @@ header.active {
     top: 24.05797vw;
   }
 }
+
+.missionvalues {
+  margin-top: 50px;
+  padding: 0 90px;
+}
+
+.cards {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: black;
+  color: white;
+}
+
+.cards .card::before {
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.cards .card.c1 {
+  background-image: url("../images/hero1.jpg");
+}
+
+.cards .card.c2 {
+  background-image: url("../images/hero2.jpg");
+}
+
+.cards .card.c3 {
+  background-image: url("../images/hero3.jpg");
+}
+
+.cards .card.c4 {
+  background-image: url("../images/hero4.jpg");
+}
+
+.cards .card.c5 {
+  background-image: url("../images/hero5.jpg");
+}
+
+.cards .card.unhover-transition .card-body {
+  -webkit-transition: opacity 500ms ease 0s, width 500ms ease 500ms;
+  transition: opacity 500ms ease 0s, width 500ms ease 500ms;
+}
+
+.cards .card.hover-transition .card-body {
+  -webkit-transition: opacity 500ms ease 500ms, width 500ms ease 0s;
+  transition: opacity 500ms ease 500ms, width 500ms ease 0s;
+}
+
+.cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  gap: 40px;
+  height: 110px;
+  -webkit-transition: opacity 1s ease 1s, width 1s ease 0s;
+  transition: opacity 1s ease 1s, width 1s ease 0s;
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+}
+
+.cards .card-header {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.cards .card-header h2 {
+  font-size: 30px;
+}
+
+.cards .card-header svg {
+  width: 40px;
+  height: 40px;
+}
+
+.cards .card-body {
+  height: 53px;
+  width: 0;
+  opacity: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cards .card-body p {
+  text-align: right;
+  font-size: 18px;
+}
+
+.cards .card:hover .card-body {
+  height: unset;
+  opacity: 1;
+  width: 800px;
+}
+
+@media screen and (max-width: 1100px) {
+  .missionvalues {
+    margin-top: 50px;
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .cards .card {
+    gap: 15px;
+    height: 130px;
+  }
+  .cards .card-header h2 {
+    font-size: 24px;
+  }
+  .cards .card-body p {
+    font-size: 15px;
+  }
+  .cards .card:hover .card-body {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .missionvalues {
+    padding: 0 20px;
+  }
+  .cards {
+    background: unset;
+  }
+  .cards .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 320px;
+  }
+  .cards .card .card-header {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+  .cards .card .card-body {
+    width: unset;
+    height: unset;
+    opacity: 1;
+  }
+  .cards .card .card-body p {
+    text-align: center;
+  }
+}
 /*# sourceMappingURL=about.css.map */
