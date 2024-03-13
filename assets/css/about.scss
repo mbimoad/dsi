@@ -152,6 +152,12 @@
              height: 320px; 
              .card-header {
                  flex: unset; 
+                 h2 {
+                     font-size: 20px; 
+                 } svg {
+                     width: 20px; 
+                     height: 20px; 
+                 }
              }
              .card-body {
                  width: unset; 
@@ -160,6 +166,7 @@
 
                  p {
                      text-align: center;
+                     font-size: 14px; 
                  }
              }
          } .card:hover {

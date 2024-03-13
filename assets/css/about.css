@@ -1638,6 +1638,13 @@ header.active {
         -ms-flex: unset;
             flex: unset;
   }
+  .cards .card .card-header h2 {
+    font-size: 20px;
+  }
+  .cards .card .card-header svg {
+    width: 20px;
+    height: 20px;
+  }
   .cards .card .card-body {
     width: unset;
     height: unset;
@@ -1645,6 +1652,7 @@ header.active {
   }
   .cards .card .card-body p {
     text-align: center;
+    font-size: 14px;
   }
   .cards .card:hover .card-body {
     width: unset;
