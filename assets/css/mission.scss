@@ -1,1 +1,540 @@
 @import './main';
+
+
+$color_1: white;
+$color_2: var(--cardColor);
+$font-family_1: sans-serif;
+$background-color_1: var(--cardColor);
+
+.missionvalues {
+    margin-top: 50px; 
+    padding: 0 90px; 
+    
+
+    .olcards {
+        margin-top: 50px; 
+        list-style: none;
+        counter-reset: cardCount;
+        font-family: sans-serif;
+        display: flex;
+        --cardsGap: 1rem;
+        gap: var(--cardsGap);
+        padding-bottom: var(--cardsGap);
+        flex-direction: row;
+        flex-wrap:wrap; 
+        justify-content: space-between;
+      }
+      .olcards li {
+        counter-increment: cardCount;
+        display: flex;
+        color: white;
+        --labelOffset: 1rem;
+        --arrowClipSize: 1.5rem;
+        margin-top: var(--labelOffset);
+        width: 48%; 
+      }
+
+      .olcards li:last-child {
+        width: 100%; 
+      }
+      
+      .olcards li::before {
+        content: counter(cardCount, decimal-leading-zero);
+        background: $red3;
+        color: white;
+        font-size: 2em;
+        font-weight: 700;
+        transform: translateY(calc(-1 * var(--labelOffset)));
+        margin-right: calc(-1 * var(--labelOffset));
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-inline: 0.5em;
+        width: 50px;
+        height: 80px;
+        flex: 0 0 50px;
+        box-shadow: -8px 6px 5px gray;
+      }
+      
+      .olcards li .content {
+        width: 100%; 
+  
+        background-color: $red1; 
+        --inlinePadding: 1em;
+        --boxPadding: 0.5em;
+        display: grid;
+        padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+          var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+        grid-template-areas:
+          "text text"
+          "text text";
+        gap: 0.25em 1em;
+        clip-path: polygon(
+          0 0,
+          calc(100% - var(--arrowClipSize)) 0,
+          100% 50%,
+          calc(100% - var(--arrowClipSize)) 100%,
+          calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+          0 calc(100% + var(--cardsGap))
+        );
+        position: relative;
+        align-items: center; 
+        justify-content: flex-start;
+      }
+      .olcards li .content::before {
+        content: "";
+        position: absolute;
+        width: var(--labelOffset);
+        height: var(--labelOffset);
+        background: var(--cardColor);
+        left: 0;
+        bottom: 0;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        filter: brightness(0.75);
+      }
+      .olcards li .content::after {
+        content: "";
+        position: absolute;
+        height: var(--cardsGap);
+        width: var(--cardsGap);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+        left: 0;
+        top: 100%;
+      }
+ 
+      .olcards li .content .text {
+        grid-area: text;
+        font-size: 15px;
+        text-align:left; 
+      }
+
+
+}
+
+
+.visi {
+    margin-top: 50px; 
+    padding: 100px 0 65px;
+    background: $red1; 
+    color:white; 
+    .inner-box {
+        position: relative;
+        width: 75%;
+        margin: auto;
+        svg {
+            position: absolute; 
+            width: 50px; 
+            height: 50px; 
+        } h5 {
+            font-size: 35px; 
+            text-align: justify; 
+        } p {
+            margin-top: 15px; 
+            font-size: 25px; 
+            text-align: right;
+        } svg:first-child {
+            left: -70px;
+            top: -40px;
+        } 
+    }
+}
+
+.cards {
+    margin-top: 50px; 
+    display: flex;
+    flex-direction: column;
+    background:black;
+    color:white;
+      .card::before {
+            content: ''; 
+            left: 0; 
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            background:rgba(0, 0, 0, 0.5); 
+            position:absolute; 
+        }
+    .card.c1 {background-image: url('../images/hero1.jpg'); }
+    .card.c2 {background-image: url('../images/hero2.jpg'); }
+    .card.c3 {background-image: url('../images/hero3.jpg'); }
+    .card.c4 {background-image: url('../images/hero4.jpg'); }
+    .card.c5 {background-image: url('../images/hero5.jpg'); }
+        $time: 500ms;
+    .card.unhover-transition {
+        .card-body {
+            transition: 
+            opacity $time ease 0s,
+            width $time ease $time;
+        }
+    } 
+
+    .card.hover-transition {
+        .card-body {
+            transition: 
+        opacity $time ease $time,
+        width $time ease 0s;
+        }
+    }
+
+    .card {
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content:flex-end;
+        align-items:center; 
+        padding: 30px;
+        gap: 40px;
+        height: 110px;
+        transition: 
+        opacity 1s ease 1s,
+        width 1s ease 0s;
+        
+        background-size: cover; 
+        position:relative; 
+        background-position: center center;
+
+       
+      
+        &-header {
+            flex:1; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            h2 {
+                font-size: 30px; 
+            } svg {
+                width: 40px;
+                height: 40px;
+            }
+            position:relative; 
+            z-index: 1;
+        } &-body {
+            // width: 800px; 
+            height: 53px; 
+            width: 0; 
+            opacity: 0; 
+       
+
+    
+            p {
+                text-align:right;
+                font-size: 18px; 
+            }
+            position:relative; 
+            z-index: 1;
+        } 
+    } .card:hover {
+        .card-body {
+            height: unset; 
+            opacity: 1; 
+            width: 800px; 
+        }
+    }
+
+
+    // cards
+    
+ }
+
+@media screen and (max-width: 1440px) {
+    .visi {
+        padding: 80px 0 40px;
+        .inner-box {
+            svg {
+                width: 40px; 
+                height: 40px; 
+            } h5 {
+                font-size: 28px; 
+            } p {
+                font-size: 18px; 
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    .olcards li::before {
+        font-size: 1.5em;
+        width: 40px; 
+        height: 70px; 
+
+    } .olcards li {
+        width: 49%; 
+    } .olcards li .content .text {
+        font-size: 14px; 
+    }
+}
+
+ 
+ @media screen and (max-width: 1100px) {
+    .missionvalues {
+        margin-top: 50px; 
+        padding: 0 50px; 
+        
+    }
+    
+ 
+ }
+
+ @media screen and (max-width: 1000px) {
+     .cards {
+         .card {
+             gap: 15px; 
+             height: 130px; 
+             &-header {
+                 h2 {
+                     font-size: 24px; 
+                 }
+             }
+             &-body {
+                
+                p {
+                    font-size: 15px; 
+                }
+             }
+         }
+
+         .card:hover {
+             .card-body {
+                width: 440px;
+             }
+         }
+     
+     }
+ 
+ }
+
+
+//  @media screen and (max-width: 975px) {
+//      .missionvalues {
+//          .olcards {
+//              margin-top: 50px; 
+//              gap: 11px
+//          } .olcards li {
+//              margin-top: 16px; 
+//          } .olcards li::before {
+//              font-size: 23px; 
+//              transform: translate(0, -17px);
+//              margin-right: -16px;
+//              padding-inline: 16px; 
+//              width: 50px; 
+//              height: 80px; 
+//              flex: 0 0 50px; 
+//              box-shadow: -8px 6px 5px gray; 
+//          } .olcards li .content {
+//             padding: 10px 30px;
+//             gap:unset; 
+//          } .olcards li .content::after {
+//             width: 18px;
+//             height: 40px;
+//          } .olcards li .content .text {
+//              font-size: 15px; 
+//          }
+//      }
+ 
+//  }
+
+
+
+@media screen and (max-width: 1000px) {
+    .missionvalues {
+        .olcards {
+            margin-top: pxToVw(50, 1000); 
+            gap: pxToVw(11, 1000)
+        } .olcards li {
+            margin-top: pxToVw(16, 1000); 
+        } .olcards li::before {
+            font-size: pxToVw(23, 1000); 
+            transform: translate(0, -pxToVw(17, 1000));
+            margin-right: -pxToVw(16, 1000);
+            padding-inline: pxToVw(16, 1000); 
+            width: pxToVw(40, 1000); 
+            height: pxToVw(70, 1000); 
+            flex: 0 0 pxToVw(50, 1000); 
+            box-shadow: pxToVw(-8, 1000) pxToVw(6, 1000) pxToVw(5, 1000) gray; 
+        } .olcards li .content {
+           padding: pxToVw(10, 1000) pxToVw(30, 1000);
+           gap:unset; 
+        } .olcards li .content::after {
+           width: pxToVw(18, 1000);
+           height: pxToVw(40, 1000);
+        } .olcards li .content .text {
+            font-size: pxToVw(14, 1000); 
+        }
+    }
+
+}
+
+@media screen and (max-width: 880px) {
+    .visi {
+        padding: 80px 0 40px;
+        .inner-box {
+            svg {
+                width: 40px; 
+                height: 40px; 
+            } h5 {
+                font-size: 23px; 
+            } p {
+                font-size: 15px; 
+            } svg:first-child {
+                left: -50px;
+                top: -26px;
+            }
+        }
+    }
+}
+
+
+ @media screen and (max-width: 785px) {
+  
+    .visi {
+        padding: 50px 0 40px;
+        .inner-box {
+            svg {
+                width: 25px; 
+                height: 25px; 
+            } h5 {
+                font-size: 20px; 
+                text-align: left; 
+            } p {
+                font-size: 13px; 
+                margin-top: 20px; 
+            
+            } svg:first-child {
+                left: -39px;
+                top: -20px;
+            }
+        }
+    }
+
+    .missionvalues {
+        padding: 0 20px;
+        .olcards {
+             margin-top: 50px; 
+             gap: 11px;
+             flex-direction:column; 
+         } .olcards li {
+             margin-top: 16px; 
+             width: 100%; 
+         } .olcards li::before {
+             font-size: 23px; 
+             transform: translate(0, -17px);
+             margin-right: -16px;
+             padding-inline: 16px; 
+             width: 50px; 
+             height: 80px; 
+             flex: 0 0 50px; 
+             box-shadow: -8px 6px 5px gray; 
+         } .olcards li .content {
+            padding: 10px 30px;
+            gap:unset; 
+         } .olcards li .content::after {
+            width: 18px;
+            height: 40px;
+         } .olcards li .content .text {
+             font-size: 14px; 
+         }
+     }
+
+
+     .missionvalues.mv1 {
+        margin-top: 72px;
+    }
+ 
+     .cards {
+        // padding: 0 20px;
+        background: unset;
+         .card {
+             flex-direction:column; 
+             justify-content: center;
+             align-items: center;
+             height: 320px; 
+             .card-header {
+                 flex: unset; 
+                 h2 {
+                     font-size: 20px; 
+                 } svg {
+                     width: 20px; 
+                     height: 20px; 
+                 }
+             }
+             //
+             .card-body {
+                 width: unset; 
+                 height: unset; 
+                 opacity: 1; 
+
+                 p {
+                     text-align: center;
+                     font-size: 14px; 
+                 }
+             }
+         } .card:hover {
+             .card-body {
+                 width: unset; 
+             }
+         }
+     }
+
+ }
+
+ @media screen and (max-width: 550px) {
+     .missionvalues {
+         .olcards li::before {
+             width: 30px; 
+             height: 60px; 
+             flex: 0 0 30px; 
+             font-size: 17px; 
+             margin-right: -20px;
+         } .olcards li .content .text {
+             font-size: 13px; 
+         }
+     }
+
+     .visi {
+        padding: 75px 0 40px;
+         .inner-box {
+             width: 90%; 
+             svg:first-child {
+                left: 0px;
+                top: -35px;
+             }
+         }
+     }
+ 
+ }
+
+$size: 400;
+@media screen and (max-width: $size + 'px') {
+    .missionvalues {
+        padding: 0 pxToVw(20, $size);
+        .olcards {
+             margin-top: pxToVw(50, $size); 
+             gap: pxToVw(11, $size);
+             flex-direction:column; 
+         } .olcards li {
+             margin-top: pxToVw(16, $size); 
+             width: 100%; 
+         } .olcards li::before {
+             font-size: pxToVw(17, $size); 
+             transform: translate(0, pxToVw(-17, $size));
+             margin-right: pxToVw(-20, $size);
+             padding-inline: pxToVw(16, $size); 
+             width: pxToVw(30, $size); 
+             height: pxToVw(60, $size); 
+             flex: 0 0 pxToVw(30, $size); 
+             box-shadow: pxToVw(-8, $size) pxToVw(6, $size) pxToVw(5, $size) gray; 
+         } .olcards li .content {
+            padding: pxToVw(10, $size) pxToVw(30, $size);
+            gap:unset; 
+         } .olcards li .content::after {
+            width: pxToVw(18, $size);
+            height: pxToVw(40, $size);
+         } .olcards li .content .text {
+             font-size: pxToVw(13, $size); 
+         }
+     }
+
+
+}

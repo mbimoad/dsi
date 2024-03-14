@@ -1450,6 +1450,12 @@ header.active {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .plan__container .section__description {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .footer__bar .contents .socials {
     gap: 10px;

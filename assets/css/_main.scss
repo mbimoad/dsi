@@ -1362,6 +1362,16 @@ $background-color_3: #ffcca3;
 
 }
 
+@media screen and (max-width: 550px) {
+	.plan__container {
+		.section__description {
+			width: 100%;
+		}
+	}
+
+
+}
+
 
 @media screen and (max-width: 500px) {
 	.footer__bar {
