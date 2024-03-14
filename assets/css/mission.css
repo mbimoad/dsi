@@ -2052,4 +2052,16 @@ header.active {
     font-size: 3.25vw;
   }
 }
+
+@media only screen and (min-width: 993px) {
+  .container {
+    width: unset;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: unset;
+  }
+}
 /*# sourceMappingURL=mission.css.map */
