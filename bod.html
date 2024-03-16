@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="./assets/css/mission.css"> 
   <link rel="stylesheet" href="./assets/css/carousel.css">
   
 </head>
@@ -355,70 +354,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  <script>
-
-
-
-const changeDescription = () => {
-  active = document.querySelector('.carousel-item.active'); 
-  console.log(active);
-  switch(active.dataset.employee) {
-      case "1": 
-        document.querySelector('.bod-info h3').innerText = "Son Goku";
-        document.querySelector('.bod-info h5').innerText = "Super Saiyan 1"
-        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
-        break;
-      case "2": 
-        document.querySelector('.bod-info h3').innerText = "Son Gohan";
-        document.querySelector('.bod-info h5').innerText = "Super Saiyan 1"
-        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
-        break;
-      case "3": 
-        document.querySelector('.bod-info h3').innerText = "Vegeta";
-        document.querySelector('.bod-info h5').innerText = "Super Saiyan Grade 2"
-        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
-        break;
-      case "4": 
-        document.querySelector('.bod-info h3').innerText = "Broly";
-        document.querySelector('.bod-info h5').innerText = "Legendary Super Saiyan"
-        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
-        break;
-      case "5": 
-        document.querySelector('.bod-info h3').innerText = "Frieza";
-        document.querySelector('.bod-info h5').innerText = "Golden Form"
-        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
-        break;
-      default: 
-        break;
-    }
-}
-    var elems = document.querySelectorAll('.carousel');
-var instances = M.Carousel.init(elems, {
-  onCycleTo: function() {
-    changeDescription()
-  }
-});
-var instance = M.Carousel.getInstance(elems[0]);
-const nextcarousel = document.querySelector('.next');
-const prevcarousel = document.querySelector('.prev');
-
-
-
-
-
-
-nextcarousel.addEventListener('click', () => {
-  instance.next();
-})
-prevcarousel.addEventListener('click', () => {
-  instance.prev()
-})
-
-
-  </script>
-  
-
-
+  <script src="./assets/scripts/materialize-carousel.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./assets/scripts/owl.carousel.min.js"></script>
