@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="./assets/css/mission.css"> -->
+  <link rel="stylesheet" href="./assets/css/mission.css"> 
+  <link rel="stylesheet" href="./assets/css/carousel.css">
   
 </head>
 <body>
@@ -234,20 +235,30 @@
 
     <section class="carousel-bod">
       <div class="carousel">
-          <a class="carousel-item" href="pages/profile.php?halaman=0"><img src="./assets/images/human1.jpg"></a>
-          <a class="carousel-item" href="pages/profile.php?halaman=1"><img src="./assets/images/human2.jpg"></a>
-          <a class="carousel-item" href="pages/profile.php?halaman=2"><img src="./assets/images/human3.jpg"></a>
-          <a class="carousel-item" href="pages/profile.php?halaman=3"><img src="./assets/images/human4.jpg"></a>
-          <a class="carousel-item" href="pages/profile.php?halaman=4"><img src="./assets/images/human5.jpg"></a>
+          <a class="carousel-item" data-employee="1"><img src="./assets/images/human1.jpg"></a>
+          <a class="carousel-item" data-employee="2"><img src="./assets/images/human2.jpg"></a>
+          <a class="carousel-item" data-employee="3"><img src="./assets/images/human3.jpg"></a>
+          <a class="carousel-item" data-employee="4"><img src="./assets/images/human4.jpg"></a>
+          <a class="carousel-item" data-employee="5"><img src="./assets/images/human5.jpg"></a>
       </div>
 
       <section class="bod-info">
-        <h3>Agung Budi Waskito</h3>
-        <h5>Presiden Director</h5>
+        <h3>Son Goku</h3>
+        <h5>Super Saiyan 1</h5>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum, fugit ab unde et eius id vero quas ipsum harum dignissimos praesentium fugiat possimus eos tempora incidunt, expedita exercitationem voluptatum!</p>
         <div class="menu-button">
-            <button class="prev"><i class="fas fa-chevron-left"></i></button>
-            <button class="next"><i class="fas fa-chevron-right"></i></button>
+            <button class="prev">
+              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2.23V17.77C16 18.955 14.695 19.675 13.69 19.03L1.48 11.26C1.26623 11.1247 1.09015 10.9376 0.96814 10.716C0.846128 10.4943 0.782147 10.2455 0.782147 9.9925C0.782147 9.73952 0.846128 9.49065 0.96814 9.26904C1.09015 9.04743 1.26623 8.86028 1.48 8.725L13.69 0.97C13.9162 0.823666 14.1778 0.74111 14.4471 0.73104C14.7163 0.72097 14.9833 0.783759 15.2198 0.912784C15.4564 1.04181 15.6537 1.23229 15.791 1.46412C15.9283 1.69596 16.0005 1.96055 16 2.23Z" fill="white"/>
+                </svg>
+                
+            </button>
+            <button class="next">
+              <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.01805e-06 2.23V17.77C3.01805e-06 18.955 1.305 19.675 2.31 19.03L14.52 11.26C14.7338 11.1247 14.9098 10.9376 15.0319 10.716C15.1539 10.4943 15.2179 10.2455 15.2179 9.9925C15.2179 9.73952 15.1539 9.49065 15.0319 9.26904C14.9098 9.04743 14.7338 8.86028 14.52 8.725L2.31 0.97C2.08376 0.823666 1.82221 0.74111 1.55295 0.73104C1.28369 0.72097 1.0167 0.783759 0.780158 0.912784C0.543612 1.04181 0.346275 1.23229 0.208965 1.46412C0.0716547 1.69596 -0.000537951 1.96055 3.01805e-06 2.23Z" fill="white"/>
+                </svg>
+                
+            </button>
         </div>
       </section>
     </section>
@@ -345,13 +356,64 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
   <script>
+
+
+
+const changeDescription = () => {
+  active = document.querySelector('.carousel-item.active'); 
+  console.log(active);
+  switch(active.dataset.employee) {
+      case "1": 
+        document.querySelector('.bod-info h3').innerText = "Son Goku";
+        document.querySelector('.bod-info h5').innerText = "Super Saiyan 1"
+        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
+        break;
+      case "2": 
+        document.querySelector('.bod-info h3').innerText = "Son Gohan";
+        document.querySelector('.bod-info h5').innerText = "Super Saiyan 1"
+        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
+        break;
+      case "3": 
+        document.querySelector('.bod-info h3').innerText = "Vegeta";
+        document.querySelector('.bod-info h5').innerText = "Super Saiyan Grade 2"
+        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
+        break;
+      case "4": 
+        document.querySelector('.bod-info h3').innerText = "Broly";
+        document.querySelector('.bod-info h5').innerText = "Legendary Super Saiyan"
+        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
+        break;
+      case "5": 
+        document.querySelector('.bod-info h3').innerText = "Frieza";
+        document.querySelector('.bod-info h5').innerText = "Golden Form"
+        // document.querySelector('.bod-info p').innerText = "Super Saiyan 1"
+        break;
+      default: 
+        break;
+    }
+}
     var elems = document.querySelectorAll('.carousel');
-var instances = M.Carousel.init(elems, 50);
+var instances = M.Carousel.init(elems, {
+  onCycleTo: function() {
+    changeDescription()
+  }
+});
 var instance = M.Carousel.getInstance(elems[0]);
 const nextcarousel = document.querySelector('.next');
 const prevcarousel = document.querySelector('.prev');
-nextcarousel.addEventListener('click', () => instance.next())
-prevcarousel.addEventListener('click', () => instance.prev())
+
+
+
+
+
+
+nextcarousel.addEventListener('click', () => {
+  instance.next();
+})
+prevcarousel.addEventListener('click', () => {
+  instance.prev()
+})
+
 
   </script>
   

@@ -1489,59 +1489,76 @@ header.active {
   }
 }
 
-.missionvalues {
-  margin-top: 50px;
-  padding: 0 90px;
-}
-
-.missionvalues .olcards {
-  margin-top: 50px;
-  list-style: none;
-  counter-reset: cardCount;
-  font-family: sans-serif;
+.carousel-bod {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  --cardsGap: 1rem;
-  gap: var(--cardsGap);
-  padding-bottom: var(--cardsGap);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
 }
 
-.missionvalues .olcards li {
-  counter-increment: cardCount;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: white;
-  --labelOffset: 1rem;
-  --arrowClipSize: 1.5rem;
-  margin-top: var(--labelOffset);
-  width: 48%;
+.carousel-bod .carousel {
+  overflow: unset;
+  width: 55%;
+  -webkit-perspective: unset;
+          perspective: unset;
 }
 
-.missionvalues .olcards li:last-child {
-  width: 100%;
+.carousel-bod .carousel .carousel-item > img {
+  width: 150%;
+  margin-left: -50px;
+  margin-top: -110px;
 }
 
-.missionvalues .olcards li::before {
-  content: counter(cardCount, decimal-leading-zero);
-  background: #8E1B2F;
-  color: white;
-  font-size: 2em;
-  font-weight: 700;
-  -webkit-transform: translateY(calc(-1 * var(--labelOffset)));
-          transform: translateY(calc(-1 * var(--labelOffset)));
-  margin-right: calc(-1 * var(--labelOffset));
-  z-index: 1;
+.carousel-bod .carousel .carousel-item.active img {
+  -webkit-transition: all 500ms ease 0s;
+  transition: all 500ms ease 0s;
+}
+
+.carousel-bod .bod-info {
+  margin-top: 270px;
+  margin-top: -40px;
+  width: 460px;
+  padding: 40px 20px 20px 20px;
+  background-image: url("../dsi/component5.png");
+  background-position: 325px -40px;
+  background-size: 350px;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 12px 9px #ccc;
+          box-shadow: 0px 12px 9px #ccc;
+}
+
+.carousel-bod .bod-info p {
+  line-height: 2;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.carousel-bod .bod-info h5 {
+  background: #C9313A;
+  display: inline-block;
+  padding: 5px 30px 2px 5px;
+  border-radius: 0 50px 50px 0;
+  color: #eee;
+  font-size: 20px;
+  margin: unset;
+  margin-top: 15px;
+}
+
+.carousel-bod .bod-info h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin: unset;
+}
+
+.carousel-bod .bod-info .menu-button {
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1551,505 +1568,205 @@ header.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-inline: 0.5em;
-  width: 50px;
-  height: 80px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50px;
-          flex: 0 0 50px;
-  -webkit-box-shadow: -8px 6px 5px gray;
-          box-shadow: -8px 6px 5px gray;
+  gap: 10px;
 }
 
-.missionvalues .olcards li .content {
-  width: 100%;
-  background-color: #C9313A;
-  --inlinePadding: 1em;
-  --boxPadding: 0.5em;
-  display: -ms-grid;
-  display: grid;
-  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
-      grid-template-areas: "text text" "text text";
-  gap: 0.25em 1em;
-  -webkit-clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
-          clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.missionvalues .olcards li .content::before {
-  content: "";
-  position: absolute;
-  width: var(--labelOffset);
-  height: var(--labelOffset);
-  background: var(--cardColor);
-  left: 0;
-  bottom: 0;
-  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 0 100%);
-  -webkit-filter: brightness(0.75);
-          filter: brightness(0.75);
-}
-
-.missionvalues .olcards li .content::after {
-  content: "";
-  position: absolute;
-  height: var(--cardsGap);
-  width: var(--cardsGap);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), color-stop(50%, transparent));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
-  left: 0;
-  top: 100%;
-}
-
-.missionvalues .olcards li .content .text {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: text;
-  font-size: 15px;
-  text-align: left;
-}
-
-.visi {
-  margin-top: 50px;
-  padding: 100px 0 65px;
-  background: #C9313A;
-  color: white;
-}
-
-.visi .inner-box {
-  position: relative;
-  width: 75%;
-  margin: auto;
-}
-
-.visi .inner-box svg {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-}
-
-.visi .inner-box h5 {
-  font-size: 35px;
-  text-align: justify;
-}
-
-.visi .inner-box p {
-  margin-top: 15px;
-  font-size: 25px;
-  text-align: right;
-}
-
-.visi .inner-box svg:first-child {
-  left: -70px;
-  top: -40px;
-}
-
-.cards {
-  margin-top: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: black;
-  color: white;
-}
-
-.cards .card::before {
-  content: '';
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-}
-
-.cards .card.c1 {
-  background-image: url("../images/hero1.jpg");
-}
-
-.cards .card.c2 {
-  background-image: url("../images/hero2.jpg");
-}
-
-.cards .card.c3 {
-  background-image: url("../images/hero3.jpg");
-}
-
-.cards .card.c4 {
-  background-image: url("../images/hero4.jpg");
-}
-
-.cards .card.c5 {
-  background-image: url("../images/hero5.jpg");
-}
-
-.cards .card.unhover-transition .card-body {
-  -webkit-transition: opacity 500ms ease 0s, width 500ms ease 500ms;
-  transition: opacity 500ms ease 0s, width 500ms ease 500ms;
-}
-
-.cards .card.hover-transition .card-body {
-  -webkit-transition: opacity 500ms ease 500ms, width 500ms ease 0s;
-  transition: opacity 500ms ease 500ms, width 500ms ease 0s;
-}
-
-.cards .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 30px;
-  gap: 40px;
-  height: 110px;
-  -webkit-transition: opacity 1s ease 1s, width 1s ease 0s;
-  transition: opacity 1s ease 1s, width 1s ease 0s;
-  background-size: cover;
-  position: relative;
-  background-position: center center;
-}
-
-.cards .card-header {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
-  position: relative;
-  z-index: 1;
-}
-
-.cards .card-header h2 {
-  font-size: 30px;
-}
-
-.cards .card-header svg {
+.carousel-bod .bod-info .menu-button button {
+  cursor: pointer;
   width: 40px;
   height: 40px;
+  background: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 5px #ddd;
+          box-shadow: 0px 5px 5px #ddd;
+  border: unset;
+  outline: unset;
+  background: #8E1B2F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: unset;
 }
 
-.cards .card-body {
-  height: 53px;
-  width: 0;
-  opacity: 0;
-  position: relative;
-  z-index: 1;
+.carousel-bod .bod-info .menu-button button svg {
+  width: 12px;
+  height: 12px;
 }
 
-.cards .card-body p {
-  text-align: right;
-  font-size: 18px;
+@media screen and (max-width: 1890px) {
+  .carousel-bod .carousel {
+    -webkit-perspective: 5000px;
+            perspective: 5000px;
+  }
 }
 
-.cards .card:hover .card-body {
-  height: unset;
-  opacity: 1;
-  width: 800px;
+@media screen and (max-width: 1780px) {
+  .carousel-bod .carousel {
+    -webkit-perspective: 2000px;
+            perspective: 2000px;
+  }
+}
+
+@media screen and (max-width: 1670px) {
+  .carousel-bod .carousel {
+    -webkit-perspective: 1200px;
+            perspective: 1200px;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .carousel-bod .carousel {
+    -webkit-perspective: 800px;
+            perspective: 800px;
+  }
 }
 
 @media screen and (max-width: 1440px) {
-  .visi {
-    padding: 80px 0 40px;
-  }
-  .visi .inner-box svg {
-    width: 40px;
-    height: 40px;
-  }
-  .visi .inner-box h5 {
-    font-size: 28px;
-  }
-  .visi .inner-box p {
-    font-size: 18px;
+  .carousel-bod .carousel {
+    -webkit-perspective: 500px;
+            perspective: 500px;
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .olcards li::before {
-    font-size: 1.5em;
-    width: 40px;
-    height: 70px;
+@media screen and (max-width: 1340px) {
+  .carousel-bod {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .olcards li {
-    width: 49%;
+}
+
+@media screen and (max-width: 1250px) {
+  .carousel-bod .bod-info {
+    width: 360px;
+    border-radius: 10px;
+    background-position: 283px -9px;
+    background-size: 213px;
   }
-  .olcards li .content .text {
+  .carousel-bod .bod-info h3 {
+    font-size: 23px;
+  }
+  .carousel-bod .bod-info h5 {
+    font-size: 18px;
+  }
+  .carousel-bod .bod-info p {
     font-size: 14px;
+  }
+  .carousel-bod .carousel .carousel-item > img {
+    width: 120%;
+    margin-top: -65px;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .missionvalues {
-    margin-top: 50px;
-    padding: 0 50px;
+  .carousel-bod {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .carousel-bod .carousel {
+    -webkit-perspective: 400px;
+            perspective: 400px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .cards .card {
-    gap: 15px;
-    height: 130px;
-  }
-  .cards .card-header h2 {
-    font-size: 24px;
-  }
-  .cards .card-body p {
-    font-size: 15px;
-  }
-  .cards .card:hover .card-body {
-    width: 440px;
+  .carousel-bod .carousel {
+    -webkit-perspective: 250px;
+            perspective: 250px;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  .missionvalues .olcards {
-    margin-top: 5vw;
-    gap: 1.1vw;
+@media screen and (max-width: 870px) {
+  .carousel-bod {
+    margin-top: 10px;
   }
-  .missionvalues .olcards li {
-    margin-top: 1.6vw;
+  .carousel-bod .carousel {
+    -webkit-perspective: 200px;
+            perspective: 200px;
   }
-  .missionvalues .olcards li::before {
-    font-size: 2.3vw;
-    -webkit-transform: translate(0, -pxToVw(17, 1000));
-            transform: translate(0, -pxToVw(17, 1000));
-    margin-right: -pxToVw(16, 1000);
-    padding-inline: 1.6vw;
-    width: 4vw;
-    height: 7vw;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 5vw;
-            flex: 0 0 5vw;
-    -webkit-box-shadow: -0.8vw 0.6vw 0.5vw gray;
-            box-shadow: -0.8vw 0.6vw 0.5vw gray;
+  .carousel-bod .carousel .carousel-item > img {
+    width: 100%;
+    margin-top: -50px;
   }
-  .missionvalues .olcards li .content {
-    padding: 1vw 3vw;
-    gap: unset;
+  .carousel-bod .bod-info {
+    width: 320px;
+    background-position: 250px 0px;
+    background-size: 198px;
   }
-  .missionvalues .olcards li .content::after {
-    width: 1.8vw;
-    height: 4vw;
-  }
-  .missionvalues .olcards li .content .text {
-    font-size: 1.4vw;
-  }
-}
-
-@media screen and (max-width: 880px) {
-  .visi {
-    padding: 80px 0 40px;
-  }
-  .visi .inner-box svg {
-    width: 40px;
-    height: 40px;
-  }
-  .visi .inner-box h5 {
-    font-size: 23px;
-  }
-  .visi .inner-box p {
+  .carousel-bod .bod-info h5 {
     font-size: 15px;
   }
-  .visi .inner-box svg:first-child {
-    left: -50px;
-    top: -26px;
+  .carousel-bod .bod-info h3 {
+    font-size: 21px;
+  }
+  .carousel-bod .bod-info p {
+    font-size: 13px;
   }
 }
 
 @media screen and (max-width: 785px) {
-  .visi {
-    padding: 50px 0 40px;
-  }
-  .visi .inner-box svg {
-    width: 25px;
-    height: 25px;
-  }
-  .visi .inner-box h5 {
-    font-size: 20px;
-    text-align: left;
-  }
-  .visi .inner-box p {
-    font-size: 13px;
-    margin-top: 20px;
-  }
-  .visi .inner-box svg:first-child {
-    left: -39px;
-    top: -20px;
-  }
-  .missionvalues {
-    padding: 0 20px;
-  }
-  .missionvalues .olcards {
-    margin-top: 50px;
-    gap: 11px;
+  .carousel-bod {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .missionvalues .olcards li {
-    margin-top: 16px;
+  .carousel-bod .carousel {
+    -webkit-perspective: unset;
+            perspective: unset;
+  }
+  .carousel-bod .bod-info {
     width: 100%;
+    background-position: 121% -8px;
+    background-size: 198px;
+    -webkit-box-shadow: 0 0 8px #ccc;
+            box-shadow: 0 0 8px #ccc;
+    border-radius: unset;
+    margin-top: -69px;
   }
-  .missionvalues .olcards li::before {
-    font-size: 23px;
-    -webkit-transform: translate(0, -17px);
-            transform: translate(0, -17px);
-    margin-right: -16px;
-    padding-inline: 16px;
-    width: 50px;
-    height: 80px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50px;
-            flex: 0 0 50px;
-    -webkit-box-shadow: -8px 6px 5px gray;
-            box-shadow: -8px 6px 5px gray;
+}
+
+@media screen and (max-width: 415px) {
+  .carousel-bod .bod-info {
+    background-position: 161% -8px;
   }
-  .missionvalues .olcards li .content {
-    padding: 10px 30px;
-    gap: unset;
+}
+
+@media screen and (max-width: 360px) {
+  .carousel-bod .bod-info {
+    background-position: 200% -8px;
   }
-  .missionvalues .olcards li .content::after {
-    width: 18px;
-    height: 40px;
-  }
-  .missionvalues .olcards li .content .text {
-    font-size: 14px;
-  }
-  .missionvalues.mv1 {
-    margin-top: 72px;
-  }
-  .cards {
-    background: unset;
-  }
-  .cards .card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 320px;
-  }
-  .cards .card .card-header {
-    -webkit-box-flex: unset;
-        -ms-flex: unset;
-            flex: unset;
-  }
-  .cards .card .card-header h2 {
-    font-size: 20px;
-  }
-  .cards .card .card-header svg {
-    width: 20px;
-    height: 20px;
-  }
-  .cards .card .card-body {
-    width: unset;
-    height: unset;
-    opacity: 1;
-  }
-  .cards .card .card-body p {
-    text-align: center;
-    font-size: 14px;
-  }
-  .cards .card:hover .card-body {
+}
+
+@media only screen and (min-width: 993px) {
+  .container {
     width: unset;
   }
 }
 
-@media screen and (max-width: 550px) {
-  .missionvalues .olcards li::before {
-    width: 30px;
-    height: 60px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 30px;
-            flex: 0 0 30px;
-    font-size: 17px;
-    margin-right: -20px;
-  }
-  .missionvalues .olcards li .content .text {
-    font-size: 13px;
-  }
-  .visi {
-    padding: 75px 0 40px;
-  }
-  .visi .inner-box {
-    width: 90%;
-  }
-  .visi .inner-box svg:first-child {
-    left: 0px;
-    top: -35px;
+@media only screen and (min-width: 601px) {
+  .container {
+    width: unset;
   }
 }
 
-@media screen and (max-width: 400px) {
-  .missionvalues {
-    padding: 0 5vw;
-  }
-  .missionvalues .olcards {
-    margin-top: 12.5vw;
-    gap: 2.75vw;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .missionvalues .olcards li {
-    margin-top: 4vw;
+@media only screen and (min-width: 250px) {
+  .container {
     width: 100%;
   }
-  .missionvalues .olcards li::before {
-    font-size: 4.25vw;
-    -webkit-transform: translate(0, -4.25vw);
-            transform: translate(0, -4.25vw);
-    margin-right: -5vw;
-    padding-inline: 4vw;
-    width: 7.5vw;
-    height: 15vw;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 7.5vw;
-            flex: 0 0 7.5vw;
-    -webkit-box-shadow: -2vw 1.5vw 1.25vw gray;
-            box-shadow: -2vw 1.5vw 1.25vw gray;
-  }
-  .missionvalues .olcards li .content {
-    padding: 2.5vw 7.5vw;
-    gap: unset;
-  }
-  .missionvalues .olcards li .content::after {
-    width: 4.5vw;
-    height: 10vw;
-  }
-  .missionvalues .olcards li .content .text {
-    font-size: 3.25vw;
+}
+
+@media only screen and (min-width: 0px) {
+  .container {
+    width: 100%;
   }
 }
-/*# sourceMappingURL=mission.css.map */
+/*# sourceMappingURL=carousel.css.map */
