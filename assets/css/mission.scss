@@ -726,6 +726,42 @@ $size: 400;
 
 }
 
+@media screen and (max-width: 785px) {
+    .carousel-bod {
+        flex-direction:column;
+        .carousel {
+            perspective: unset; 
+        }
+        .bod-info {
+            width: 100%; 
+            background-position: 121% -8px;
+            background-size: 198px;
+            box-shadow: 0 0 8px #ccc;
+            border-radius: unset; 
+            margin-top: -69px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 415px) {
+    .carousel-bod {
+        .bod-info {
+            background-position: 161% -8px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .carousel-bod {
+        .bod-info {
+            background-position: 200% -8px;
+        }
+    }
+
+}
+
 // Materalize option
 @media only screen and (min-width: 993px) {
     .container {
@@ -736,5 +772,16 @@ $size: 400;
 @media only screen and (min-width: 601px) {
     .container {
         width: unset;
+    }
+}
+
+@media only screen and (min-width: 250px) {
+    .container {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 0px) {
+    .container {
+        width: 100%;
     }
 }
