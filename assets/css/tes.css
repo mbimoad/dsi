@@ -1253,6 +1253,10 @@ header.active {
     opacity: unset;
     pointer-events: unset;
     height: unset;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
   }
   header .nav-bar .navigation li .sub-menu {
     margin-top: 10px;
@@ -1273,9 +1277,17 @@ header.active {
   }
   header .nav-bar .navigation li .sub-menu a {
     padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 25px;
   }
   header .nav-bar .navigation li .menu {
     height: unset;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    /* border: 1px solid black; */
+    padding-left: 25px;
   }
   header .nav-bar .navigation .nav-items {
     position: relative;
