@@ -284,76 +284,7 @@ $titlefont: 50px;
 }
 
 
-.service { 
-	
-	.service-boxs {
-		margin-top: 50px; 
-		display: flex;
-		gap: 60px; 
-		position:relative; 
-		z-index: 1;
-		.service-box:hover {
-			.service-overlay {
-				width: 100%; 
-				height: 100%; 
-				background: $red1; 
-			} .service-icon, h5, p {
-				z-index: 1;
-				color:white;
-			} .service-icon {
-				svg {
-					filter: invert(11) brightness(6.5);
-				}
-			}
-		}
-		.service-box {
-			position:relative;
-			.service-overlay {
-				transition: all 200ms ease 0s;
-				width: 70px; 
-				height: 70px; 
-				background: #ffc5cf;
-				position:absolute;
-				bottom:0; 
-				right: 0; 
-			}
-			box-shadow: 0 0 10px 0 #999;
-			background:white; 
-			padding: 70px 30px;
-			display: flex;
-			flex-direction:column;
-			justify-content: center;
-			align-items:center; 
-			text-align: center;
-			gap: 20px; 
-			.service-icon {
-				width: 70px; 
-				height: 70px; 
-				background: #ffc5cf; 
-				display:flex;
-				justify-content:center;
-				align-items:center;
-				svg {
-					width: 50px; 
-					height: 50px; 
-	
-				} 
-			} h5 {
-				font-size: 21px;
-			} p {
-				font-size: 0.9em;
-			}
-		}
-		.service-box:nth-child(2) {
-			.service-icon {
-				svg {
-					width: 30px; 
-					height: 30px; 
-				}
-			}
-		}
-	}
-}
+
 .button {
 	padding: 5px 30px; 
 	background: $red3; 
@@ -528,19 +459,7 @@ $titlefont: 50px;
 
 
 @media screen and (max-width: 1400px) {
-	.service {
-		.service-boxs {
-			gap: 20px; 
-			.service-box {
-				padding: 50px 20px;
-				.service-overlay {
-					width: 40px; 
-					height: 40px; 
-				} 
-			} 
-		}
-	}
-
+	
 
 	.about {
 		&-detail {
@@ -642,25 +561,6 @@ $titlefont: 50px;
 @media screen and (max-width: 1000px) {
 	$titlefont: 40px;
 
-
-	.service {
-		.service-boxs {
-			 .service-box {
-				.service-icon {
-					width: 60px; 
-					height: 60px; 
-					svg {
-						width: 40px; 
-						height: 40px;
-					}
-				} h5 {
-					font-size: 16px; 
-				} p {
-					font-size: 12px; 
-				}
-			}
-		}
-	}
 
 
 
@@ -820,21 +720,6 @@ $p785: 20px;
 
 
 
-	.service {
-		.service-boxs {
-			flex-direction:column; 
-			 .service-box {
-				width: 70%;
-				margin: auto;
-				.service-icon {
-				} h5 {
-					font-size: 23px; 
-				} p {
-					font-size: 17px; 
-				}
-			}
-		}
-	}
 	.about.section {
 		padding:unset;
 	}
@@ -949,21 +834,7 @@ $p785: 20px;
 	
 }
 @media screen and (max-width: 590px) {
-	.service {
-		.service-boxs {
-			flex-direction:column; 
-			.service-box {
-				width: 100%;
-				margin: auto;
-				h5 {
-					font-size : 18px; 
 
-				} p {
-					font-size: 12px; 
-				}
-			}
-		}
-	}
 
 	.swiper-slide {
 		.text-content {

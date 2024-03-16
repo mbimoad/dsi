@@ -1,0 +1,132 @@
+@import './main';
+
+
+.plan__container.section {
+    padding: 100px 90px 50px; 
+}
+
+.business {
+    padding: 0 100px; 
+    display: flex;
+    flex-direction:column;
+
+    .boxs {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        .box {
+            height: 414px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .circle {
+                background: $red3;
+                width: 250px; 
+                height: 250px;
+                margin: auto;
+                border-radius: 50%;
+                position:relative;
+                z-index: 99;
+                
+                svg {
+                    width: 100px; 
+                    height: 100px; 
+                    transform:translate(0, 70%);
+
+                }
+            }
+
+            .circle::before {
+                content: '';
+                width: 879px;
+                height: 4px;
+                background: $red3;
+                position: absolute;
+                bottom: -50%;
+                transform: rotate(25deg);
+            }
+        }
+
+        
+        .box:first-child {
+            position:relative;
+            width: 50%; 
+            text-align:center;
+        
+        } .box:last-child {
+            width: 50%; 
+            text-align:center;
+            h2 {
+                font-size: 30px; 
+                margin-bottom: 15px;
+                color: $red3;
+            } p {
+                font-size: 16px;
+                line-height: 2;
+            } h5 {
+                margin: 15px 0;
+                font-size: 23px;
+                color: $red1;  
+            }
+            
+        } .box.list {
+            text-align: left;
+            align-items: flex-start;
+            h2 {
+                // text-align: center;
+            } ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px; 
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .number {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 30px;
+                        height: 30px; 
+                        border-radius:5px;
+                        background: $red3;
+                        color:white; 
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    } .boxs:nth-child(even) {
+        flex-direction: row-reverse;
+        .box {
+            .circle {
+                background:black;
+            }    .circle::before {
+                content: '';
+                width: 879px;
+                height: 4px;
+                background: black;
+                position: absolute;
+                bottom: -25%;
+                -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+                right: 100px;
+
+            }
+        }
+    } .boxs:last-child  {
+        .box {
+            .circle::before {
+                display:none;
+            } 
+            
+            // align-items: flex-end;
+            // ul {
+            //     li {
+            //         flex-direction: row-reverse;
+            //     }
+            // }
+        }
+    }
+}

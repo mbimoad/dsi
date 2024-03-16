@@ -1638,104 +1638,135 @@ header.active {
   }
 }
 
-.carousel-bod {
+.plan__container.section {
+  padding: 100px 90px 50px;
+}
+
+.business {
+  padding: 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.business .boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
 }
 
-.carousel-bod .carousel {
-  overflow: unset;
-  width: 55%;
-  -webkit-perspective: unset;
-          perspective: unset;
-}
-
-.carousel-bod .carousel .carousel-item > img {
-  width: 150%;
-  margin-left: -50px;
-  margin-top: -110px;
-  border-radius: 20px;
-}
-
-.carousel-bod .carousel .carousel-item {
-  padding: 10px;
-}
-
-.carousel-bod .carousel .carousel-item.active img {
-  -webkit-transition: all 500ms ease 0s;
-  transition: all 500ms ease 0s;
-}
-
-.carousel-bod .bod-info {
-  margin-top: 270px;
-  margin-top: -40px;
-  width: 460px;
-  padding: 40px 20px 20px 20px;
-  background-image: url("../dsi/component5.png");
-  background-position: 325px -40px;
-  background-size: 350px;
-  background-repeat: no-repeat;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 12px 9px #ccc;
-          box-shadow: 0px 12px 9px #ccc;
-}
-
-.carousel-bod .bod-info p {
-  line-height: 2;
-  font-size: 16px;
-  margin-top: 15px;
-}
-
-.carousel-bod .bod-info h5 {
-  background: #C9313A;
-  display: inline-block;
-  padding: 5px 30px 2px 5px;
-  border-radius: 0 50px 50px 0;
-  color: #eee;
-  font-size: 20px;
-  margin: unset;
-  margin-top: 15px;
-}
-
-.carousel-bod .bod-info h3 {
-  font-size: 28px;
-  font-weight: bold;
-  margin: unset;
-}
-
-.carousel-bod .bod-info .menu-button {
-  margin-top: 15px;
+.business .boxs .box {
+  height: 414px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.business .boxs .box .circle {
+  background: #8E1B2F;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  z-index: 99;
+}
+
+.business .boxs .box .circle svg {
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translate(0, 70%);
+          transform: translate(0, 70%);
+}
+
+.business .boxs .box .circle::before {
+  content: '';
+  width: 879px;
+  height: 4px;
+  background: #8E1B2F;
+  position: absolute;
+  bottom: -50%;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+.business .boxs .box:first-child {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+
+.business .boxs .box:last-child {
+  width: 50%;
+  text-align: center;
+}
+
+.business .boxs .box:last-child h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #8E1B2F;
+}
+
+.business .boxs .box:last-child p {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.business .boxs .box:last-child h5 {
+  margin: 15px 0;
+  font-size: 23px;
+  color: #C9313A;
+}
+
+.business .boxs .box.list {
+  text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.business .boxs .box.list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.business .boxs .box.list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
 }
 
-.carousel-bod .bod-info .menu-button button {
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  background: white;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 5px 5px #ddd;
-          box-shadow: 0px 5px 5px #ddd;
-  border: unset;
-  outline: unset;
-  background: #8E1B2F;
+.business .boxs .box.list ul li .number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1745,182 +1776,38 @@ header.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: unset;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #8E1B2F;
+  color: white;
+  font-size: 22px;
 }
 
-.carousel-bod .bod-info .menu-button button svg {
-  width: 12px;
-  height: 12px;
+.business .boxs:nth-child(even) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-@media screen and (max-width: 1890px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 5000px;
-            perspective: 5000px;
-  }
+.business .boxs:nth-child(even) .box .circle {
+  background: black;
 }
 
-@media screen and (max-width: 1780px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 2000px;
-            perspective: 2000px;
-  }
+.business .boxs:nth-child(even) .box .circle::before {
+  content: '';
+  width: 879px;
+  height: 4px;
+  background: black;
+  position: absolute;
+  bottom: -25%;
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  right: 100px;
 }
 
-@media screen and (max-width: 1670px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 1200px;
-            perspective: 1200px;
-  }
+.business .boxs:last-child .box .circle::before {
+  display: none;
 }
-
-@media screen and (max-width: 1560px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 800px;
-            perspective: 800px;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 500px;
-            perspective: 500px;
-  }
-}
-
-@media screen and (max-width: 1340px) {
-  .carousel-bod {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .carousel-bod .bod-info {
-    width: 360px;
-    border-radius: 10px;
-    background-position: 283px -9px;
-    background-size: 213px;
-  }
-  .carousel-bod .bod-info h3 {
-    font-size: 23px;
-  }
-  .carousel-bod .bod-info h5 {
-    font-size: 18px;
-  }
-  .carousel-bod .bod-info p {
-    font-size: 14px;
-  }
-  .carousel-bod .carousel .carousel-item > img {
-    width: 120%;
-    margin-top: -65px;
-    margin-left: 0;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .carousel-bod {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .carousel-bod .carousel {
-    -webkit-perspective: 400px;
-            perspective: 400px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .carousel-bod .carousel {
-    -webkit-perspective: 250px;
-            perspective: 250px;
-  }
-}
-
-@media screen and (max-width: 870px) {
-  .carousel-bod {
-    margin-top: -35px;
-  }
-  .carousel-bod .carousel {
-    -webkit-perspective: 200px;
-            perspective: 200px;
-  }
-  .carousel-bod .carousel .carousel-item > img {
-    width: 100%;
-    margin-top: -50px;
-  }
-  .carousel-bod .bod-info {
-    width: 320px;
-    background-position: 250px 0px;
-    background-size: 198px;
-  }
-  .carousel-bod .bod-info h5 {
-    font-size: 15px;
-  }
-  .carousel-bod .bod-info h3 {
-    font-size: 21px;
-  }
-  .carousel-bod .bod-info p {
-    font-size: 13px;
-  }
-}
-
-@media screen and (max-width: 785px) {
-  .carousel-bod {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .carousel-bod .carousel {
-    -webkit-perspective: unset;
-            perspective: unset;
-  }
-  .carousel-bod .bod-info {
-    width: 100%;
-    background-position: 121% -8px;
-    background-size: 198px;
-    -webkit-box-shadow: 0 0 8px #ccc;
-            box-shadow: 0 0 8px #ccc;
-    border-radius: unset;
-    margin-top: -69px;
-  }
-}
-
-@media screen and (max-width: 415px) {
-  .carousel-bod .bod-info {
-    background-position: 161% -8px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .carousel-bod .bod-info {
-    background-position: 200% -8px;
-  }
-}
-
-@media only screen and (min-width: 993px) {
-  .container {
-    width: unset;
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  .container {
-    width: unset;
-  }
-}
-
-@media only screen and (min-width: 250px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 0px) {
-  .container {
-    width: 100%;
-  }
-}
-/*# sourceMappingURL=carousel.css.map */
+/*# sourceMappingURL=business.css.map */
