@@ -2034,4 +2034,27 @@ header.active {
             flex-direction: column;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .business .boxs .box:last-child h2 {
+    font-size: 25px;
+  }
+  .business .boxs .box:last-child h5 {
+    font-size: 19px;
+  }
+  .business .boxs .box:last-child p {
+    font-size: 14px;
+  }
+  .business .boxs .box.list ul li {
+    gap: 5px;
+  }
+  .business .boxs .box.list ul li span.deskripsi {
+    font-size: 14px;
+  }
+  .business .boxs .box.list ul li span.number {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+  }
+}
 /*# sourceMappingURL=business.css.map */
