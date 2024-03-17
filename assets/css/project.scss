@@ -197,6 +197,9 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
                                 height: 15px; 
                             }
                         }
+                    } .time {
+                        justify-content: flex-end; 
+                        width: 105px; 
                     }
                 }
             }
@@ -516,6 +519,8 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
                                     height: 11px; 
                                 }
                             }
+                        } .time {
+                            width: 85px; 
                         }
                     }
                 }
@@ -618,6 +623,8 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
                                     height: 9px; 
                                 }
                             }
+                        } .time {
+                            width: 75px; 
                         }
                     }
                 }

@@ -1923,6 +1923,13 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   height: 15px;
 }
 
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 105px;
+}
+
 .parent-box .frame-box .frame-img .floating-detail {
   position: absolute;
   left: 50%;
@@ -2234,6 +2241,9 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
     width: 11px;
     height: 11px;
   }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 85px;
+  }
   .parent-box .frame-box .frame-img img.indomap {
     width: 500px;
   }
@@ -2322,6 +2332,9 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
     width: 9px;
     height: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 75px;
   }
   .parent-box .frame-box .frame-img img.indomap {
     width: 400px;
