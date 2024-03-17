@@ -1,0 +1,445 @@
+@import "./main";
+
+// $x: 142;
+// $y: 27; 
+// $z: 46;
+
+$x: 255;
+$y: 255;
+$z: 255;
+
+@keyframes pinAnimate {
+    from {
+        transform: translate(0,0);
+    } to {
+        transform: translate(0,-5px);
+    }
+}
+
+@keyframes pinCircle {
+    0% {
+        transform: scale(0);
+        opacity: 0; 
+    }
+    30% {
+        transform: scale(1);
+        opacity: 1; 
+        background: rgba($x, $y, $z, 0.643); 
+    } 60% {
+        transform: scale(1.2);
+        opacity: 1; 
+        background: rgba($x, $y, $z, 0.322); 
+    } 100% {
+        transform: scale(1.5);
+        opacity: 0; 
+        background: rgba($x, $y, $z, 0); 
+    }
+}
+
+button.pinbtn {
+    position:absolute; 
+    right: 20px;
+    top:60px; 
+    border-radius: 30px; 
+    padding: 5px 10px; 
+    background: $red3; 
+    color:white; 
+    border: unset; 
+    outline: unset; 
+    box-shadow: 2px 2px 2px #aaa;
+    cursor: pointer;  
+
+}
+
+.plan__container {
+    .section__description {
+        margin-bottom: 30px; 
+    }
+}
+
+
+
+div.dt-container .dt-paging .dt-paging-button {
+    font-size: 17px; 
+    border-radius: 20%; 
+}
+
+
+div.dt-container .dt-paging .dt-paging-button.current {
+    background: $red3; 
+    color:unset;
+    color:white !important; 
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+    background: $red3; 
+    color:unset;
+    color:white !important; 
+}
+
+
+div.dt-container .dt-paging .dt-paging-button.current:hover {
+    background: $red3; 
+    color:unset;
+    color:white !important; 
+}
+
+div.dt-container select.dt-input {
+    padding: 10px;
+    font-size: 18px;
+}
+
+div.dt-container .dt-search input {
+    padding: 10px;
+    font-size: 18px;
+} div.dt-container .dt-search label {
+    margin-right: 10px;
+    color: $red3; 
+}
+
+div.dt-container .dt-length {
+    font-size: 17px; 
+    text-transform: capitalize;
+    label {
+    
+        margin-left: 10px;
+        color: $red3; 
+    }
+}
+
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_1 {
+    box-shadow: unset; 
+
+}
+
+#myTable,
+#myTable2 {
+    width: 100%; 
+    border: 1px solid;
+    margin-top: 15px; 
+    margin-bottom: 20px; 
+    box-shadow: 0px 19px 7px #ccc;
+    thead,tbody {
+        tr {
+            
+            th,td {
+                padding: 20px;
+                font-size: 18px;
+            } th:nth-child(odd) {
+                background: $red1;
+                color:white; 
+            } th:nth-child(even) {
+                background: $red3; 
+                color:white; 
+            } 
+        }
+    } 
+    
+    tbody {
+        tr:nth-child(odd) {
+            td {
+                background: rgba(250, 250, 250, 0.719); 
+                color:$red3; 
+            }
+           
+        }
+    }
+}
+
+.parent-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .frame-box {
+        border: 1px solid $red3;
+        display: inline-block;
+        margin: auto; 
+        margin-top: -120px;
+        background:white; 
+        border-radius: 30px;
+        padding: 15px;
+        box-shadow: 0px 13px 22px #aaa;
+        .frame-img {
+            position:relative;
+            border: 5px double $red3;
+            border-radius: 30px;
+            .floating-detail.floating-detail2 {
+                display:flex;
+                align-items:center; 
+                color:white; 
+                // top: unset; 
+                // bottom: -40px;
+                width: 600px; 
+                padding: 10px 20px;
+                .timestamp {
+                    display:flex;
+                    justify-content:space-between;
+                    gap:10px;
+                    width: 100%; 
+                    .detail {
+                        text-align: center;
+                        img {
+                            width: 120px;
+                        }
+                        h3 {
+                            font-size: 16px; 
+                        } h4 {
+                            font-size: 14px; 
+                        }
+                    } .date,.time {
+                        display:flex; 
+                        align-items:center; 
+                        gap: 5px; 
+                        span {
+                            font-size: 13px; 
+                            svg {
+                                width: 15px; 
+                                height: 15px; 
+                            }
+                        }
+                    }
+                }
+            }
+            .floating-detail {
+                position:absolute; 
+                left: 50%;
+                transform: translateX(-50%);
+                background: $red3;
+                top: -40px;
+                padding: 10px 50px;
+                border-radius: 15px;
+                border: 2px solid white;
+                
+                .boxs {
+                    display:flex;
+                    margin:auto; 
+                    gap: 15px;
+                
+                    .box {
+                        color:white; 
+                        text-align: center;
+                        h1 {
+                            font-size: 16px; 
+                        } p {
+                            font-size: 14px; 
+                        }
+                    }
+                }
+                
+            } 
+            .pins.active {
+                
+                opacity: 0; 
+                visiblity:none; 
+                pointer-events: none;
+
+            }
+            .pins {
+                .pin:nth-child(even) {
+                    .pinImage {
+                        animation: pinAnimate 1s ease 1s infinite alternate; 
+                    }
+                } .pin:nth-child(odd) {
+                    .pinImage {
+                        animation: pinAnimate 1s ease 0s infinite alternate; 
+                    }
+                }
+                .pin {
+                    .pinImage {
+                        cursor:pointer;
+                    }
+                    position:relative;
+                    display: inline-block;
+                    .post-map.active {
+                        pointer-events: unset; 
+                        transform: scale(1); 
+                        opacity: 1; 
+                        visibility: unset; 
+                        transition: all 200ms ease 0s;
+                    }
+                    .post-map {
+                        transition: all 200ms ease 0s;
+                        pointer-events: none;
+                        transform: scale(0); 
+                        opacity: 0; 
+                        visibility: hidden; 
+
+                        background:white; 
+                        border-radius: 10px; 
+                        position:absolute; 
+                        padding: 5px; 
+                        width: 120px;
+                        // text-align:center; 
+                        left: 30px;
+                        top: 10px;
+                        box-shadow: 0px 4px 5px #666;
+                        h3 {
+                            font-size: 12px;
+                        } p {
+                            font-size: 10px; 
+                        } img {
+                            width: 100%; 
+                            object-fit:cover; 
+                            border-radius: 10px; 
+                        } a {
+                            font-size: 8px;
+                            padding: 3px 4px; 
+                            background: $red3; 
+                            color:white; 
+                            border-radius: 5px;
+                            margin-bottom: 5px;
+                        }
+                    }
+                    .circle-pin {
+                        position: absolute;
+                        width: 23px;
+                        height: 23px;
+                        background: transparent;
+                        border-radius: 50%;
+                        left: -4px;
+                        bottom: 0px;
+                        // border: 2px solid $red3;
+                        animation: pinCircle 2s ease-in 0s infinite; 
+                        transform: scale(0);
+                        opacity: 0; 
+                    } img {
+                        position:relative; 
+                        z-index: 9;
+                       
+                    }
+                }
+                .pin1 {
+                    transform: translate(100px, 180px);
+                } .pin2 {
+                    transform: translate(300px, 180px);
+                }
+            }
+        }
+        
+        .frame-detail {
+            text-align: center;
+            h3 {
+                font-size: 30px; 
+            } h4 {
+                padding: 3px 10px;
+                background: $red3;
+                border-radius: 30px;
+                display: inline-block;
+                color:white; 
+    
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .parent-box {
+        .frame-box {
+            .frame-img {
+                img.indomap {
+                    width: 700px; 
+                }  .floating-detail.floating-detail2 {
+                    width: 500px;
+                }
+
+                .pins {
+                    .pin1 {
+                        transform: translate(100px, 150px);
+                    } .pin2 {
+                        transform: translate(250px, 150px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #myTable, 
+    #myTable2 {
+        thead,tbody {
+            tr {
+                th,td {
+                    padding: 15px; 
+                    font-size: 14px; 
+                } 
+            }
+        }
+    }
+
+    div.dt-container .dt-paging .dt-paging-button {
+        font-size: 14px; 
+        border-radius: 20%; 
+    } div.dt-container select.dt-input {
+        padding: 7px;
+        font-size: 14px;
+    } div.dt-container .dt-search input {
+        padding: 7px;
+        font-size: 14px;
+    } div.dt-container .dt-search label {
+        margin-right: 7px;
+        color: $red3; 
+    } div.dt-container .dt-length {
+        font-size: 14px; 
+        text-transform: capitalize;
+        label {
+            margin-left: 7px;
+            color: $red3; 
+        }
+    }
+    
+}
+
+@media screen and (max-width: 880px) {
+
+    button.pinbtn {
+        font-size: 10px; 
+    }
+
+    .parent-box {
+        .frame-box {
+            margin-top: -50px;
+            .frame-img {
+                .pins {
+                    .pin {
+                        .post-map {
+                            width: 100px;
+                            h3 {
+                               font-size: 10px; 
+                            } p {
+                                display:none;
+                            }
+                        }
+                    }
+
+                    .pin1 {
+                        transform: translate(100px, 120px);
+                    } .pin2 {
+                        transform: translate(250px, 120px);
+                    }
+                }
+                img.indomap {
+                    width: 620px; 
+                }  .floating-detail.floating-detail2 {
+                   .timestamp {
+                       .detail {
+                           img {
+                               width: 90px;
+                           }
+                       }
+                   }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    #myTable2_wrapper > div:nth-child(3) > div.dt-layout-cell.dt-end > div,
+    #myTable_wrapper > div:nth-child(3) > div.dt-layout-cell.dt-end > div {
+        margin-top: 20px; 
+    } 
+
+}
