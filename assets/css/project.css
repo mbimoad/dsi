@@ -2192,6 +2192,9 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
     -webkit-box-shadow: 0px 15px 10px #aaa;
             box-shadow: 0px 15px 10px #aaa;
   }
+  .plan__container {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2249,6 +2252,16 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   }
 }
 
+@media screen and (max-width: 690px) {
+  .plan__container .section__header {
+    font-size: 30px;
+    font-weight: unset;
+  }
+  .plan__container .section__description {
+    line-height: 2;
+  }
+}
+
 @media screen and (max-width: 650px) {
   div.dt-container .dt-paging .dt-paging-button {
     font-size: 12px;
@@ -2273,6 +2286,10 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   div.dt-container .dt-length label {
     margin-left: 3px;
     color: #8E1B2F;
+  }
+  #myTable_info,
+  #myTable2_info {
+    font-size: 12px;
   }
   #myTable_wrapper > div:nth-child(1) > div.dt-layout-cell.dt-end > div > label,
   #myTable2_wrapper > div:nth-child(1) > div.dt-layout-cell.dt-end > div > label {
@@ -2397,11 +2414,16 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 }
 
 @media screen and (max-width: 400px) {
+  .parent-box {
+    margin-top: 61px;
+  }
   .parent-box .frame-box {
+    border: unset;
     padding: unset;
     border-radius: unset;
   }
   .parent-box .frame-box .frame-img {
+    border: unset;
     border-radius: unset;
   }
   .parent-box .frame-box .frame-img button.pinbtn {
@@ -2410,10 +2432,15 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
     padding: 3px 6px;
   }
   .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
-    width: 90%;
-    top: -21px;
+    width: 100%;
+    top: unset;
     padding: 1px 10px;
     border-radius: 7px;
+    bottom: -25px;
+    border: unset;
+    border-radius: unset;
+    -webkit-box-shadow: 0px 15px 10px #aaa;
+            box-shadow: 0px 15px 10px #aaa;
   }
   .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
     width: 45px;
