@@ -1787,7 +1787,7 @@ header.active {
 }
 
 .services .main-service .box.image.reverse {
-  border-radius: 60px;
+  border-radius: 60px 60px 0 0;
   background: #eee;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -1801,7 +1801,7 @@ header.active {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -95px;
+  bottom: -70px;
   width: 100%;
 }
 
@@ -2026,6 +2026,7 @@ header.active {
 }
 
 .services .main-service .box.list .icon-boxs .icon-box {
+  position: relative;
   border-radius: 3px;
   background: #8E1B2F;
   -webkit-box-shadow: 0 0 5px #aaa;
@@ -2036,6 +2037,25 @@ header.active {
   -ms-grid-columns: 50px 1fr;
       grid-template-columns: 50px 1fr;
   gap: 10px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+.services .main-service .box.list .icon-boxs .icon-box .background-image {
+  position: absolute;
+  background-image: url("../dsi/component5.png");
+  background-size: 529px;
+  background-position: -26px 73px;
+  color: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.services .main-service .box.list .icon-boxs .icon-box .icon {
+  position: relative;
+  z-index: 2;
 }
 
 .services .main-service .box.list .icon-boxs .icon-box .icon svg {
@@ -2046,6 +2066,8 @@ header.active {
 }
 
 .services .main-service .box.list .icon-boxs .icon-box .detail {
+  position: relative;
+  z-index: 2;
   color: white;
 }
 

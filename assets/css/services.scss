@@ -88,7 +88,7 @@
                 }
             }
         } .box.image.reverse {
-            border-radius: 60px; 
+            border-radius: 60px 60px 0 0; 
             background: #eee;
             flex-direction: row-reverse;
             position:relative; 
@@ -97,7 +97,7 @@
                 position: absolute;
                 left: 0;
                 right: 0;
-                bottom: -95px;
+                bottom: -70px;
                 width: 100%;
 
             }
@@ -256,10 +256,12 @@
                 }
             }
             .icon-boxs {
+                
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 20px; 
                 .icon-box {
+                    position:relative;
                     border-radius: 3px;
                     background: $red3; 
                     box-shadow: 0 0 5px #aaa;
@@ -267,13 +269,30 @@
                     display:grid; 
                     grid-template-columns: 50px 1fr;
                     gap: 10px;
+                    border-radius: 26px;
+                    overflow: hidden;
+                    .background-image {
+                        position:absolute;
+                        background-image:url('../dsi/component5.png');
+                        background-size: 529px;
+                        background-position: -26px 73px;
+                        color:white;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                    }
                     .icon {
+                        position:relative;
+                        z-index: 2;
                         svg {
                             width: 50px; 
                             height: 50px; 
                             filter: brightness(1) invert(1);
                         }
                     } .detail {
+                        position:relative;
+                        z-index: 2;
                         color:white; 
                         h3 {
                             font-size: 18px;
