@@ -1675,7 +1675,7 @@ header.active {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 30px;
-  width: 75%;
+  width: 70%;
 }
 
 .services .main-service .box.column {
@@ -1685,15 +1685,37 @@ header.active {
           flex-direction: column;
 }
 
-.services .main-service .box.column video {
-  width: 100%;
-  height: 500px;
+.services .main-service .box.column .mask {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.services .main-service .box.column .mask .maskparent {
+  width: 1000px;
+  border-radius: 0 60px 60px 0;
+  -webkit-box-shadow: 9px 13px 9px #666;
+          box-shadow: 9px 13px 9px #666;
+}
+
+.services .main-service .box.column .mask video {
+  position: absolute;
+  width: 1000px;
+  height: 437px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: 0 23%;
      object-position: 0 23%;
   -webkit-box-shadow: 0px 16px 10px #aaa;
           box-shadow: 0px 16px 10px #aaa;
+  mix-blend-mode: screen;
+  border-radius: 0 60px 60px 0;
+}
+
+.services .main-service .box.column .mask .component {
+  position: absolute;
+  left: -26px;
+  width: 405px;
 }
 
 .services .main-service .box {
@@ -1701,6 +1723,20 @@ header.active {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+}
+
+.services .main-service .box .title-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services .main-service .box .title-component img {
+  width: 100px;
+  margin-right: 20px;
 }
 
 .services .main-service img {
@@ -1738,12 +1774,35 @@ header.active {
   margin-top: unset;
 }
 
+.services .main-service .box.image .maskimg {
+  position: relative;
+}
+
+.services .main-service .box.image .maskimg img:first-child {
+  position: absolute;
+  mix-blend-mode: lighten;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 400px;
+}
+
 .services .main-service .box.image.reverse {
+  border-radius: 60px;
   background: #eee;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.services .main-service .box.image.reverse .image-component {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -95px;
+  width: 100%;
 }
 
 .services .main-service .list-image h3 {
@@ -1911,6 +1970,8 @@ header.active {
 .services .main-service .box.list .timeline .box .icon svg {
   width: 30px;
   height: 30px;
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
 }
 
 .services .main-service .box.list .timeline .box p {
@@ -1965,9 +2026,11 @@ header.active {
 }
 
 .services .main-service .box.list .icon-boxs .icon-box {
+  border-radius: 3px;
+  background: #8E1B2F;
   -webkit-box-shadow: 0 0 5px #aaa;
           box-shadow: 0 0 5px #aaa;
-  padding: 20px 10px;
+  padding: 30px 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50px 1fr;
@@ -1978,6 +2041,12 @@ header.active {
 .services .main-service .box.list .icon-boxs .icon-box .icon svg {
   width: 50px;
   height: 50px;
+  -webkit-filter: brightness(1) invert(1);
+          filter: brightness(1) invert(1);
+}
+
+.services .main-service .box.list .icon-boxs .icon-box .detail {
+  color: white;
 }
 
 .services .main-service .box.list .icon-boxs .icon-box .detail h3 {
@@ -1990,14 +2059,37 @@ header.active {
 }
 
 .services .other-service {
-  width: 360px;
+  width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
 }
 
-.services .other-service h3 {
+.services .other-service .title-component.news {
+  margin-top: 60px;
+}
+
+.services .other-service .title-component {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services .other-service .title-component img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.services .other-service .title-component h3 {
   font-size: 23px;
-  padding: 5px 10px;
-  background: #8E1B2F;
-  color: white;
 }
 
 .services .other-service .boxs {
@@ -2008,22 +2100,21 @@ header.active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 25px;
+  height: 470px;
+  overflow: auto;
+  padding-right: 10px;
 }
 
 .services .other-service .boxs .box {
   gap: 15px;
-  padding: 16px;
+  padding: 30px 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 7px;
-  -webkit-box-shadow: 0 0 5px 0 #333;
-          box-shadow: 0 0 5px 0 #333;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  border-radius: 10px;
+  background: #8E1B2F;
+  color: white;
 }
 
 .services .other-service .boxs .box .img-box {
@@ -2031,6 +2122,7 @@ header.active {
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
+  border: 5px solid white;
 }
 
 .services .other-service .boxs .box .detail h5 {
@@ -2038,6 +2130,46 @@ header.active {
 }
 
 .services .other-service .boxs .box .detail p {
+  font-size: 16px;
+}
+
+.services .other-service .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 9px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 65px;
+  padding: 8px 15px;
+  -webkit-box-shadow: 0px 0px 4px #aaa;
+          box-shadow: 0px 0px 4px #aaa;
+}
+
+.services .other-service .search button {
+  padding: 9px 27px;
+  background: #8E1B2F;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.services .other-service .search svg {
+  width: 20px;
+  height: 20px;
+}
+
+.services .other-service .search input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 85%;
+  border: unset;
+  outline: unset;
   font-size: 16px;
 }
 /*# sourceMappingURL=services.css.map */
