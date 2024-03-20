@@ -1691,6 +1691,29 @@ header.active {
   margin-bottom: 30px;
 }
 
+.services .main-service .box.column .mask .logo {
+  width: 150px;
+  padding: 10px 30px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  right: 150px;
+  top: 36px;
+  border-radius: 19px;
+}
+
+.services .main-service .box.column .mask .logo img {
+  width: 100%;
+}
+
 .services .main-service .box.column .mask .maskparent {
   width: 1000px;
   border-radius: 0 60px 60px 0;
@@ -1860,7 +1883,7 @@ header.active {
   display: inline-block;
   padding: 5px 20px;
   border-radius: 30px;
-  background: #8E1B2F;
+  background: #043349;
   color: white;
 }
 
@@ -2133,8 +2156,9 @@ header.active {
 }
 
 .services .other-service .boxs .box {
+  position: relative;
   gap: 15px;
-  padding: 30px 18px;
+  padding: 40px 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2143,12 +2167,32 @@ header.active {
   color: white;
 }
 
+.services .other-service .boxs .box .white-component {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: -28px;
+  width: 179px;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 .services .other-service .boxs .box .img-box {
+  position: relative;
+  z-index: 2;
   width: 120px;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   border: 5px solid white;
+}
+
+.services .other-service .boxs .box .detail {
+  position: relative;
+  z-index: 2;
 }
 
 .services .other-service .boxs .box .detail h5 {
@@ -2202,6 +2246,18 @@ header.active {
 .services .other-service .boxs.blogs {
   overflow: unset;
   padding: unset;
+  height: unset;
+}
+
+.services .other-service .boxs.blogs a {
+  display: inline-block;
+  background: #043349;
+  border-radius: 0 30px 30px 0;
+  color: white;
+  padding: 5px 20px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 10px;
 }
 
 .services .other-service .boxs.blogs .blog-box:hover {
@@ -2210,6 +2266,7 @@ header.active {
 }
 
 .services .other-service .boxs.blogs .blog-box {
+  border-radius: 15px;
   -webkit-transition: all 500ms ease 0s;
   transition: all 500ms ease 0s;
   margin-top: 30px;
@@ -2223,6 +2280,10 @@ header.active {
           align-items: center;
   -webkit-box-shadow: 0 0 5px #333;
           box-shadow: 0 0 5px #333;
+  position: relative;
+  background-image: url("../dsi/component5_gray.png");
+  background-size: 300px;
+  background-position: -47px 28px;
 }
 
 .services .other-service .boxs.blogs .blog-box img {
@@ -2234,6 +2295,8 @@ header.active {
   left: -40px;
   -webkit-box-shadow: 5px 5px 5px #aaa;
           box-shadow: 5px 5px 5px #aaa;
+  z-index: 2;
+  border-radius: 30px;
 }
 
 .services .other-service .boxs.blogs .blog-box .detail {
@@ -2245,6 +2308,7 @@ header.active {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 
 .services .other-service .boxs.blogs .blog-box .detail span {
@@ -2260,11 +2324,37 @@ header.active {
 }
 
 .services .other-service .boxs.blogs .blog-box .detail button {
-  padding: 5px 10px;
+  padding: 5px 20px;
   background: #8E1B2F;
   color: white;
   border-radius: 5px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  border-radius: 30px;
+}
+
+.services .other-service .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  row-gap: 20px;
+}
+
+.services .other-service .tags a {
+  font-size: 16px;
+  color: black;
+  display: inline-block;
+  padding: 3px 15px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 5px #333;
+          box-shadow: 0 0 5px #333;
+}
+
+.services .other-service .tags a:hover {
+  background: #8E1B2F;
+  color: white;
 }
 /*# sourceMappingURL=services.css.map */

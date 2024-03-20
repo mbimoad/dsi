@@ -21,6 +21,27 @@
                 text-align:center; 
                 position:relative;
                 margin-bottom: 30px;
+                .logo {
+                    width: 150px;
+                    padding: 10px 30px;
+                    background: white;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    position: absolute;
+                    right: 150px;
+                    top: 36px;
+                    border-radius: 19px;
+                    img {
+                        width: 100%; 
+                    }
+                }
                 .maskparent {
                     width: 1000px; 
                     border-radius: 0 60px 60px 0; 
@@ -150,7 +171,7 @@
                 display:inline-block;
                 padding: 5px 20px; 
                 border-radius: 30px; 
-                background: $red3;
+                background: $darkblue;
                 color:white; 
             } 
             
@@ -337,30 +358,42 @@
             overflow:auto;
             padding-right: 10px;
             .box {
+                position:relative;
+                // overflow:hidden;
+                .white-component {
+                    position: absolute;
+                    right: 0;
+                    bottom: -4px;
+                    left: -28px;
+                    width: 179px;
+                    height: 174px;
+                    object-fit: cover;
+                    box-shadow: unset; 
+                }
                 gap: 15px;
-            
-                padding: 30px 18px;
+                padding: 40px 18px;
                 display:flex; 
                 border-radius: 10px; 
                 // box-shadow: 0 0 5px 0 #333;
                 background: $red3; 
                 color:white; 
                 .img-box {
+                    position:relative; 
+                    z-index: 2;
                     width: 120px; 
                     border-radius: 10px;
                     object-fit:cover; 
                     border:5px solid white; 
                 }
                 .detail {
+                    position:relative; 
+                    z-index: 2;
                     h5 {
                         font-size: 20px; 
                     } p {
                         font-size: 16px;
                     }
                 }
-
-
-               
             }
         } .search {
             display: flex; 
@@ -389,10 +422,21 @@
         } .boxs.blogs {
             overflow:unset;
             padding: unset;
+            height: unset;
+            a {
+                display:inline-block; 
+                background: #043349; 
+                border-radius: 0 30px 30px 0;
+                color:white; 
+                padding: 5px 20px; 
+                align-self: flex-start; 
+                margin-top: 10px;
+            }
             .blog-box:hover {
                 transform: scale(1.04);
             }
             .blog-box {
+                border-radius: 15px;
                 transition: all 500ms ease 0s; 
                 margin-top: 30px;
                 padding: 20px 0;
@@ -400,6 +444,10 @@
                 grid-template-columns: 107px 1fr;
                 align-items: center;
                 box-shadow: 0 0 5px #333;
+                position:relative;
+                background-image: url('../dsi/component5_gray.png');
+                background-size: 300px;
+                background-position: -47px 28px;
                 img {
                     width: 120px; 
                     position:relative; 
@@ -407,12 +455,15 @@
                     height: 120px;
                     left: -40px;
                     box-shadow: 5px 5px 5px #aaa;
-        
+                    z-index: 2;
+                    border-radius: 30px; 
                 }
                 .detail {
                     display:flex;
                     flex-direction:column;
                     gap: 10px;
+                    position:relative;
+            
                    
                     span {
                         font-size: 13px;
@@ -421,13 +472,33 @@
                     } p {
                         font-size: 16px;
                     } button {
-                        padding: 5px 10px; 
+                        padding: 5px 20px; 
                         background: $red3; 
                         color:white; 
                         border-radius: 5px;
                         align-self: flex-start;
+                        border-radius: 30px; 
                     }
                 }
+            }
+        }
+
+
+        .tags {
+            display:flex; 
+            flex-wrap: wrap;
+            gap: 15px;
+            row-gap: 20px; 
+            a {
+                font-size: 16px; 
+                color:black; 
+                display:inline-block; 
+                padding: 3px 15px; 
+                border-radius: 30px; 
+                box-shadow: 0 0 5px #333; 
+            } a:hover {
+                background: $red3; 
+                color:white; 
             }
         }
     }
