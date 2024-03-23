@@ -1100,8 +1100,8 @@ $background-color_3: #ffcca3;
 
 			.navigation {
 				transition: all 200ms ease 0s;
-					background: $red1; 
-					backdrop-filter: blur(10px);
+				background: $red1; 
+				backdrop-filter: blur(10px);
 				z-index: 99999;
 				position:fixed; 
 			    display: flex;
