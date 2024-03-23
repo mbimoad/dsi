@@ -14,12 +14,19 @@
     .boxs {
         // height: 500px; 
         // overflow:auto;
+        .box:hover {
+
+        }
         .box {
             // padding: 20px;
 
             // border-top: 1px solid $red1;
             border-bottom: 1px solid $red1;
+            .toggle:hover {
+                background: #eee; 
+            }
             .toggle {
+                cursor:pointer;
                 padding: 20px 20px 20px 0;
                 display:flex; 
                 justify-content: space-between;
@@ -416,7 +423,7 @@
 @media screen and (max-width: 785px) {
     .service-togglebox {
         .boxs {
-            margin-top: 75px;
+            margin-top: 70px;
             .box.closed {
                 height: 75px;
             }

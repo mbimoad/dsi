@@ -282,7 +282,7 @@ header .nav-bar .navigation {
 
 header .nav-bar .navigation li {
   height: 100%;
-  width: 120px;
+  width: 170px;
   position: relative;
 }
 
@@ -1662,7 +1662,12 @@ header.active {
   border-bottom: 1px solid #C9313A;
 }
 
+.service-togglebox .boxs .box .toggle:hover {
+  background: #eee;
+}
+
 .service-togglebox .boxs .box .toggle {
+  cursor: pointer;
   padding: 20px 20px 20px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2135,7 +2140,7 @@ header.active {
 
 @media screen and (max-width: 785px) {
   .service-togglebox .boxs {
-    margin-top: 75px;
+    margin-top: 70px;
   }
   .service-togglebox .boxs .box.closed {
     height: 75px;
