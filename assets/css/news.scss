@@ -18,6 +18,7 @@ header {
 }
 header.active {
     background: white;
+    // box-shadow: 0 5px 5px #eee;
 }
 .banner-news {
     margin-top: 80px; 
@@ -144,6 +145,7 @@ header.active {
         } 
         
         .menu.mysosmed {
+         
             .content {
                 display:flex; 
                 flex-direction:column;
@@ -188,28 +190,30 @@ header.active {
                 }
             }
         }
-        .menu.mytags {
-            margin-top: 30px; 
-            
-            .tags {
-                margin-top: 30px;     
-                display:flex; 
-                gap: 10px; 
-                flex-wrap: wrap;
-                a {
-                    display:inline-block; 
-                    padding: 3px 6px; 
-                    border-radius: 30px; 
-                    border: 1px solid $red3; 
-                    color: $red3; 
-                } a:hover {
-                    background: $red3; 
-                    color:white; 
-                }
-            }
-        }
+       
         .menu.mynews {
             margin-top: 30px;
+            .tag-menu {
+                margin-top: 30px; 
+                .tags {
+                    margin-top: 30px;     
+                    display:flex; 
+                    gap: 10px; 
+                    flex-wrap: wrap;
+                    a {
+                        display:inline-block; 
+                        padding: 3px 6px; 
+                        border-radius: 30px; 
+                        border: 1px solid $red3; 
+                        color: $red3; 
+                    } a:hover {
+                        background: $red3; 
+                        color:white; 
+                    }
+                }
+            }
+
+            
             .content {
                 display:grid; 
                 grid-template-columns: repeat(2,145px);
@@ -293,6 +297,21 @@ header.active {
             align-items: center;
             h1 {
                 font-size: 40px; 
+            } .line {
+                position:relative;
+                width: 32%; 
+                height: 2px; 
+                background: $red1; 
+
+            } .line::before {
+                content: '';
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                background: #8E1B2F;
+                left: 0;
+                top: -7px;
+                border-radius: 50%;
             }
             .category-button {
                 border: 1px solid gray;
@@ -451,6 +470,9 @@ header.active {
 
            .other-news {
                margin-top: 35px; 
+               .line {
+                   width: 78%;
+               }
                 h3 {
                     font-size: 30px; 
                 } .boxs {

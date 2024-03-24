@@ -1,0 +1,239 @@
+@import './main';
+@import './news.scss';
+
+.container {
+    overflow:unset; 
+} .news.section {
+    overflow:unset; 
+}
+// header,
+// header.active {
+//     background:$red1; 
+//     backdrop-filter: unset;
+//     background-image: linear-gradient(-180deg, $red1, $red2, $red3);
+//     .nav-bar {
+//         .navigation {
+//             li {
+//                 a {
+//                     color:white;
+//                 } svg {
+//                     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(261deg) brightness(106%) contrast(103%);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.news {
+    .layer:last-child {
+        .menu.mysosmed {
+            // position: sticky; 
+            // top: 90px; 
+        }
+        .menu.mynews {
+            position: sticky; 
+        top: 120px; 
+         
+        }
+    }
+    .layer:first-child {
+        display:flex; 
+        flex-direction: column;
+        gap: 30px; 
+        .articles {
+            display:flex; 
+            flex-direction:column; 
+            gap: 30px; 
+            img {
+                width: 100%; 
+                object-fit: cover;
+            }
+
+            &-cover {
+                height: 510px; 
+            } p {
+                font-size: 16px; 
+                line-height: 2;
+            } 
+            .component {
+                display:flex; 
+                align-items: center;
+                gap:10px; 
+                img {
+                    width: 50px; 
+                }
+            }
+            h3 {
+                font-size: 24px; 
+            } ul li {
+                font-size: 16px; 
+                line-height: 2
+            } ul {
+                margin-left: 45px; 
+                list-style: disc;
+            } .twolayer {
+                display:flex; 
+                justify-content: space-between;
+                gap: 40px; 
+                &-description {
+                    display:flex; 
+                    flex-direction:column;
+                    gap: 30px; 
+                }
+                
+                img {
+                    
+                    height: 400px; 
+                }
+            }
+        }
+        .tags {
+            .header {
+                h3 {
+                    font-size: 24px; 
+                }
+                margin-bottom: 20px; 
+            }
+            a {
+                display:inline-block; 
+                padding: 3px 6px; 
+                border-radius: 30px; 
+                border: 1px solid $red3; 
+                color: $red3; 
+            } a:hover {
+                background: $red3; 
+                color:white; 
+            }
+        } .author-info {
+            .twolayer {
+                gap: 40px;
+                padding: 40px;
+                background: whitesmoke;
+                display:flex; 
+                align-items:center; 
+                img {
+                    width: 170px; 
+                } .detail {
+                    display:flex; 
+                    flex-direction:column;
+                    gap: 10px; 
+                    h2 {
+                        font-size: 24px; 
+
+                    } p {
+                        font-size: 16px; 
+                    } .sosmed {
+                        margin-top: 10px; 
+                        display:flex; 
+                        align-items: center;
+                        gap: 10px; 
+                        svg {
+                            width:20px; 
+                            height: auto; 
+                            filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(93%) contrast(92%);
+                        }
+                    }
+                }
+            }
+        } .others {
+            display:flex; 
+            gap: 30px; 
+            align-items: center;
+            .box {
+                border-radius: 10px; 
+                border: 1px solid gray;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .header {
+                    display:flex; 
+                    align-items: center;
+                    justify-content:flex-start;
+                    margin-bottom:unset; 
+                } h3 {
+                    font-size: 22px; 
+                }
+            } .apps-icon {
+                svg {
+                    $dimension: 30px; 
+                    width: $dimension; 
+                    height: $dimension; 
+                }
+            }
+        }
+      
+        .description {
+            position: relative;
+            z-index: 1; 
+            padding: 20px 0;
+            h6 {
+                padding: 3px 10px; 
+                background: $red3;
+                display: inline-block;
+                color:white; 
+            } h1 {
+                font-size: 40px; 
+            }   .contact {
+                margin-top: 20px; 
+                display:flex; 
+                justify-content: space-between;
+                $dimension: 40px;
+                $svg      : 25px; 
+                .email {
+                    width: $dimension;
+                    height: $dimension;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $darkgray;
+                    svg {
+                        width: $svg; 
+                        height: $svg;
+                    }
+                }
+                .sosmed {
+                    display:flex; 
+                    gap: 10px; 
+                    a:first-child {background-color:#3b5998}
+                    a:nth-child(2) {background-color:#bd081c}
+                    a:nth-child(3) {background-color:#5851db}
+                    a:nth-child(4) {background-color:#0077b5}
+                    a {
+                        width: $dimension;
+                        height: $dimension;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg {
+                            width: $svg; 
+                            height: $svg;
+                        }
+                    }
+                }
+            }
+           
+            .detail {
+                display: flex;
+                align-items: center;
+                gap: 15px; 
+                height: 30px; 
+                span {
+                    font-size: 14px; 
+                }
+                &-date,
+                &-views {
+                    display:flex;
+                    align-items: center;
+                    gap: 5px;
+                    .icon {
+                        svg {
+                            filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(289deg) brightness(93%) contrast(92%);
+                            width: 25px; 
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
