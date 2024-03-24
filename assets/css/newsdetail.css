@@ -228,6 +228,21 @@ img.separate {
   width: 100%;
 }
 
+button.pinbtn {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: #8E1B2F;
+  color: white;
+  border: unset;
+  outline: unset;
+  -webkit-box-shadow: 2px 2px 2px #aaa;
+          box-shadow: 2px 2px 2px #aaa;
+  cursor: pointer;
+}
+
 header {
   z-index: 999;
   position: fixed;
@@ -875,6 +890,258 @@ header.active {
   height: 30px;
 }
 
+.parent-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parent-box .frame-box {
+  border: 1px solid #8E1B2F;
+  display: inline-block;
+  margin: auto;
+  margin-top: -120px;
+  background: white;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 13px 22px #aaa;
+          box-shadow: 0px 13px 22px #aaa;
+}
+
+.parent-box .frame-box .frame-img {
+  position: relative;
+  border: 5px double #8E1B2F;
+  border-radius: 30px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 600px;
+  padding: 10px 20px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail {
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+  width: 120px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail h3 {
+  font-size: 16px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail h4 {
+  font-size: 14px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+  font-size: 13px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+  width: 15px;
+  height: 15px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 105px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #8E1B2F;
+  top: -40px;
+  padding: 10px 50px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  gap: 15px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box {
+  color: white;
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box h1 {
+  font-size: 16px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box p {
+  font-size: 14px;
+}
+
+.parent-box .frame-box .frame-img .pins.active {
+  opacity: 0;
+  visiblity: none;
+  pointer-events: none;
+}
+
+.parent-box .frame-box .frame-img .pins .pin:nth-child(even) .pinImage {
+  -webkit-animation: pinAnimate 1s ease 1s infinite alternate;
+          animation: pinAnimate 1s ease 1s infinite alternate;
+}
+
+.parent-box .frame-box .frame-img .pins .pin:nth-child(odd) .pinImage {
+  -webkit-animation: pinAnimate 1s ease 0s infinite alternate;
+          animation: pinAnimate 1s ease 0s infinite alternate;
+}
+
+.parent-box .frame-box .frame-img .pins .pin {
+  position: relative;
+  display: inline-block;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .pinImage {
+  cursor: pointer;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map.active {
+  pointer-events: unset;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: unset;
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map {
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  padding: 5px;
+  width: 120px;
+  left: 30px;
+  top: 10px;
+  -webkit-box-shadow: 0px 4px 5px #666;
+          box-shadow: 0px 4px 5px #666;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+  font-size: 12px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map p {
+  font-size: 10px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map a {
+  font-size: 8px;
+  padding: 3px 4px;
+  background: #8E1B2F;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .circle-pin {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: transparent;
+  border-radius: 50%;
+  left: -4px;
+  bottom: 0px;
+  -webkit-animation: pinCircle 2s ease-in 0s infinite;
+          animation: pinCircle 2s ease-in 0s infinite;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.parent-box .frame-box .frame-img .pins .pin img {
+  position: relative;
+  z-index: 9;
+}
+
+.parent-box .frame-box .frame-img .pins .pin1 {
+  -webkit-transform: translate(100px, 180px);
+          transform: translate(100px, 180px);
+}
+
+.parent-box .frame-box .frame-img .pins .pin2 {
+  -webkit-transform: translate(300px, 180px);
+          transform: translate(300px, 180px);
+}
+
+.parent-box .frame-box .frame-detail {
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-detail h3 {
+  font-size: 30px;
+}
+
+.parent-box .frame-box .frame-detail h4 {
+  padding: 3px 10px;
+  background: #8E1B2F;
+  border-radius: 30px;
+  display: inline-block;
+  color: white;
+}
+
 @media screen and (max-width: 1570px) {
   .banner-hero p {
     width: 40%;
@@ -964,6 +1231,20 @@ header.active {
 }
 
 @media screen and (max-width: 1100px) {
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 700px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 500px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(100px, 150px);
+            transform: translate(100px, 150px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(250px, 150px);
+            transform: translate(250px, 150px);
+  }
   .plan__container.pln2.section {
     padding: 0 50px;
   }
@@ -1120,6 +1401,35 @@ header.active {
 }
 
 @media screen and (max-width: 880px) {
+  button.pinbtn {
+    font-size: 10px;
+  }
+  .parent-box .frame-box {
+    margin-top: -50px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 100px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 10px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map p {
+    display: none;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(100px, 120px);
+            transform: translate(100px, 120px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(250px, 120px);
+            transform: translate(250px, 120px);
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 620px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 90px;
+  }
   header {
     height: 75px;
   }
@@ -1159,6 +1469,14 @@ header.active {
 }
 
 @media screen and (max-width: 785px) {
+  .parent-box {
+    margin-top: 130px;
+  }
+  .parent-box .frame-box {
+    margin-top: unset;
+    -webkit-box-shadow: 0px 15px 10px #aaa;
+            box-shadow: 0px 15px 10px #aaa;
+  }
   .service .service-boxs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1517,6 +1835,44 @@ header.active {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 380px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 80px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 11px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 11px;
+    height: 11px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 85px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 500px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 12px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 17px;
+    height: 17px;
+    bottom: 6px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .plan__image img:nth-child(2) {
     left: 8%;
@@ -1612,6 +1968,52 @@ header.active {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 30px;
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 300px;
+    top: -30px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 60px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 9px;
+    height: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 75px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 400px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 12px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 17px;
+    height: 17px;
+    bottom: 6px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .plan__container .section__description {
     width: 100%;
@@ -1648,6 +2050,150 @@ header.active {
 @media screen and (max-width: 485px) {
   .plan__image img:nth-child(3) {
     top: 24.05797vw;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 30px;
+    font-size: 8px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 300px;
+    top: -30px;
+    padding: 5px 20px;
+    border-radius: 7px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 55px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 9px;
+    height: 9px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 340px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(40px, 70px);
+            transform: translate(40px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(120px, 70px);
+            transform: translate(120px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 8px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    left: -1px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .parent-box {
+    margin-top: 61px;
+  }
+  .parent-box .frame-box {
+    border: unset;
+    padding: unset;
+    border-radius: unset;
+  }
+  .parent-box .frame-box .frame-img {
+    border: unset;
+    border-radius: unset;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 20px;
+    font-size: 6px;
+    padding: 3px 6px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 100%;
+    top: unset;
+    padding: 1px 10px;
+    border-radius: 7px;
+    bottom: -25px;
+    border: unset;
+    border-radius: unset;
+    -webkit-box-shadow: 0px 15px 10px #aaa;
+            box-shadow: 0px 15px 10px #aaa;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 45px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 8px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 8px;
+    height: 8px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 100%;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(40px, 70px);
+            transform: translate(40px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(120px, 70px);
+            transform: translate(120px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 60px;
+    top: 0;
+    left: 20px;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 7px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map a {
+    font-size: 6px;
+    margin-bottom: unset;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map img {
+    border-radius: 3px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 8px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 9px;
+    height: 9px;
+    bottom: 3px;
+    left: -1px;
   }
 }
 
@@ -1814,6 +2360,21 @@ img.separate {
   width: 100%;
 }
 
+button.pinbtn {
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: #8E1B2F;
+  color: white;
+  border: unset;
+  outline: unset;
+  -webkit-box-shadow: 2px 2px 2px #aaa;
+          box-shadow: 2px 2px 2px #aaa;
+  cursor: pointer;
+}
+
 header {
   z-index: 999;
   position: fixed;
@@ -2461,6 +3022,258 @@ header.active {
   height: 30px;
 }
 
+.parent-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.parent-box .frame-box {
+  border: 1px solid #8E1B2F;
+  display: inline-block;
+  margin: auto;
+  margin-top: -120px;
+  background: white;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-box-shadow: 0px 13px 22px #aaa;
+          box-shadow: 0px 13px 22px #aaa;
+}
+
+.parent-box .frame-box .frame-img {
+  position: relative;
+  border: 5px double #8E1B2F;
+  border-radius: 30px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  width: 600px;
+  padding: 10px 20px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail {
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+  width: 120px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail h3 {
+  font-size: 16px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail h4 {
+  font-size: 14px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+  font-size: 13px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+  width: 15px;
+  height: 15px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 105px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #8E1B2F;
+  top: -40px;
+  padding: 10px 50px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  gap: 15px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box {
+  color: white;
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box h1 {
+  font-size: 16px;
+}
+
+.parent-box .frame-box .frame-img .floating-detail .boxs .box p {
+  font-size: 14px;
+}
+
+.parent-box .frame-box .frame-img .pins.active {
+  opacity: 0;
+  visiblity: none;
+  pointer-events: none;
+}
+
+.parent-box .frame-box .frame-img .pins .pin:nth-child(even) .pinImage {
+  -webkit-animation: pinAnimate 1s ease 1s infinite alternate;
+          animation: pinAnimate 1s ease 1s infinite alternate;
+}
+
+.parent-box .frame-box .frame-img .pins .pin:nth-child(odd) .pinImage {
+  -webkit-animation: pinAnimate 1s ease 0s infinite alternate;
+          animation: pinAnimate 1s ease 0s infinite alternate;
+}
+
+.parent-box .frame-box .frame-img .pins .pin {
+  position: relative;
+  display: inline-block;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .pinImage {
+  cursor: pointer;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map.active {
+  pointer-events: unset;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: unset;
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map {
+  -webkit-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+  pointer-events: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  padding: 5px;
+  width: 120px;
+  left: 30px;
+  top: 10px;
+  -webkit-box-shadow: 0px 4px 5px #666;
+          box-shadow: 0px 4px 5px #666;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+  font-size: 12px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map p {
+  font-size: 10px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .post-map a {
+  font-size: 8px;
+  padding: 3px 4px;
+  background: #8E1B2F;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.parent-box .frame-box .frame-img .pins .pin .circle-pin {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background: transparent;
+  border-radius: 50%;
+  left: -4px;
+  bottom: 0px;
+  -webkit-animation: pinCircle 2s ease-in 0s infinite;
+          animation: pinCircle 2s ease-in 0s infinite;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+}
+
+.parent-box .frame-box .frame-img .pins .pin img {
+  position: relative;
+  z-index: 9;
+}
+
+.parent-box .frame-box .frame-img .pins .pin1 {
+  -webkit-transform: translate(100px, 180px);
+          transform: translate(100px, 180px);
+}
+
+.parent-box .frame-box .frame-img .pins .pin2 {
+  -webkit-transform: translate(300px, 180px);
+          transform: translate(300px, 180px);
+}
+
+.parent-box .frame-box .frame-detail {
+  text-align: center;
+}
+
+.parent-box .frame-box .frame-detail h3 {
+  font-size: 30px;
+}
+
+.parent-box .frame-box .frame-detail h4 {
+  padding: 3px 10px;
+  background: #8E1B2F;
+  border-radius: 30px;
+  display: inline-block;
+  color: white;
+}
+
 @media screen and (max-width: 1570px) {
   .banner-hero p {
     width: 40%;
@@ -2550,6 +3363,20 @@ header.active {
 }
 
 @media screen and (max-width: 1100px) {
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 700px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 500px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(100px, 150px);
+            transform: translate(100px, 150px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(250px, 150px);
+            transform: translate(250px, 150px);
+  }
   .plan__container.pln2.section {
     padding: 0 50px;
   }
@@ -2706,6 +3533,35 @@ header.active {
 }
 
 @media screen and (max-width: 880px) {
+  button.pinbtn {
+    font-size: 10px;
+  }
+  .parent-box .frame-box {
+    margin-top: -50px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 100px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 10px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map p {
+    display: none;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(100px, 120px);
+            transform: translate(100px, 120px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(250px, 120px);
+            transform: translate(250px, 120px);
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 620px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 90px;
+  }
   header {
     height: 75px;
   }
@@ -2745,6 +3601,14 @@ header.active {
 }
 
 @media screen and (max-width: 785px) {
+  .parent-box {
+    margin-top: 130px;
+  }
+  .parent-box .frame-box {
+    margin-top: unset;
+    -webkit-box-shadow: 0px 15px 10px #aaa;
+            box-shadow: 0px 15px 10px #aaa;
+  }
   .service .service-boxs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3103,6 +3967,44 @@ header.active {
   }
 }
 
+@media screen and (max-width: 720px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 380px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 80px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 11px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 11px;
+    height: 11px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 85px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 500px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 12px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 17px;
+    height: 17px;
+    bottom: 6px;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .plan__image img:nth-child(2) {
     left: 8%;
@@ -3198,6 +4100,52 @@ header.active {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 30px;
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 300px;
+    top: -30px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 60px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 9px;
+    height: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time {
+    width: 75px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 400px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 12px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 17px;
+    height: 17px;
+    bottom: 6px;
+  }
+}
+
 @media screen and (max-width: 550px) {
   .plan__container .section__description {
     width: 100%;
@@ -3237,6 +4185,150 @@ header.active {
   }
 }
 
+@media screen and (max-width: 460px) {
+  .parent-box .frame-box {
+    padding: 5px;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 30px;
+    font-size: 8px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 300px;
+    top: -30px;
+    padding: 5px 20px;
+    border-radius: 7px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 55px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 9px;
+    height: 9px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 340px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(40px, 70px);
+            transform: translate(40px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(120px, 70px);
+            transform: translate(120px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 82px;
+    top: 0;
+    left: 20px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 9px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 8px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 10px;
+    height: 10px;
+    bottom: 0px;
+    left: -1px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .parent-box {
+    margin-top: 61px;
+  }
+  .parent-box .frame-box {
+    border: unset;
+    padding: unset;
+    border-radius: unset;
+  }
+  .parent-box .frame-box .frame-img {
+    border: unset;
+    border-radius: unset;
+  }
+  .parent-box .frame-box .frame-img button.pinbtn {
+    top: 20px;
+    font-size: 6px;
+    padding: 3px 6px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 {
+    width: 100%;
+    top: unset;
+    padding: 1px 10px;
+    border-radius: 7px;
+    bottom: -25px;
+    border: unset;
+    border-radius: unset;
+    -webkit-box-shadow: 0px 15px 10px #aaa;
+            box-shadow: 0px 15px 10px #aaa;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .detail img {
+    width: 45px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span {
+    font-size: 8px;
+  }
+  .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .date span svg, .parent-box .frame-box .frame-img .floating-detail.floating-detail2 .timestamp .time span svg {
+    width: 8px;
+    height: 8px;
+  }
+  .parent-box .frame-box .frame-img img.indomap {
+    width: 100%;
+  }
+  .parent-box .frame-box .frame-img .pins .pin1 {
+    -webkit-transform: translate(40px, 70px);
+            transform: translate(40px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin2 {
+    -webkit-transform: translate(120px, 70px);
+            transform: translate(120px, 70px);
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map {
+    width: 60px;
+    top: 0;
+    left: 20px;
+    border-radius: 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map h3 {
+    font-size: 7px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map a {
+    font-size: 6px;
+    margin-bottom: unset;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .post-map img {
+    border-radius: 3px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .pinImage {
+    width: 8px;
+  }
+  .parent-box .frame-box .frame-img .pins .pin .circle-pin {
+    width: 9px;
+    height: 9px;
+    bottom: 3px;
+    left: -1px;
+  }
+}
+
 header {
   background: white;
 }
@@ -3252,8 +4344,6 @@ header .nav-bar .navigation li svg {
 
 header.active {
   background: white;
-  -webkit-box-shadow: 0 5px 5px #eee;
-          box-shadow: 0 5px 5px #eee;
 }
 
 .banner-news {

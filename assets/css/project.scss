@@ -36,21 +36,6 @@ $z: 255;
     }
 }
 
-button.pinbtn {
-    position:absolute; 
-    right: 20px;
-    top:60px; 
-    border-radius: 30px; 
-    padding: 5px 10px; 
-    background: $red3; 
-    color:white; 
-    border: unset; 
-    outline: unset; 
-    box-shadow: 2px 2px 2px #aaa;
-    cursor: pointer;  
-
-}
-
 .plan__container {
     .section__description {
         margin-bottom: 30px; 
@@ -146,216 +131,10 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
     }
 }
 
-.parent-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .frame-box {
-        border: 1px solid $red3;
-        display: inline-block;
-        margin: auto; 
-        margin-top: -120px;
-        background:white; 
-        border-radius: 30px;
-        padding: 15px;
-        box-shadow: 0px 13px 22px #aaa;
-        .frame-img {
-            position:relative;
-            border: 5px double $red3;
-            border-radius: 30px;
-            .floating-detail.floating-detail2 {
-                display:flex;
-                align-items:center; 
-                color:white; 
-                // top: unset; 
-                // bottom: -40px;
-                width: 600px; 
-                padding: 10px 20px;
-                .timestamp {
-                    display:flex;
-                    justify-content:space-between;
-                    gap:10px;
-                    width: 100%; 
-                    .detail {
-                        text-align: center;
-                        img {
-                            width: 120px;
-                        }
-                        h3 {
-                            font-size: 16px; 
-                        } h4 {
-                            font-size: 14px; 
-                        }
-                    } .date,.time {
-                        display:flex; 
-                        align-items:center; 
-                        gap: 5px; 
-                        span {
-                            font-size: 13px; 
-                            svg {
-                                width: 15px; 
-                                height: 15px; 
-                            }
-                        }
-                    } .time {
-                        justify-content: flex-end; 
-                        width: 105px; 
-                    }
-                }
-            }
-            .floating-detail {
-                position:absolute; 
-                left: 50%;
-                transform: translateX(-50%);
-                background: $red3;
-                top: -40px;
-                padding: 10px 50px;
-                border-radius: 15px;
-                border: 2px solid white;
-                
-                .boxs {
-                    display:flex;
-                    margin:auto; 
-                    gap: 15px;
-                
-                    .box {
-                        color:white; 
-                        text-align: center;
-                        h1 {
-                            font-size: 16px; 
-                        } p {
-                            font-size: 14px; 
-                        }
-                    }
-                }
-                
-            } 
-            .pins.active {
-                
-                opacity: 0; 
-                visiblity:none; 
-                pointer-events: none;
-
-            }
-            .pins {
-                .pin:nth-child(even) {
-                    .pinImage {
-                        animation: pinAnimate 1s ease 1s infinite alternate; 
-                    }
-                } .pin:nth-child(odd) {
-                    .pinImage {
-                        animation: pinAnimate 1s ease 0s infinite alternate; 
-                    }
-                }
-                .pin {
-                    .pinImage {
-                        cursor:pointer;
-                    }
-                    position:relative;
-                    display: inline-block;
-                    .post-map.active {
-                        pointer-events: unset; 
-                        transform: scale(1); 
-                        opacity: 1; 
-                        visibility: unset; 
-                        transition: all 200ms ease 0s;
-                    }
-                    .post-map {
-                        transition: all 200ms ease 0s;
-                        pointer-events: none;
-                        transform: scale(0); 
-                        opacity: 0; 
-                        visibility: hidden; 
-
-                        background:white; 
-                        border-radius: 10px; 
-                        position:absolute; 
-                        padding: 5px; 
-                        width: 120px;
-                        // text-align:center; 
-                        left: 30px;
-                        top: 10px;
-                        box-shadow: 0px 4px 5px #666;
-                        h3 {
-                            font-size: 12px;
-                        } p {
-                            font-size: 10px; 
-                        } img {
-                            width: 100%; 
-                            object-fit:cover; 
-                            border-radius: 10px; 
-                        } a {
-                            font-size: 8px;
-                            padding: 3px 4px; 
-                            background: $red3; 
-                            color:white; 
-                            border-radius: 5px;
-                            margin-bottom: 5px;
-                        }
-                    }
-                    .circle-pin {
-                        position: absolute;
-                        width: 23px;
-                        height: 23px;
-                        background: transparent;
-                        border-radius: 50%;
-                        left: -4px;
-                        bottom: 0px;
-                        // border: 2px solid $red3;
-                        animation: pinCircle 2s ease-in 0s infinite; 
-                        transform: scale(0);
-                        opacity: 0; 
-                    } img {
-                        position:relative; 
-                        z-index: 9;
-                       
-                    }
-                }
-                .pin1 {
-                    transform: translate(100px, 180px);
-                } .pin2 {
-                    transform: translate(300px, 180px);
-                }
-            }
-        }
-        
-        .frame-detail {
-            text-align: center;
-            h3 {
-                font-size: 30px; 
-            } h4 {
-                padding: 3px 10px;
-                background: $red3;
-                border-radius: 30px;
-                display: inline-block;
-                color:white; 
-    
-            }
-        }
-    }
-}
 
 
 @media screen and (max-width: 1100px) {
-    .parent-box {
-        .frame-box {
-            .frame-img {
-                img.indomap {
-                    width: 700px; 
-                }  .floating-detail.floating-detail2 {
-                    width: 500px;
-                }
-
-                .pins {
-                    .pin1 {
-                        transform: translate(100px, 150px);
-                    } .pin2 {
-                        transform: translate(250px, 150px);
-                    }
-                }
-            }
-        }
-    }
+   
 }
 
 @media screen and (max-width: 960px) {
@@ -394,50 +173,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
     
 }
 
-@media screen and (max-width: 880px) {
 
-    button.pinbtn {
-        font-size: 10px; 
-    }
-
-    .parent-box {
-        .frame-box {
-            margin-top: -50px;
-            .frame-img {
-                .pins {
-                    .pin {
-                        .post-map {
-                            width: 100px;
-                            h3 {
-                               font-size: 10px; 
-                            } p {
-                                display:none;
-                            }
-                        }
-                    }
-
-                    .pin1 {
-                        transform: translate(100px, 120px);
-                    } .pin2 {
-                        transform: translate(250px, 120px);
-                    }
-                }
-                img.indomap {
-                    width: 620px; 
-                }  .floating-detail.floating-detail2 {
-                   .timestamp {
-                       .detail {
-                           img {
-                               width: 90px;
-                           }
-                       }
-                   }
-                }
-            }
-        }
-    }
-
-}
 
 @media screen and (max-width: 785px) {
     #myTable,
@@ -466,16 +202,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 
     }
 
-    .parent-box {
-        // margin-top: 64px;
-        // background: whitesmoke;
-        // padding: 90px 0;
-        margin-top: 130px; 
-        .frame-box {
-            margin-top: unset;
-            box-shadow: 0px 15px 10px #aaa; 
-        }
-    }
+  
 
     .plan__container {
         margin-top: 10px;
@@ -499,54 +226,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 }
 
 @media screen and (max-width: 720px) {
-    .parent-box {
-        .frame-box {
-            padding: 5px; 
-            .frame-img {
-                .floating-detail.floating-detail2 {
-                    width: 380px; 
-                    .timestamp {
-                        .detail {
-                            img {
-                                width: 80px;
-                            }
-                        }
-                        .date, .time {
-                            span {
-                                font-size: 11px; 
-                                svg {
-                                    width: 11px; 
-                                    height: 11px; 
-                                }
-                            }
-                        } .time {
-                            width: 85px; 
-                        }
-                    }
-                }
-                img.indomap {
-                    width: 500px; 
-                } .pins {
-                    .pin {
-                        .post-map {
-                            width: 82px;
-                            
-                            top: 0;
-                            left: 20px;
-                        }
-                        .pinImage {
-                            width: 12px; 
-
-                        } .circle-pin {
-                            width: 17px; 
-                            height: 17px; 
-                            bottom: 6px;
-                        }
-                    }
-                }
-            } 
-        }
-    }
+   
 
 }
 
@@ -598,62 +278,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 }
 
 @media screen and (max-width: 560px) {
-    .parent-box {
-        .frame-box {
-            padding: 5px; 
-            .frame-img {
-                button.pinbtn {
-                    top: 30px; 
-                    font-size: 9px; 
-                }
-                .floating-detail.floating-detail2 {
-                    width: 300px; 
-                    top: -30px; 
-                    .timestamp {
-                        .detail {
-                            img {
-                                width: 60px;
-                            }
-                        }
-                        .date, .time {
-                            span {
-                                font-size: 9px; 
-                                svg {
-                                    width: 9px; 
-                                    height: 9px; 
-                                }
-                            }
-                        } .time {
-                            width: 75px; 
-                        }
-                    }
-                }
-                img.indomap {
-                    width: 400px; 
-                } .pins {
-                    .pin {
-                        .post-map {
-                            width: 82px;                        
-                            top: 0;
-                            left: 20px;
-                            h3 {
-                                font-size: 9px; 
-                            }
-                        }
-                        .pinImage {
-                            width: 12px; 
-
-                        } .circle-pin {
-                            width: 17px; 
-                            height: 17px; 
-                            bottom: 6px;
-                        }
-                    }
-                }
-            } 
-        }
-    }
-
+  
     #myTable, 
     #myTable2 {
         thead,tbody {
@@ -669,68 +294,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 
 @media screen and (max-width: 460px) {
 
-    .parent-box {
-        .frame-box {
-            padding: 5px; 
-            .frame-img {
-                button.pinbtn {
-                    top: 30px; 
-                    font-size: 8px; 
-                }
-                .floating-detail.floating-detail2 {
-                    width: 300px; 
-                    top: -30px; 
-                    padding: 5px 20px;
-                    border-radius: 7px;
-                    .timestamp {
-                        .detail {
-                            img {
-                                width: 55px;
-                            }
-                        }
-                        .date, .time {
-                            span {
-                                font-size: 9px; 
-                                svg {
-                                    width: 9px; 
-                                    height: 9px; 
-                                }
-                            }
-                        }
-                    }
-                }
-                img.indomap {
-                    width: 340px; 
-                } .pins {
-                    .pin1 {
-                        transform: translate(40px, 70px);
-                    } .pin2 {
-                        transform: translate(120px, 70px);
-                    }
-
-                    .pin {
-                        .post-map {
-                            width: 82px;                        
-                            top: 0;
-                            left: 20px;
-                            h3 {
-                                font-size: 9px; 
-                            }
-                        }
-                        .pinImage {
-                            width: 8px; 
-
-                        } .circle-pin {
-                            width: 10px;
-                            height: 10px;
-                            bottom: 0px;
-                            left: -1px;
-                        }
-                    }
-                }
-            } 
-        }
-    }
+   
 
 }
 
@@ -743,91 +307,7 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
 }
 
 @media screen and (max-width: 400px) {
-    .parent-box {
-        margin-top: 61px; 
-        .frame-box {
-            border:unset;
-            padding: unset;
-            border-radius:unset; 
-            .frame-img {
-                border:unset;
-                border-radius: unset;
-                button.pinbtn {
-                    top: 20px;
-                    font-size: 6px;
-                    padding: 3px 6px;
-                }
-                .floating-detail.floating-detail2 {
-                    width: 100%;
-                    top: unset;
-                    padding: 1px 10px;
-                    border-radius: 7px;
-                    bottom: -25px;
-                    border: unset;
-                    border-radius: unset;
-                    box-shadow: 0px 15px 10px #aaa; 
-                    .timestamp {
-                        .detail {
-                            img {
-                                width: 45px;
-                            }
-                        }
-                        // .date {
-                        //     display:none;
-                        // }
-                        .date, .time {
-                            span {
-                                font-size: 8px; 
-                                svg {
-                                    width: 8px; 
-                                    height: 8px; 
-                                }
-                            }
-                        }
-                    }
-                }
-                img.indomap {
-                    width: 100%; 
-                } .pins {
-                    .pin1 {
-                        transform: translate(40px, 70px);
-                    } .pin2 {
-                        transform: translate(120px, 70px);
-                    }
-
-                    .pin {
-                        .post-map {
-                            width: 60px;                        
-                            top: 0;
-                            left: 20px;
-                            border-radius: 3px;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
-                            align-items: flex-start;
-                            h3 {
-                                font-size: 7px; 
-                            } a {
-                                font-size: 6px; 
-                                margin-bottom:unset; 
-                            } img {
-                                border-radius: 3px; 
-                            }
-                        }
-                        .pinImage {
-                            width: 8px; 
-
-                        } .circle-pin {
-                            width: 9px;
-                            height: 9px;
-                            bottom: 3px;
-                            left: -1px;
-                        }
-                    }
-                }
-            } 
-        }
-    } 
+   
 
     #myTable_info,
     #myTable2_info {
