@@ -1,0 +1,377 @@
+@import './main';
+
+.container {
+    background: #eee; 
+}
+
+$shadow: 0 0 5px #aaa;
+
+
+
+
+.job-hero {
+    width: 100%; 
+    height: 400px;
+    display:flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 90px;
+    border-radius: 0 0 50px 50px;
+    background:unset; 
+    background-image: url("../../images/jobhero.png");
+    background-size:cover;
+    * {
+        color:white; 
+    }
+    .job-header {
+        display:flex; 
+        align-items:center;
+        gap: 30px; 
+        .detail {
+            display:flex; 
+            flex-direction:column;
+            gap: 10px; 
+            h3 {
+                font-size: 30px; 
+            } .spans {
+                display:flex;
+                gap: 15px; 
+                align-items:center; 
+                span {
+                    padding: 3px 10px; 
+                    background: $red1; 
+                    border-radius: 30px;
+                }
+            } .location {
+                display:flex; 
+                align-items:center; 
+                gap: 10px; 
+                svg {
+                    filter:brightness(10);
+                    width: 12px; 
+                    height: auto; 
+                } span {
+                    font-size: 14px; 
+                }
+            }
+        }
+        img {
+            width: 130px; 
+            
+        }
+    } .job-footer {
+        h5 {
+            font-size: 20px; 
+        } .sosmed {
+            margin-top: 10px;
+            
+            display:flex; 
+            align-items: center;
+            justify-content: space-between;
+            svg {
+                width: 28px; 
+                height: auto; 
+            }
+        }
+    }
+}
+
+.twolayer {
+    display:flex; 
+    gap: 20px; 
+    .right {
+        width: 300px; 
+        .cards {
+            display:flex; 
+            flex-direction:column; 
+            gap: 30px; 
+            .card {
+                box-shadow: $shadow;
+
+                &-header {
+                    background:white; 
+                    padding: 15px; 
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3 {
+                        font-size: 22px; 
+                    } svg {
+                        width: 16px; 
+                        height: 16px; 
+                    }
+                } &-body {
+                    padding: 15px; 
+                    background: #eee; 
+                    display:flex; 
+                    flex-direction: column;
+                    gap: 15px; 
+                    p {
+                        font-size: 16px; 
+                    
+                    } .inner-card {
+
+                        display:flex; 
+                        align-items: center;
+
+                        padding: 10px; 
+                        background:white; 
+                        justify-content: space-between;
+                        border-radius: 7px; 
+                        box-shadow: $shadow;
+                        img {
+                            width: 80px; 
+                        }
+                        .detail {
+                            display:flex; 
+                            flex-direction:column; 
+                            gap:7px; 
+                            .location {
+                                display:flex;
+                                svg {
+                                    width: 13px; 
+                                    height: 13px; 
+                                } span {
+                                    font-size: 13px; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .left {
+        flex: 1; 
+        .left-header {
+            display:flex; ;
+            justify-content: space-between;
+            gap: 30px;
+            .card {
+                background:white; 
+                padding: 30px 30px; 
+                border-radius: 4px; 
+                box-shadow: $shadow;
+                flex:1; 
+                h3 {
+                    font-size: 20px; 
+                    
+                } p {
+                    font-size: 18px; 
+                    font-weight: bold;
+                }
+            }
+        } .left-footer {
+            background:white; 
+            padding: 50px; 
+            margin-top: 50px;
+            display:flex; 
+            flex-direction:column;
+            gap: 30px; 
+            box-shadow: $shadow;
+            h3 {
+                font-size: 22px;
+
+            } .contains, ul {
+                display:flex; 
+                flex-direction:column; 
+                gap: 10px; 
+                list-style: disc;
+                p,li {
+                    font-size: 18px; 
+                    line-height: 2;
+                }
+            } ul {
+                margin-left: 30px;
+            }
+        } button {
+            cursor:pointer; 
+            display:inline-block;
+            padding: 5px 15px; 
+            background: $red3; 
+            color:white; 
+            margin-top: 30px; 
+            border-radius: 6px;
+            font-size: 20px;
+            border:unset; 
+            outline:unset;  
+     
+        }
+    }
+}
+
+
+
+
+.overlay {
+    transition: all 500ms ease 0s;
+    background:unset;
+}
+
+.overlay.active {
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background:rgba(0, 0, 0, 0.315); 
+    z-index: 99;
+}
+
+.box-white.active {
+    transform: translate(-50%, -50%);
+}
+
+.box-white {
+    transition: all 500ms ease 0s;
+    // centering
+    position: fixed;
+    top: 50%;  /* position the top  edge of the element at the middle of the parent */
+    left: 50%; /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, 200%);
+
+    z-index: 999;
+    margin-top: unset;
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    width: 860px;
+    height: auto;
+    .header {
+    
+        h1 {
+            font-size: 30px;
+            padding-right: 30px;
+        } h2 {
+            margin-top: 50px;
+            font-size: 20px;
+            border-bottom: 1px solid;
+        }
+    }
+
+    form {
+        .mybtn.btn-purple {
+            margin-top: 46px;
+            width: 100%;
+            height: 46px;
+            font-size: 15px;
+            background:$red3; 
+            color:white; 
+            border:unset; 
+            outline:unset; 
+        }
+        .form-group {
+            select {
+                background:white; 
+                padding: 13px 8px;
+                color:black;
+                border:unset;
+                outline: none;
+                -webkit-appearance: none;
+                background: url('../assets/arrow2.svg') no-repeat 95% 20px;
+                box-shadow: inset 1px 3px 3px 0 #eee;
+                color:#000;
+                font-size: 16px;
+                background-size: 11px ;
+                option {
+                    color:#000;
+                    font-size: 16px;
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            label {
+                font-size: 15px;
+                text-transform: uppercase;
+            } input,textarea,select {
+                height: 45px;
+            } textarea {
+                height: 129px;
+                border:unset;
+                outline: unset;
+                color:#000;
+            }
+
+            input,textarea,select {
+                border:unset; 
+                outline:unset; 
+                border-radius: 3px;
+                padding: 16px; 
+                
+                box-shadow: inset 1px 3px 3px 0 #eee;
+                font-size: 16px;
+            }
+            input {
+                font-size: 16px;
+            }
+            input::-webkit-input-placeholder {
+                font-size: 16px;
+            }
+            
+            input::placeholder {
+                font-size: 16px;
+            } label.btn-purple {
+                width: 188px; 
+                height: 36px; 
+                border-radius: 5px;
+                font-size: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            } #myfile {
+                display: none;
+            }
+        }
+        .form-header {
+            margin-top: 36px;
+            margin-bottom: 34px;
+            display: flex;
+            justify-content: space-between;
+            gap: 41px; 
+            .right {
+                display: flex;
+                flex-direction: column;
+                gap:22px;
+                flex: 1; 
+                .form-group {
+                    svg {
+                        filter: brightness(0);
+                    }
+                    .numbers {
+                        display: flex;
+                        select {
+                            background:white; 
+                            padding: 13px;
+                            padding-right: 50px;
+                            color:black;
+                            border:unset;
+                            outline: none;
+                            -webkit-appearance: none;
+                            background: url('../assets/arrowselect.svg') no-repeat 65px 23px;
+                            box-shadow: 0 0 2px #ccc;
+                            background-size: 11px ;
+                        } input {
+                            flex:1;
+                        }
+                    }
+                }
+            } .left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap:22px;
+                .username {
+                    display: flex;
+                    gap: 16px;
+                    .form-group {
+                        flex:1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import './main';
+
+.container {
+    .box {
+        display:flex; 
+        flex-direction: column;
+        text-align:center; 
+        justify-content: center;
+        align-items: center;
+        gap: 10px; 
+        img {
+            width: 50%;
+        } a {
+            border: unset; 
+            padding: 3px 10px; 
+            display: inline-block;
+            background: $red3; 
+            color:white; 
+            border-radius: 3px;
+        }
+    }
+}

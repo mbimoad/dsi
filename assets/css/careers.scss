@@ -1,0 +1,238 @@
+@import './main';
+
+.twolayer.section {
+    padding-top: unset; 
+}
+
+.plan__container.section {
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+}
+
+.nodata {
+    display:flex; 
+    flex-direction:column; 
+    justify-self: center;
+    text-align: center;
+    align-items:center;
+    img {
+        width: 500px; 
+    } .detail {
+        h3 {
+            font-size: 23px; 
+            
+        } p {
+            font-size: 18px;
+        }
+    }
+}
+
+.pagination {
+   
+    justify-self: center;
+    align-self:center; 
+    display:flex; 
+    align-items: center;
+    gap: 10px; 
+    margin: auto; 
+    margin-top: 40px; 
+    svg {
+        width: 18px; 
+        height: auto; 
+        cursor: pointer; 
+    
+    }
+    .numbers {
+        transform: translate(0,-5px);
+        display:flex;
+        gap: 10px; 
+        align-items:center; 
+        span {
+            cursor: pointer; 
+            font-size: 20px; 
+            display:inline-block; 
+            width: 40px; 
+            height: 40px; 
+            display:grid;
+            place-content: center;
+            border-radius: 50%; 
+        } span.active {
+            background: $red3; 
+            color:white; 
+        }
+    }
+}
+.twolayer {
+    display:flex; 
+    gap: 20px;
+    .right {
+       
+        .menu {
+         
+            padding: 20px; 
+            background: #efefef;
+        } .menu:last-child {
+            background:unset;
+        }
+        display:flex; 
+        flex-direction:column;
+        gap: 20px; 
+        .relateds {
+            a {
+                display:inline-block;
+                padding: 3px 6px; 
+                background: #efefef;
+                color:black;
+                border-radius: 3px; 
+            }
+        }
+        .component {
+            display:flex; 
+            gap: 10px; 
+            align-items:center; 
+            margin-bottom: 20px;
+            img {
+                width: 50px; 
+            }       h3 {
+                font-size: 22px; 
+            }
+        } .search {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .jobname,
+            .location {
+                background:white; 
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 6px;
+                // border: 1px solid;
+                padding-right: 10px;
+                box-shadow: 0 0 5px #eee;
+                input,select {
+                    border:unset; 
+                    outline:unset; 
+                } svg {
+                    width: 20px; 
+                    height: auto; 
+                }
+            } button {
+                background: $red3; 
+                color:white; 
+                border:unset; 
+                outline:unset; 
+                padding: 5px 10px; 
+                border-radius: 3px; 
+            }
+        }
+    }
+
+    .left {
+        display:flex; 
+        flex-direction:column;
+        flex: 1; 
+        .job-found {
+            display:flex; 
+            align-items:center; 
+            justify-content: space-between;
+            
+            * {
+                font-size: 20px; 
+            } button {
+                border: unset; 
+                outline:unset; 
+                display:flex; 
+                align-items:center; 
+                gap: 10px; 
+                background:unset; 
+                svg {
+                    width: 10px; 
+                    height: auto; 
+                }
+            } h3 {
+                font-size: 22px; 
+            }
+        } .cards {
+            margin-top: 50px; 
+            display:flex; 
+            flex-direction:column;
+            gap: 20px; 
+            .card:hover {
+                background:$red3; 
+                * {
+                    color:white; 
+                } .main {
+                    .left {
+                        filter: brightness(10.5);
+                    }
+                    .center {
+                        .detail {
+                            span {
+                                background: $red1; 
+                            }
+                        } .location {
+                            svg {
+                                filter: brightness(10.5);
+                            }
+                        }
+                    }
+                }
+            }
+            .card {
+                box-shadow: 0 0 5px #eee;
+                padding: 20px;
+                border-radius: 10px;
+                display:flex; 
+                justify-content: space-between;
+                align-items:center; 
+                .main {
+                    display:flex; 
+                    gap: 30px;
+                    align-items:center;
+                   
+                    .right {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        gap: 10px;
+
+                        a {
+                            padding: 5px 10px; 
+                            display:inline-block; 
+                            background: $red3; 
+                            color:white; 
+                            border-radius: 7px; 
+
+                        }
+                    }
+                    .left {
+                        img {
+                            width: 100px; 
+                            height: auto; 
+                        }
+                    } .center {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        h3 {
+                            font-size: 22px; 
+                        } .detail {
+                            span {
+                                padding: 3px 10px; 
+                                background: $gray; 
+                                
+                            }
+                        } .location {
+                            svg {
+                                width: 12px; 
+                                height: auto; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
