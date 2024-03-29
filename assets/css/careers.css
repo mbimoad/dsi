@@ -2428,6 +2428,7 @@ header.active {
 }
 
 .twolayer .left .job-found button {
+  cursor: pointer;
   border: unset;
   outline: unset;
   display: -webkit-box;
@@ -2443,6 +2444,11 @@ header.active {
 .twolayer .left .job-found button svg {
   width: 10px;
   height: auto;
+}
+
+.twolayer .left .job-found button span.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .twolayer .left .job-found h3 {
