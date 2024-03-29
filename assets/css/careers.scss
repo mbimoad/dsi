@@ -416,14 +416,85 @@
 
 
 @media screen and (max-width: 550px) {
+    .pagination {
+        .numbers {
+            transform: translate(0, -3px);
+            span {
+                cursor: pointer;
+                font-size: 13px;
+                display: inline-block;
+                width: 25px;
+                height: 25px;
+                display: -ms-grid;
+                display: grid;
+                place-content: center;
+                border-radius: 50%;
+            }
+        }
+    }
     .twolayer.section {
         .left {
             margin-top : 75px;
+            .job-found {
+                * {
+                    font-size: 17px;
+                }
+            }
+
+            .cards {
+                .card {
+                    .right {
+                        * {
+                            font-size: 11px; 
+                        }
+                    }
+                    .main {
+                        gap: 15px; 
+                        .left {
+                            img {
+                                width: 80px 
+                            }
+                        }
+                        .center {
+                            h3 {
+                                font-size: 16px; 
+                            } .detail {
+                                span {
+                                    font-size: 11px; 
+                                }
+                            } .location {
+                                span 
+                                {
+                                    font-size: 11px; 
+                                } svg {
+                                    width: 8px; 
+                                    height: auto; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         .right.layer {
+            .component {
+                h3 {
+                    font-size: 20px; 
+                } img {
+                    width: 40px; 
+                }
+            }
             .search {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
+                .jobname,
+                .location {
+                    input, select {
+                        font-size: 13px; 
+                    } svg {
+                        width: 15px; 
+                    }
+                }
                 button {
                     position: absolute;
                     transform: translate(0px, 60px);
@@ -431,6 +502,7 @@
                     right: 0;
                     width: 93%;
                     margin: auto;
+                    font-size: 13px;
                 }
             }
         }

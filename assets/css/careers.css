@@ -2718,14 +2718,69 @@ header.active {
 }
 
 @media screen and (max-width: 550px) {
+  .pagination .numbers {
+    -webkit-transform: translate(0, -3px);
+            transform: translate(0, -3px);
+  }
+  .pagination .numbers span {
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+  }
   .twolayer.section .left {
     margin-top: 75px;
+  }
+  .twolayer.section .left .job-found * {
+    font-size: 17px;
+  }
+  .twolayer.section .left .cards .card .right * {
+    font-size: 11px;
+  }
+  .twolayer.section .left .cards .card .main {
+    gap: 15px;
+  }
+  .twolayer.section .left .cards .card .main .left img {
+    width: 80px;
+  }
+  .twolayer.section .left .cards .card .main .center h3 {
+    font-size: 16px;
+  }
+  .twolayer.section .left .cards .card .main .center .detail span {
+    font-size: 11px;
+  }
+  .twolayer.section .left .cards .card .main .center .location span {
+    font-size: 11px;
+  }
+  .twolayer.section .left .cards .card .main .center .location svg {
+    width: 8px;
+    height: auto;
+  }
+  .twolayer.section .right.layer .component h3 {
+    font-size: 20px;
+  }
+  .twolayer.section .right.layer .component img {
+    width: 40px;
   }
   .twolayer.section .right.layer .search {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  .twolayer.section .right.layer .search .jobname input, .twolayer.section .right.layer .search .jobname select,
+  .twolayer.section .right.layer .search .location input,
+  .twolayer.section .right.layer .search .location select {
+    font-size: 13px;
+  }
+  .twolayer.section .right.layer .search .jobname svg,
+  .twolayer.section .right.layer .search .location svg {
+    width: 15px;
   }
   .twolayer.section .right.layer .search button {
     position: absolute;
@@ -2735,6 +2790,7 @@ header.active {
     right: 0;
     width: 93%;
     margin: auto;
+    font-size: 13px;
   }
 }
 /*# sourceMappingURL=careers.css.map */
