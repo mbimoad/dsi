@@ -319,7 +319,7 @@ $shadow: 0 0 5px #aaa;
                 border-radius: 5px;
                 font-size: 13px;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 gap: 10px;
             } #myfile {
@@ -376,6 +376,24 @@ $shadow: 0 0 5px #aaa;
     }
 }
 
+@media screen and (max-width: 1570px) {
+    .box-white {
+        width: 800px;
+        form {
+            .form-group {
+                textarea {
+                    height: 90px;
+                }
+            }
+        } .header {
+            h2 {
+                margin-top: 30px; 
+            }
+        }
+    }
+
+}
+
 @media screen and (max-width: 1370px) {
     .twolayer.section {
             flex-direction: column;
@@ -403,6 +421,103 @@ $shadow: 0 0 5px #aaa;
 }
 
 @media screen and (max-width: 1000px) {
+    .box-white {
+
+        padding: pxToVw(50, 1000);
+        border-radius: pxToVw(5, 1000);
+        box-shadow: 0 0 pxToVw(5, 1000) #ccc;
+        width: pxToVw(800, 1000);
+        .header {
+        
+            h1 {
+                font-size: pxToVw(30, 1000);
+                padding-right: pxToVw(30, 1000);
+            } h2 {
+                margin-top: pxToVw(30, 1000); 
+                font-size: pxToVw(20, 1000);
+                border-bottom: pxToVw(1, 1000) solid;
+            }
+        }
+    
+        form {
+            .mybtn.btn-purple {
+                margin-top: pxToVw(46, 1000);
+                height: pxToVw(46, 1000);
+                font-size: pxToVw(15, 1000);
+            }
+            .form-group {
+                select {
+                    padding: pxToVw(13, 1000) pxToVw(8, 1000);
+                    background: url('../assets/arrow2.svg') no-repeat 95% pxToVw(20, 1000);
+                    box-shadow: inset pxToVw(1, 1000) pxToVw(3, 1000) pxToVw(3, 1000) 0 #eee;
+                    font-size: pxToVw(16, 1000);
+                    background-size: pxToVw(11, 1000);
+                    option {
+                        font-size: pxToVw(16, 1000);
+                    }
+                }
+                gap:pxToVw(10, 1000);
+                label {
+                    font-size: pxToVw(15, 1000);
+                } input,textarea,select {
+                    height: pxToVw(45, 1000);
+                } textarea {
+                    border-radius: pxToVw(3, 1000);
+                    height: pxToVw(90, 1000);
+                    padding: pxToVw(16, 1000); 
+                    box-shadow: inset pxToVw(1, 1000) pxToVw(3, 1000) pxToVw(3, 1000) 0 #eee;
+                    font-size: pxToVw(16, 1000);
+                }
+                input {
+                    font-size: pxToVw(16, 1000);
+                }
+                input::-webkit-input-placeholder {
+                    font-size: pxToVw(16, 1000);
+                }
+                
+                input::placeholder {
+                    font-size: pxToVw(16, 1000);
+                } label.btn-purple {
+                    width: pxToVw(188, 1000); 
+                    height: pxToVw(36, 1000); 
+                    border-radius: pxToVw(5, 1000);
+                    font-size: pxToVw(13, 1000);
+                    gap: pxToVw(10, 1000);
+                }
+            }
+            .form-header {
+                margin-top: pxToVw(36, 1000);
+                margin-bottom: pxToVw(34, 1000);
+                gap: pxToVw(41, 1000); 
+                .right {
+                    gap:pxToVw(22, 1000);
+                    flex: 1; 
+                    .form-group {
+                        .numbers {
+                            select {
+                                padding: pxToVw(13, 1000);
+                                padding-right: pxToVw(50, 1000);
+                                background: url('../assets/arrowselect.svg') no-repeat pxToVw(65, 1000) pxToVw(23, 1000);
+                                box-shadow: 0 0 pxToVw(2, 1000) #ccc;
+                                background-size: pxToVw(11, 1000);
+                            } input {
+                                flex:1;
+                            }
+                        }
+                    }
+                } .left {
+                    flex: 1;
+                    gap:pxToVw(22, 1000);
+                    .username {
+                        gap: pxToVw(16, 1000);
+                        .form-group {
+                            flex:1;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .job-hero {
         .job-footer {
             position: absolute;
@@ -415,6 +530,99 @@ $shadow: 0 0 5px #aaa;
 }
 
 @media screen and (max-width: 785px) {
+    .box-white {
+        width: 90%;
+        padding: 30px; 
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ccc;
+        .header {
+            h1 {
+                font-size: 20px;
+            } h2 {
+                font-size: 17px;
+                margin-top: 9px;
+                margin-bottom: 20px;
+            }
+        }
+        form {
+
+            .mybtn.btn-purple {
+                margin-top: 8px;
+                width: 100%;
+                height: 30px;
+                font-size: 13px;
+            }
+
+            .form-header {
+                margin-top: 8px;
+                margin-bottom: 8px;
+                gap: 8px;
+                flex-direction: column;
+                .left,
+                .right {
+                    gap: 8px;
+                }
+
+                .right {
+                    .form-group {
+                        .numbers {
+                            select {
+                                
+                                padding: 0 6px; 
+                                padding-right: 50px;
+                                background: url('../assets/arrowselect.svg') no-repeat 65px 13px;
+                                box-shadow: 0 0 2px #ccc;
+                                background-size: 11px ; 
+                            }
+                        }
+                    }
+                } .left {
+                    // gap: unset;
+                    .username {
+                        gap: unset; 
+                    }
+                }
+            }
+
+            .form-group {
+                select {
+                    padding: 0 6px; 
+                    
+                    background: url('../assets/arrow2.svg') no-repeat 95% 13px;
+                    font-size: 11px;
+                    option {
+                        font-size: 11px; 
+                    }
+                }
+                gap: 8px; 
+                label {
+                    font-size: 11px; 
+                    
+
+                } input,textarea,select {
+                    height: 36px;
+                } textarea {
+                    font-size: 11px;
+                    height: 50px; 
+                    padding: 11px; 
+                } input::-webkit-input-placeholder {
+                    font-size: 11px;
+                }
+                input {
+                    font-size: 11px;
+                }
+                input::placeholder {
+                    font-size: 11px;
+                } label.btn-purple {
+                    width: 188px; 
+                    height: 30px; 
+                    border-radius: 5px;
+                    font-size: 11px;
+                    gap: 8px;
+                }
+            }
+        }
+    } 
     .job-hero {
         padding: 0 40px;
         .job-header {
@@ -448,6 +656,7 @@ $shadow: 0 0 5px #aaa;
         .left {
             button {
                 font-size: 12px; 
+                border-radius: 3px; 
             }
             .left-header {
                 .card {
