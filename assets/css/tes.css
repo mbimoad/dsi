@@ -200,6 +200,10 @@ img.img-support {
   position: absolute;
 }
 
+.mobilemode {
+  display: none;
+}
+
 img.img-support-background1 {
   width: 400px;
   position: absolute;

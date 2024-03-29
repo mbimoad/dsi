@@ -201,6 +201,10 @@ img.img-support {
   position: absolute;
 }
 
+.mobilemode {
+  display: none;
+}
+
 img.img-support-background1 {
   width: 400px;
   position: absolute;
@@ -2331,6 +2335,10 @@ section {
 img.img-support {
   width: 800px;
   position: absolute;
+}
+
+.mobilemode {
+  display: none;
 }
 
 img.img-support-background1 {

@@ -200,6 +200,10 @@ img.img-support {
   position: absolute;
 }
 
+.mobilemode {
+  display: none;
+}
+
 img.img-support-background1 {
   width: 400px;
   position: absolute;
@@ -2283,6 +2287,7 @@ header.active {
 }
 
 .twolayer {
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2307,6 +2312,15 @@ header.active {
 
 .twolayer .right .menu:last-child {
   background: unset;
+}
+
+.twolayer .right .relateds {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
 }
 
 .twolayer .right .relateds a {
@@ -2548,5 +2562,179 @@ header.active {
 .twolayer .left .cards .card .main .center .location svg {
   width: 12px;
   height: auto;
+}
+
+@media screen and (max-width: 1400px) {
+  .twolayer .right.layer {
+    width: 400px;
+  }
+  .twolayer .right.layer .search .jobname input {
+    width: 90px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .twolayer .left .cards .card .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .twolayer .left .cards .card {
+    gap: 20px;
+  }
+  .twolayer .left .cards .card .main .detail {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .twolayer .left .cards .card .right {
+    width: 115px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .twolayer.section {
+    margin-top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .twolayer.section .left {
+    margin-top: 35px;
+  }
+  .twolayer.section .left .job-found * {
+    font-size: 22px;
+  }
+  .twolayer.section .left .cards .card .main .left {
+    margin-top: unset;
+  }
+  .twolayer.section .right.layer {
+    width: 100%;
+  }
+  .twolayer.section .right.layer .menu {
+    background: white;
+    padding: 20px 0;
+  }
+  .twolayer.section .right.layer .search .jobname,
+  .twolayer.section .right.layer .search .location {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .twolayer.section .right.layer .search .jobname input, .twolayer.section .right.layer .search .jobname select,
+  .twolayer.section .right.layer .search .location input,
+  .twolayer.section .right.layer .search .location select {
+    padding: unset;
+    font-size: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .twolayer.section .right.layer .search .jobname svg,
+  .twolayer.section .right.layer .search .location svg {
+    width: 30px;
+  }
+  .twolayer.section .right.layer .search button {
+    font-size: 18px;
+  }
+  .twolayer.section .right.layer .component h3 {
+    font-size: 25px;
+  }
+  .twolayer.section .right.layer .component img {
+    width: 50px;
+  }
+  .twolayer.section .right.layer .menu.related {
+    display: none;
+  }
+  .twolayer.section .right.layer .menu:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 20px 0;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .mobilemode.section {
+    padding-top: unset;
+    padding-bottom: 20px;
+  }
+  .mobilemode {
+    padding-top: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 75px;
+  }
+  .twolayer.section {
+    margin-top: unset;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .twolayer .left .cards .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .twolayer .left .cards .card .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .twolayer.section .left {
+    margin-top: 75px;
+  }
+  .twolayer.section .right.layer .search {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .twolayer.section .right.layer .search button {
+    position: absolute;
+    -webkit-transform: translate(0px, 60px);
+            transform: translate(0px, 60px);
+    left: 0;
+    right: 0;
+    width: 93%;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=careers.css.map */

@@ -1,6 +1,8 @@
 @import './main';
 
-
+.mobilemode {
+    display:none;
+}
 
 .parent-box {
     .frame-box {
@@ -28,7 +30,7 @@
         justify-content: space-between;
         gap: 30px; 
         .detail-information {
-            flex: 1;
+            flex: unset;
             .component {
                 display:flex; 
                 align-items: center;

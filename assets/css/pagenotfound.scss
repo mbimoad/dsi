@@ -1,6 +1,13 @@
 @import './main';
 
 .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
     .box {
         display:flex; 
         flex-direction: column;
@@ -17,6 +24,42 @@
             background: $red3; 
             color:white; 
             border-radius: 3px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        .box {
+            img {
+                width: 70%; 
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 785px) {
+    .container {
+        .box {
+            img {
+                width: 85%; 
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        .box {
+            h1 {
+                font-size: 22px; 
+            } span {
+                font-size: 14px; 
+                width: 70%;
+            } a {
+                font-size: 14px; 
+            }
         }
     }
 }

@@ -63,6 +63,7 @@
     }
 }
 .twolayer {
+    margin-top: 100px; 
     display:flex; 
     gap: 20px;
     .right {
@@ -78,6 +79,10 @@
         flex-direction:column;
         gap: 20px; 
         .relateds {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+
             a {
                 display:inline-block;
                 padding: 3px 6px; 
@@ -235,4 +240,200 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .twolayer {
+        .right.layer {
+            width: 400px; 
+            .search {
+                .jobname {
+                    input {
+                        width: 90px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .twolayer {
+        .left {
+            .cards {
+                .card {
+                    .main {
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    .twolayer {
+        .left {
+            .cards {
+                .card {
+                    gap: 20px; 
+                    .main {
+                        .detail {
+                            flex-wrap: wrap;
+                            display: flex;
+                            gap: 15px;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .twolayer {
+        .left {
+            .cards {
+                .card {
+        
+                    .right {
+                        width: 115px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1010px) {
+    .twolayer.section {
+        margin-top: 60px; 
+        flex-direction: column-reverse;
+        .left {
+            margin-top: 35px;
+            .job-found {
+                * {
+                    font-size: 22px; 
+                }
+            } .cards {
+                .card {
+                    .main {
+                        .left {
+                            margin-top: unset; 
+                        }
+                    }
+                }
+            }
+        }
+        .right.layer {
+            .menu {
+                background:white; 
+                padding: 20px 0;
+            }
+            .search {
+               
+                .jobname, 
+                .location {
+                    flex: 1; 
+                    input,select {
+                        padding: unset;
+                        font-size: 20px;
+                        flex:1;
+                    } svg {
+                        width: 30px; 
+                    }
+                } button {
+                    font-size: 18px;
+
+                }
+            }
+            .component {
+                h3 {
+                    font-size: 25px; 
+                } img {
+                    width: 50px; 
+                }
+            }
+            width: 100%; 
+            .menu.related {
+                display:none; 
+            }
+
+            .menu:last-child {
+                
+                flex: 1; 
+                padding: 20px 0; 
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 785px) {
+    .mobilemode.section {
+        padding-top: unset; 
+        padding-bottom: 20px;
+    }
+    .mobilemode {
+        padding-top: unset; 
+        display:flex; 
+        flex-direction:column;
+        margin-top: 75px; 
+    } .twolayer.section {
+        margin-top: unset; 
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .twolayer {
+        .left {
+            .cards {
+                .card {
+                    flex-direction:column;
+                    align-items:flex-start; 
+                    .right {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    .twolayer.section {
+        .left {
+            margin-top : 75px;
+        }
+        .right.layer {
+            .search {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                button {
+                    position: absolute;
+                    transform: translate(0px, 60px);
+                    left: 0;
+                    right: 0;
+                    width: 93%;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
 }
