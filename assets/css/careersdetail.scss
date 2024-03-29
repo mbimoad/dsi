@@ -530,6 +530,11 @@ $shadow: 0 0 5px #aaa;
 }
 
 @media screen and (max-width: 785px) {
+    .box-white.active {
+        z-index: 9999999;
+    } .overlay.active {
+        z-index: 9999999;
+    }
     .box-white {
         width: 90%;
         padding: 30px; 

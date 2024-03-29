@@ -2917,6 +2917,12 @@ header.active {
 }
 
 @media screen and (max-width: 785px) {
+  .box-white.active {
+    z-index: 9999999;
+  }
+  .overlay.active {
+    z-index: 9999999;
+  }
   .box-white {
     width: 90%;
     padding: 30px;
