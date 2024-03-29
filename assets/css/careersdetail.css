@@ -2854,7 +2854,7 @@ header.active {
     font-size: 12px;
   }
   .job-hero {
-    border-radius: 25px;
+    border-radius: unset;
     padding: 0 20px;
   }
   .job-hero .job-footer {
