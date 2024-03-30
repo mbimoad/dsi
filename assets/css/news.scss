@@ -277,6 +277,8 @@ header.active {
                     font-size: 16px;
                     outline:unset; 
                     border:unset; 
+                } label {
+                    transform: translate(0px, 4px);
                 }
                 button {
                     padding: 0px 10px;
@@ -555,6 +557,533 @@ header.active {
                     }
                 }
            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1660px) {
+    .news {
+        gap: 25px; 
+        .layer:last-child {
+            .menu.mynews {
+                .content {
+                    grid-template-columns: repeat(2, 140px);
+                }
+            }
+        }
+        .layer:first-child {
+            .content {
+                .other-news {
+                    .boxs {
+                        gap: 40px; 
+                    }
+                }
+                .split-news {
+                    .allsub {
+                        width: 355px; 
+                        .sub-news {
+                            .images {
+                                img {
+                                    width: 105px;
+                                    height: 105px;
+                                }
+                            }
+                        }
+                    }
+                    .main-news {
+                        .description {
+                            h1 {
+                                font-size: 33px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1400px) {
+    .banner-news {
+        $dimension: 450px; 
+        $subdimens: $dimension - 230px;
+        .news1 {
+            width: 640px;
+            height: $dimension;
+        } .news2, .news3 {
+            width: 460px;
+            height: $subdimens;
+        } 
+    }
+
+}
+
+@media screen and (max-width: 1370px) {
+    .news.section {
+        flex-direction:column;
+
+        .layer:last-child {
+            .menu.mynews {
+                display:none; 
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+    .news {
+        // gap: 25px; 
+        .layer:last-child {
+            .menu.mynews {
+                .content {
+                    // grid-template-columns: repeat(2, 140px);
+                }
+            }
+        }
+        .layer:first-child {
+            .header {
+                h1 {
+                    font-size: 33px; 
+                }
+            }
+          
+            .content {
+                .other-news {
+                    .line {
+                        width: 70%; 
+                    }
+                    .boxs {
+                        gap: 15px; 
+                        .box {
+                            .description {
+                                padding: 10px 0px;
+                                h3 {
+                                    font-size: 18px; 
+                                } .detail {
+                                    &-author {
+                                        span {
+                                            font-size: 13px; 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .split-news {
+                    .allsub {
+                        width: 320px; 
+                        .sub-news {
+                            .images {
+                                
+                            }
+                        } .sub-news.sn4 {
+                            display:none;
+                        }
+                    }
+                    .main-news {
+                        .description {
+                            h1 {
+                                font-size: 28px; 
+                            } h6 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 900px) {
+    .news {
+        .layer:first-child {
+            .header {
+                .line {
+                    width: 22%; 
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 820px) {
+
+
+    .news {
+        // gap: 25px; 
+        .layer:last-child {
+            .menu.mynews {
+                .content {
+                    // grid-template-columns: repeat(2, 140px);
+                }
+            }
+        }
+        .layer:first-child {
+            .content {
+                .other-news {
+                    .boxs {
+                        // gap: 40px; 
+                    }
+                }
+                .split-news {
+                    .allsub {
+                        width: 320px; 
+                        .sub-news {
+                            .images {
+                                
+                            }
+                        }
+                    }
+                    .main-news {
+                        .description {
+                            h1 {
+                                font-size: 26px; 
+                            } h6 {
+                                font-size: 12px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .banner-news {
+        $dimension: 450px; 
+        $subdimens: $dimension - 230px;
+        .news1 {
+            width: 570px;
+            height: $dimension;
+        } .news2, .news3 {
+            width: 390px;
+            height: $subdimens;
+        } 
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .banner-news {
+        display:flex; 
+        justify-content:center; 
+        align-items: center; 
+        grid-template-areas: unset;
+        grid-template-columns: unset;
+        .news1 {
+            width: 90%; 
+        } 
+
+        .news2,
+        .news3 {
+            display:none; 
+        }
+
+        
+    }
+}
+
+
+@media screen and (max-width: 785px) {
+
+    .news {
+
+
+
+        .layer:first-child {
+            .header {
+                h1 {
+                    font-size: 27px; 
+                } .category-button {
+                    button {
+                        font-size: 12px; 
+                    }
+                }
+            }
+            .content {
+                .other-news {
+                    h3 {
+                        font-size: 27px; 
+                    }
+                    .line {
+                        width: 55%; 
+                    } .boxs {
+                        grid-template-columns: repeat(2, 1fr);
+                        // .box:nth-child(3),
+                        // .box:nth-child(4),
+                        .box:nth-child(5),
+                        .box:nth-child(6) {
+                            display:none; 
+                        }
+                    }
+                }
+                .split-news {
+
+                    .allsub {
+                        width: 255px; 
+                        .sub-news {
+                            .detail {
+                                h1 {
+                                    font-size: 14px; 
+                                }
+                            } .images {
+                                img {
+                                    width: 90px; 
+                                    height: 90px; 
+                                } .index {
+                                    bottom: 15px;
+                                    left: 0px;
+                                }
+                            }
+                        }
+                    }
+                    .description {
+                        padding: 20px; 
+                    } .main-news {
+                        .description {
+                            h1 {
+                                font-size: 20px; 
+                            } h6 {
+                                font-size: 10px; 
+                            } .detail {
+                                span {
+                                    font-size: 12px;
+                                }
+                            } .detail-date {
+                                .icon {
+                                    svg {
+                                        width: 20px; 
+                                        height: 20px; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .banner-news {
+        padding: 40px 0; 
+        .news1 {
+            height: 365px; 
+            .description {
+                h1 {
+                    font-size: 24px; 
+                }
+
+                .detail {
+                    &-author {
+                        span {
+                            font-size: 12px;
+                        }
+                    } &-date {
+                        span {
+                            font-size: 12px; 
+                        }
+                        .icon {
+                            svg {
+                                width: 16px; 
+                                height: 16px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .news {
+
+
+
+        .layer:first-child {
+            .header {
+              .line {
+                    display:none;
+                }
+            }
+            .content {
+                .split-news {
+                    flex-direction:column;
+                    gap: 30px; 
+                    .allsub {
+                        width: 100%;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        .sub-news.sn3 {
+                            display:none; 
+                        }
+                        .sub-news {
+                            justify-content:space-between; 
+
+                            .detail-date {
+                                .icon {
+                                    svg {
+                                        height: auto; 
+                                    }
+                                }
+                            }
+                            .detail {
+                                gap: 5px; 
+                                h1 {
+                                    margin-top: 10px; 
+                                    font-size: 14px; 
+                                }
+                            } .images {
+                                img {
+                                    width: 90px; 
+                                    height: 90px; 
+                                } .index {
+                                    bottom: 0;
+                                    left: 0px;
+                                }
+                            }
+                        }
+                    }
+                    .description {
+                        padding: 20px; 
+                    } .main-news {
+                        .description {
+                            padding: 110px 20px 20px 20px;
+                            h1 {
+                                font-size: 20px; 
+                            } h6 {
+                                font-size: 10px; 
+                            } .detail {
+                                span {
+                                    font-size: 12px;
+                                }
+                            } .detail-date {
+                                .icon {
+                                    svg {
+                                        width: 20px; 
+                                        height: 20px; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .news {
+        .layer:first-child {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            } .content {
+                .other-news {
+                    .boxs {
+                        flex-direction: column;
+                        grid-template-columns: 1fr; 
+                        .box:nth-child(3),
+                        .box:nth-child(4) {
+                            display:none; 
+                        } .box {
+                            .images {
+                                img {
+                                    height: 215px; 
+                                    object-fit: cover;
+                                }
+                            } .description {
+                                h3 {
+                                    font-size: 14px; 
+                                } .detail-author {
+                                    span {
+                                        font-size: 12px; 
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-news {
+        .news1 {
+            height: 280px; 
+
+            .description {
+                h1 {
+                    font-size: 20px;
+                } .detail {
+                    &-author {
+                        span {
+                            font-size: 10px; 
+                        } 
+                    } &-date {
+                        span {
+                            font-size: 10px; 
+                        } .icon {
+                            svg {
+                                width: 14px; 
+                                height: 14px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+    .banner-news {
+        .news1 {
+            height: 240px; 
+
+            .description {
+                h1 {
+                    font-size: 18px;
+                } .detail {
+                    &-author {
+                        span {
+                            font-size: 10px; 
+                        } 
+                    } &-date {
+                        span {
+                            font-size: 10px; 
+                        } .icon {
+                            svg {
+                                width: 14px; 
+                                height: 14px; 
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
