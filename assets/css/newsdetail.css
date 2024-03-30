@@ -6141,6 +6141,9 @@ header.active {
     width: 16px;
     height: 16px;
   }
+  .news.section .layer:first-child .description .contact .sosmed {
+    gap: 5px;
+  }
   .news.section .layer:first-child .description .contact .sosmed a {
     width: 25px;
     height: 25px;
