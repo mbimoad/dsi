@@ -1904,7 +1904,21 @@ $background-color_3: #ffcca3;
 		.section__description {
 			width: 100%;
 		}
+    }
+    
+    .plan__container {
+		.section__description {
+			font-size: 13px;  
+		}
 	}
+
+    .plan__container {
+        .section__header {
+            // text-align: center;
+            font-size: 1.5rem;
+        }
+        
+    }
 
 
 }

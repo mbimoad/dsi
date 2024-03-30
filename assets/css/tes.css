@@ -2021,6 +2021,12 @@ header.active {
   .plan__container .section__description {
     width: 100%;
   }
+  .plan__container .section__description {
+    font-size: 13px;
+  }
+  .plan__container .section__header {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 500px) {

@@ -224,6 +224,14 @@ $shadow: 0 0 5px #aaa;
 }
 
 .box-white {
+    .closed {
+        $pos: 30px; 
+        position:absolute; 
+        top: $pos; 
+        right: $pos; 
+        cursor:pointer;
+
+    }
     transition: all 500ms ease 0s;
     // centering
     position: fixed;
