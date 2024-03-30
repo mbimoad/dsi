@@ -805,7 +805,7 @@ header.active {
         .layer:first-child {
             .header {
                 h1 {
-                    font-size: 27px; 
+                    font-size: 25px; 
                 } .category-button {
                     button {
                         font-size: 12px; 
@@ -815,7 +815,7 @@ header.active {
             .content {
                 .other-news {
                     h3 {
-                        font-size: 27px; 
+                        font-size: 25px; 
                     }
                     .line {
                         width: 55%; 
@@ -992,15 +992,22 @@ header.active {
 }
 
 @media screen and (max-width: 550px) {
+ 
 
     .news {
         .layer:first-child {
             .header {
                 flex-direction: column;
                 gap: 15px;
+                h1 {
+                    font-size: 24px; 
+                }
             } .content {
                 .other-news {
-                    .boxs {
+                    .boxs { 
+                        h3 {
+                            font-size: 24px; 
+                        }
                         flex-direction: column;
                         grid-template-columns: 1fr; 
                         .box:nth-child(3),

@@ -3088,13 +3088,13 @@ header.active {
 
 @media screen and (max-width: 785px) {
   .news .layer:first-child .header h1 {
-    font-size: 27px;
+    font-size: 25px;
   }
   .news .layer:first-child .header .category-button button {
     font-size: 12px;
   }
   .news .layer:first-child .content .other-news h3 {
-    font-size: 27px;
+    font-size: 25px;
   }
   .news .layer:first-child .content .other-news .line {
     width: 55%;
@@ -3233,6 +3233,9 @@ header.active {
             flex-direction: column;
     gap: 15px;
   }
+  .news .layer:first-child .header h1 {
+    font-size: 24px;
+  }
   .news .layer:first-child .content .other-news .boxs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3240,6 +3243,9 @@ header.active {
             flex-direction: column;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .news .layer:first-child .content .other-news .boxs h3 {
+    font-size: 24px;
   }
   .news .layer:first-child .content .other-news .boxs .box:nth-child(3),
   .news .layer:first-child .content .other-news .boxs .box:nth-child(4) {
