@@ -527,6 +527,7 @@
 @media screen and (max-width: 560px) {
 
  .news.section {
+        margin-top: 35px; 
         flex-direction:column;
 
         .layer:first-child {
@@ -588,18 +589,19 @@
                         width: 25px; 
                         height: 25px; 
                         svg {
-                            width: 18px; 
-                            height: 18px; 
+                            width: 16px; 
+                            height: 16px; 
                         }
                     } .sosmed {
                         a {
                             width: 25px; 
                             height: 25px; 
+                            svg {
+                                width: 16px; 
+                                height: 16px; 
+                            }
                         }
-                        svg {
-                            width: 18px; 
-                            height: 18px; 
-                        }
+                        
                     }
                 }
             }

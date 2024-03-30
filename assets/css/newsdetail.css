@@ -6087,6 +6087,7 @@ header.active {
 
 @media screen and (max-width: 560px) {
   .news.section {
+    margin-top: 35px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -6137,16 +6138,16 @@ header.active {
     height: 25px;
   }
   .news.section .layer:first-child .description .contact .email svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
   .news.section .layer:first-child .description .contact .sosmed a {
     width: 25px;
     height: 25px;
   }
-  .news.section .layer:first-child .description .contact .sosmed svg {
-    width: 18px;
-    height: 18px;
+  .news.section .layer:first-child .description .contact .sosmed a svg {
+    width: 16px;
+    height: 16px;
   }
   .news.section .layer:last-child .menu.mynews {
     display: -ms-grid;
