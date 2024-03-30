@@ -642,6 +642,12 @@
                     .popular-new:nth-child(5), 
                     .popular-new:nth-child(6) {
                         display:none; 
+                    } .popular-new {
+                        .detail {
+                            h1 {
+                                font-size: 14px; 
+                            }
+                        }
                     }
                 } .tag-menu {
                     grid-area: tag; 

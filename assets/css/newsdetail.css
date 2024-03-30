@@ -6204,6 +6204,9 @@ header.active {
   .news.section .layer:last-child .menu.mynews .content .popular-new:nth-child(6) {
     display: none;
   }
+  .news.section .layer:last-child .menu.mynews .content .popular-new .detail h1 {
+    font-size: 14px;
+  }
   .news.section .layer:last-child .menu.mynews .tag-menu {
     -ms-grid-row: 4;
     -ms-grid-column: 1;
