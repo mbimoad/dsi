@@ -2342,7 +2342,7 @@ header.active * {
   padding: 5rem 90px;
   background-position: center center;
   background-size: cover;
-  background-image: url("../images/hero3.webp");
+  background-image: url("../webp/hero3.webp");
 }
 
 .bannerinfo .overlay {
@@ -2431,7 +2431,7 @@ header.active * {
 }
 
 .contactus {
-  background: url("../images/hero6.webp");
+  background: url("../webp/hero6.webp");
   background-size: cover;
   background-position: center center;
   padding: 90px;
@@ -3334,7 +3334,7 @@ header.active * {
   position: relative;
   border-radius: 6px;
   padding: 20px;
-  background: url("../images/hero5.webp");
+  background: url("../webp/hero5.webp");
   background-size: cover;
   background-position: center center;
 }
@@ -3576,7 +3576,7 @@ header.active * {
   top: 0;
   right: 0;
   bottom: 0;
-  background: url("../dsi/component5.webp");
+  background: url("../webp/component5.webp");
   background-size: cover;
   background-position: 100px 241px;
   background-size: 700px;
@@ -3875,7 +3875,7 @@ header.active * {
     height: 71px;
     width: 100%;
     /* border: 1px solid red; */
-    background-image: url(../dsi/component2.webp);
+    background-image: url(../webp/component2.webp);
     background-size: 127px;
     background-position: 62px 90px;
     margin: 50px 0 0px;
@@ -3919,7 +3919,7 @@ header.active * {
   .about-detail .images {
     height: 700px;
     width: 100%;
-    background-image: url("../images/hero1.webp");
+    background-image: url("../webp/hero1.webp");
     background-attachment: fixed;
     background-size: cover;
   }
@@ -4114,6 +4114,7 @@ header.active * {
   .aboutnew .floating-box {
     width: 100%;
     padding: 25px 20px;
+    border-radius: 15px 15px 0 0;
   }
   .aboutnew .floating-box .right .cards {
     margin-top: 10px;

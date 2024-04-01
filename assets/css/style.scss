@@ -15,7 +15,7 @@
 	}
 	background-position: center center;
 	background-size: cover;
-	background-image: url('../images/hero3.webp');
+	background-image: url('../webp/hero3.webp');
 	.left {
 		width: 650px; 
 		position:relative; 
@@ -70,7 +70,7 @@
 }
 
 .contactus {
-	background: url('../images/hero6.webp'); 
+	background: url('../webp/hero6.webp'); 
 	background-size: cover; 
 	background-position: center center;
 	padding: 90px;
@@ -752,7 +752,7 @@ $titlefont: 50px;
 			}
 			border-radius: 6px;
 			padding: 20px; 
-			background: url('../images/hero5.webp');
+			background: url('../webp/hero5.webp');
 			background-size: cover; 
 			background-position:center center; 
 			.detail {
@@ -907,7 +907,7 @@ $titlefont: 50px;
 		top: 0;
 		right: 0; 
 		bottom: 0; 
-		background: url('../dsi/component5.webp');
+		background: url('../webp/component5.webp');
 		background-size: cover; 
 		background-position: 100px 241px;
     	background-size: 700px;
@@ -1288,7 +1288,7 @@ $p785: 20px;
 		height: 71px;
 		width: 100%;
 		/* border: 1px solid red; */
-		background-image: url(../dsi/component2.webp);
+		background-image: url(../webp/component2.webp);
 		background-size: 127px;
 		background-position: 62px 90px;
 		margin: 50px 0 0px;
@@ -1342,7 +1342,7 @@ $p785: 20px;
 			.images {
 				height: 700px; 
 				width: 100%; 
-				background-image: url('../images/hero1.webp');
+				background-image: url('../webp/hero1.webp');
 				background-attachment: fixed;
 				background-size: cover;
 				img {
@@ -1578,6 +1578,7 @@ $p785: 20px;
 		.floating-box {
 			width: 100%; 
 			padding: 25px 20px;
+			border-radius: 15px 15px 0 0;
 			.right {
 				.cards {
 					margin-top: 10px; 
