@@ -1043,6 +1043,20 @@ $titlefont: 50px;
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.sloganews.section {
+		.right {
+			.frame {
+				img {
+					width: 350px; 
+				}
+			} .frame:last-child {
+				transform: translate(-35px, -25px);
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 1150px) {
 	.projects {
 		.project-boxs {
@@ -1061,7 +1075,14 @@ $titlefont: 50px;
 
 
 @media screen and (max-width: 1100px) {
-	
+	.sloganews.section {
+		margin-bottom: 60px; 
+		.left {
+			.cards {
+				margin-top: 10px; 
+			}
+		}
+	}
 	.aboutnew {
 		.floating-box {
 			width: 95%; 
@@ -1090,7 +1111,50 @@ $titlefont: 50px;
 @media screen and (max-width: 1000px) {
 	$titlefont: 40px;
 
+	.sloganews.section {
+		.left {
+			width: 100%; 
+			.cards {
+				grid-template-columns: repeat(3,1fr);
+				gap: 15px; 
+				.card {
+					.title {
+						font-size: 14px; 
+					}
 
+					.icon {
+						 svg {
+							width: 16px; 
+							height: 16px; 
+						}
+					}
+				}
+			}
+			p {
+				font-size: 16px; 
+			} h1 {
+				font-size: 35px; 
+			} .component {
+				h3 {
+					font-size: 18px; 
+				} img {
+					width: 40px; 
+				}
+			}
+		} .right {
+			.frame {
+				img {
+					width: 300px; 
+				}
+			} .frame:last-child {
+				transform: translate(25px, -35px);
+				width: 255px; 
+				img {
+					width: 245px; 
+				}
+			}
+		}
+	}
 
 	.aboutnew {
 		.floating-box {
@@ -1214,6 +1278,39 @@ $p785: 20px;
 }
 
 @media screen and (max-width: 890px) {
+	.sloganews.section {
+		.left {
+			width: 100%; 
+			.cards {
+				grid-template-columns: repeat(3,1fr);
+				gap: 15px; 
+			}
+			p {
+				font-size: 16px; 
+			} h1 {
+				font-size: 35px; 
+			} .component {
+				h3 {
+					font-size: 18px; 
+				} img {
+					width: 40px; 
+				}
+			}
+		} .right {
+			.frame {
+				img {
+					width: 250px; 
+					height: 160px; 
+				}
+			} .frame:last-child {
+				transform: translate(25px, -35px);
+				width: 255px; 
+				img {
+					width: 245px; 
+				}
+			}
+		}
+	}
 
 	.aboutnew {
 		.floating-box {
@@ -1250,6 +1347,51 @@ $p785: 20px;
 
 
 @media screen and (max-width: 785px) {
+	.sloganews.section {
+		.left {
+			a.button {
+				font-size: 14px; 
+				svg {
+					width: 14px; 
+					height: 14px; 
+				}
+			}
+			p {
+				margin-top: 300px; 
+			}
+		} .right {
+			width: auto;
+			position: absolute;
+			flex-direction: row;
+			top: 175px;
+			left: 0;
+			right: 0;
+			display: flex;
+			margin: unset;
+			width: 100%;
+			text-align: center;
+			margin: auto;
+			justify-content: center;
+			align-items: center;
+			gap: 30px;
+			.frame {
+				width: 38%;
+				// margin-left: 25px; 
+				img {
+					width: 100%; 
+					height: auto; 
+				}
+			}
+			.frame:last-child {
+			    width: 38%;
+				height: auto;
+				img {
+					width: 100%; 
+					height: auto; 
+				}
+			}
+		}
+	}
 	.projects {
 		.project-boxs {
 			.project-box {
@@ -1260,6 +1402,7 @@ $p785: 20px;
 	}
 
 	.aboutnew {
+		padding-bottom: 50px; 
 		.floating-box {
 			flex-direction:column;
 			.right {
@@ -1456,7 +1599,70 @@ $p785: 20px;
 
 	
 }
+
+
+@media screen and (max-width: 676px) {
+	.sloganews.section {
+		.right {
+			top: 220px; 
+		}
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	
+}
+
 @media screen and (max-width: 590px) {
+	.sloganews.section {
+		.left {
+			.cards {
+				margin-top: unset; 
+				margin-bottom: 30px;
+				.card {
+					.title {
+						font-size: 12px; 
+					}
+				}
+			}
+			a.button {
+				font-size: 12px; 
+				svg {
+					width: 12px; 
+					height: 12px; 
+				}
+			}
+			.component {
+				h4 {
+					font-size: 16px; 
+				} img {
+					width: 30px; 
+				}
+			} h1 {
+				font-size: 28px; 
+			} 
+
+			p {
+				margin-top: 58vw; 
+				font-size: 14px; 
+			}
+		}
+		.right {
+			top: 145px;
+			.frame:last-child {
+				display:none; 
+			} .frame {
+				width: 70%; 
+				margin-left: unset; 
+				img {
+
+				}
+			}
+		}
+	}
+
+
 	.aboutnew {
 		.floating-box {
 			.right {
@@ -1548,6 +1754,8 @@ $p785: 20px;
 
 
 @media screen and (max-width: 550px) {
+
+	
 	.projects {
 		.project-boxs {
 			.project-box {
@@ -1573,7 +1781,48 @@ $p785: 20px;
 }
 
 
+@media screen and (max-width: 547px) {
+	.sloganews.section {
+		.right {
+			top: 180px;
+		}
+	}
+
+}
+
 @media screen and (max-width: 450px) {
+	.sloganews.section {
+		.right {
+			top: 155px; 
+			.frame {
+				width: 85%; 
+			}
+		}
+		.left {
+			.card {
+				text-align:center; 
+				.icon {
+					
+				}
+				.title {
+					font-size: 12px; 
+				}
+			}
+			.component {
+				h4 {
+					font-size: 14px; 
+				} img {
+					width: 25px; 
+				}
+			} h1 {
+				font-size: 26px; 
+			} p {
+				margin-top: 64vw; 
+				font-size: 12px; 
+			}
+		}
+	}
+
 	.aboutnew {
 		.floating-box {
 			width: 100%; 
