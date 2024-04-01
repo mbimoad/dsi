@@ -419,6 +419,12 @@
 
 
 @media screen and (max-width: 550px) {
+
+    .nodata {
+        img {
+            width: 100%; 
+        }
+    }
     .pagination {
         .numbers {
             transform: translate(0, -3px);
