@@ -590,19 +590,34 @@ $background-color_3: #ffcca3;
     overflow:unset;
 }
 .plan__container {
-
-	.section__header {
-		// text-align: center;
-		font-size: 2.5rem;
-        line-height: 4rem;
-        margin-top: 1rem;
-	} .section__description {
+    // .components.sub {
+    //     img {
+    //         width: 60px;
+    //     }
+    // }
+    .components {
+        .section__header {
+            // text-align: center;
+            
+            font-size: 2.5rem;
+            line-height: 4rem;
+            // margin-top: 1rem;
+        } 
+        display:flex; 
+        align-items:center; 
+        gap: 20px; 
+        img {
+            width: 90px; 
+        }
+    }
+	.section__description {
 		font-size: 18px; 
 		width: 60%; 
-		margin-top: 20px; 
+        margin-top: 20px; 
+        line-height: 2; 
 	}
 	.line {
-        width: 70px;
+        width: 150px;
         height: 4px;
         display:inline-block; 
         background: $red1;
@@ -1314,9 +1329,13 @@ $background-color_3: #ffcca3;
 	}
 
     .plan__container {
-        .section__header {
-            // text-align: center;
-            font-size: 2rem;
+        .components {
+            .section__header {
+                // text-align: center;
+                font-size: 2rem;
+            } img {
+                width: 70px; 
+            }
         }
         
     }
@@ -1967,8 +1986,13 @@ $background-color_3: #ffcca3;
             font-size: 13px; 
         }
     } .plan__container {
-        .section__header {
-            font-size: 30px; 
+        .components {
+            gap: 10px; 
+            .section__header {
+                font-size: 30px; 
+            } img {
+                width: 50px; 
+            }
         }
     }
 
@@ -2085,9 +2109,13 @@ $background-color_3: #ffcca3;
 	}
 
     .plan__container {
-        .section__header {
-            // text-align: center;
-            font-size: 1.5rem;
+        .components {
+            .section__header {
+                // text-align: center;
+                font-size: 1.5rem;
+            } img {
+                width: 40px; 
+            }
         }
         
     }

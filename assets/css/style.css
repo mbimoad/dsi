@@ -766,20 +766,34 @@ header.active * {
   overflow: unset;
 }
 
-.plan__container .section__header {
+.plan__container .components {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.plan__container .components .section__header {
   font-size: 2.5rem;
   line-height: 4rem;
-  margin-top: 1rem;
+}
+
+.plan__container .components img {
+  width: 90px;
 }
 
 .plan__container .section__description {
   font-size: 18px;
   width: 60%;
   margin-top: 20px;
+  line-height: 2;
 }
 
 .plan__container .line {
-  width: 70px;
+  width: 150px;
   height: 4px;
   display: inline-block;
   background: #C9313A;
@@ -1500,8 +1514,11 @@ header.active * {
   .plan__container .section__description {
     font-size: 16px;
   }
-  .plan__container .section__header {
+  .plan__container .components .section__header {
     font-size: 2rem;
+  }
+  .plan__container .components img {
+    width: 70px;
   }
   .plan__content p {
     font-size: 16px;
@@ -2083,8 +2100,14 @@ header.active * {
   .plan__content p {
     font-size: 13px;
   }
-  .plan__container .section__header {
+  .plan__container .components {
+    gap: 10px;
+  }
+  .plan__container .components .section__header {
     font-size: 30px;
+  }
+  .plan__container .components img {
+    width: 50px;
   }
 }
 
@@ -2170,8 +2193,11 @@ header.active * {
   .plan__container .section__description {
     font-size: 13px;
   }
-  .plan__container .section__header {
+  .plan__container .components .section__header {
     font-size: 1.5rem;
+  }
+  .plan__container .components img {
+    width: 40px;
   }
 }
 
@@ -3476,6 +3502,7 @@ header.active * {
 }
 
 .ournewsnew .cards .card {
+  color: inherit;
   overflow: hidden;
 }
 

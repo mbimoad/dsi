@@ -155,11 +155,11 @@ $background-color_1: var(--cardColor);
             background:rgba(0, 0, 0, 0.5); 
             position:absolute; 
         }
-    .card.c1 {background-image: url('../images/hero1.jpg'); }
-    .card.c2 {background-image: url('../images/hero2.jpg'); }
-    .card.c3 {background-image: url('../images/hero3.jpg'); }
-    .card.c4 {background-image: url('../images/hero4.jpg'); }
-    .card.c5 {background-image: url('../images/hero5.jpg'); }
+    .card.c1 {background-image: url('../webp/hero1.webp'); }
+    .card.c2 {background-image: url('../webp/hero2.webp'); }
+    .card.c3 {background-image: url('../webp/hero3.webp'); }
+    .card.c4 {background-image: url('../webp/hero4.webp'); }
+    .card.c5 {background-image: url('../webp/hero5.webp'); }
         $time: 500ms;
     .card.unhover-transition {
         .card-body {

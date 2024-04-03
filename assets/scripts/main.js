@@ -188,3 +188,22 @@ window.onload = function() {
 
     
 }
+
+
+
+
+document.querySelector('.navigation li:first-child .sub-menu a:first-child').setAttribute('href', './about.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(2)').setAttribute('href', './mission.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './bod.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './news.html');
+
+
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './business.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(2)').setAttribute('href', './project.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './projects.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './services.html');
+
+
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './careers.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(2)').setAttribute('href', './contact.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(3)').setAttribute('href', './login.html');

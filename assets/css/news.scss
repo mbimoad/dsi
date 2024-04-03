@@ -31,7 +31,7 @@ header.active {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-image: url('../images/hero2.jpg');
+    background-image: url('../webp/hero2.webp');
     background-size: cover;
     .overlay {
         position: absolute;
@@ -879,6 +879,7 @@ header.active {
 
     .banner-news {
         padding: 40px 0; 
+        margin-top: 45px;
         .news1 {
             height: 365px; 
             .description {
