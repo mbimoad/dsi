@@ -37,17 +37,10 @@ window.addEventListener("scroll", (event) => {
 
 let current = 0; 
 let isfilled = false; 
-// if(window.innerWidth > 785) {
-//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
-//     this.querySelector('.sub-menu').classList.add('active');
-//     this.querySelector('svg').classList.add('active');
-//     }))
 
-//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
-//         this.querySelector('.sub-menu').classList.remove('active');
-//         this.querySelector('svg').classList.remove('active');
-//     }))
-// } else {
+
+
+// else {
   
 //     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('click', function() {
         
@@ -170,5 +163,21 @@ window.onload = function() {
         })
     }
 
-    document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
+    if(window.innerWidth <= 785) {
+        document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
+    }
+
+    if(window.innerWidth > 785) {
+        document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
+        this.querySelector('.sub-menu').classList.add('active');
+        this.querySelector('svg').classList.add('active');
+        }))
+    
+        document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
+            this.querySelector('.sub-menu').classList.remove('active');
+            this.querySelector('svg').classList.remove('active');
+        }))
+    } 
+
+    
 }

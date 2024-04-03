@@ -322,20 +322,21 @@ header.active {
             }
             li {
                 svg {
-                    filter: brightness(0) saturate(100%)
+                    filter: brightness(0);
                 } 
-             
+
                 .sub-menu {
                     background:white; 
-                    border-radius: 0 0 30px 30px ; 
-                    overflow
+                    border-radius: 0 0 30px 30px; 
                     a {
                         color:black; 
                         svg {
-                            filter: brightness(0) saturate(100%)
+                            filter: brightness(0);
                         }
                     }
                 }
+             
+               
             }
         }
     }
@@ -1599,7 +1600,7 @@ $background-color_3: #ffcca3;
                             margin-left: 25px; 
                             svg {
                                 display:unset;
-                                filter: brightness(0) 
+                                filter: brightness(0); 
                             }
 						}
 					} .menu {
