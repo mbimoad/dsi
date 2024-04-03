@@ -1508,7 +1508,8 @@ $background-color_3: #ffcca3;
 				opacity: 1;
 				pointer-events: unset;
 				transform: translate(0%, 0);
-				opacity: 1;
+                opacity: 1;
+                box-shadow: -3px -3px 2px 0 #ddd;
 			} .nav-menu-btn {
 				display: block;
 				color: $red3;
@@ -1548,13 +1549,21 @@ $background-color_3: #ffcca3;
 				visibility: hidden;
 				pointer-events: none;
 				transform: translate(100%, 0);
-				gap: 25px; 
+                gap: 25px; 
+                background:white; 
 				// bimo transition: 0.3s ease;
 				// li:hover {
 			
 				// }
 				li {
-					height: unset;
+                    height: unset;
+                    
+                    a {
+                        color:black; 
+                        svg {
+                            display:none; 
+                        }
+                    }
 					
 					width: 100%;
 					.sub-menu.active {
@@ -1586,6 +1595,12 @@ $background-color_3: #ffcca3;
                             display:flex; 
                             align-items:center; 
                             gap: 5px; 
+                            color:black; 
+                            margin-left: 25px; 
+                            svg {
+                                display:unset;
+                                filter: brightness(0) 
+                            }
 						}
 					} .menu {
 						height: unset; 

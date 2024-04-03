@@ -37,36 +37,36 @@ window.addEventListener("scroll", (event) => {
 
 let current = 0; 
 let isfilled = false; 
-if(window.innerWidth > 785) {
-    document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
-    this.querySelector('.sub-menu').classList.add('active');
-    this.querySelector('svg').classList.add('active');
-    }))
+// if(window.innerWidth > 785) {
+//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
+//     this.querySelector('.sub-menu').classList.add('active');
+//     this.querySelector('svg').classList.add('active');
+//     }))
 
-    document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
-        this.querySelector('.sub-menu').classList.remove('active');
-        this.querySelector('svg').classList.remove('active');
-    }))
-} else {
+//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
+//         this.querySelector('.sub-menu').classList.remove('active');
+//         this.querySelector('svg').classList.remove('active');
+//     }))
+// } else {
   
-    document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('click', function() {
+//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('click', function() {
         
-        if(this.querySelector('.sub-menu').classList.contains('active')) {
-            this.querySelector('.sub-menu').classList.remove('active');
-            this.querySelector('svg').classList.remove('active');
-        } else {
-            document.querySelectorAll('header ul li').forEach(item => {
-                item.querySelector('.sub-menu').classList.remove('active');
-                item.querySelector('svg').classList.remove('active');
-            })
+//         if(this.querySelector('.sub-menu').classList.contains('active')) {
+//             this.querySelector('.sub-menu').classList.remove('active');
+//             this.querySelector('svg').classList.remove('active');
+//         } else {
+//             document.querySelectorAll('header ul li').forEach(item => {
+//                 item.querySelector('.sub-menu').classList.remove('active');
+//                 item.querySelector('svg').classList.remove('active');
+//             })
     
-            this.querySelector('.sub-menu').classList.add('active');
-            this.querySelector('svg').classList.add('active');
-        }
+//             this.querySelector('.sub-menu').classList.add('active');
+//             this.querySelector('svg').classList.add('active');
+//         }
 
      
-    }))
-}
+//     }))
+// }
 
 console.log($(document))
 
@@ -159,3 +159,16 @@ $('.owl3').owlCarousel({
     autoWidth:true,
     margin: 120,
 })
+
+
+window.onload = function() {
+    if(window.innerWidth <= 550) {
+        $('.owlproject').owlCarousel({
+            center: true,
+            items:1,
+            loop:true,
+        })
+    }
+
+    document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
+}
