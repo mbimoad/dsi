@@ -7,6 +7,15 @@
     overflow:unset; 
 }
 
+header {
+    .nav-bar {
+        .logo {
+            img {
+                filter: unset; 
+            }
+        }
+    }
+}
 
 .news {
     .layer:last-child {

@@ -5795,6 +5795,11 @@ header.active {
   overflow: unset;
 }
 
+header .nav-bar .logo img {
+  -webkit-filter: unset;
+          filter: unset;
+}
+
 .news .layer:last-child .menu.mynews {
   position: -webkit-sticky;
   position: sticky;
