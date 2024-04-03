@@ -9,6 +9,7 @@ $darkblue: #043349;
 $black: #000000;
 
 
+
 @function pxToVw($px, $baseWidth) {
     @return #{$px / $baseWidth * 100}vw;
 }
