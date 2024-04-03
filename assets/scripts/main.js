@@ -160,6 +160,13 @@ window.onload = function() {
             center: true,
             items:1,
             loop:true,
+            autoplay: true,
+            slideTransition: 'linear',
+            autoplayTimeout: 3000,
+            autoplaySpeed: 3000,
+            autoplayHoverPause: true,
+            // nav:true,
+            // dots:true,
         })
     }
 

@@ -1742,7 +1742,7 @@ header.active * {
             align-items: center;
     gap: 5px;
     color: black;
-    margin-left: 25px;
+    margin-left: 0;
   }
   header .nav-bar .navigation li .sub-menu a svg {
     display: unset;
