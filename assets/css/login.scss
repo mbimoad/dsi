@@ -466,3 +466,31 @@
 //         }
 //     }
 // }
+
+
+@media screen and (max-width: 450px) {
+    .login {
+        .layer:first-child {
+            height: 100px; 
+            .boxcolor {
+                .components {
+                    img {
+                        width: 120px; 
+                    }
+                } .detail {
+                    left: 15px; 
+                    top: 15px; 
+                    a {
+                        width: 25px; 
+                        height: 25px; 
+                        border: 1px solid white; 
+                        svg {
+                            width: 8px; 
+                            height: 8px; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

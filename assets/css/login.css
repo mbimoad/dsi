@@ -2852,4 +2852,26 @@ header.active * {
     height: 10px;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .login .layer:first-child {
+    height: 100px;
+  }
+  .login .layer:first-child .boxcolor .components img {
+    width: 120px;
+  }
+  .login .layer:first-child .boxcolor .detail {
+    left: 15px;
+    top: 15px;
+  }
+  .login .layer:first-child .boxcolor .detail a {
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+  }
+  .login .layer:first-child .boxcolor .detail a svg {
+    width: 8px;
+    height: 8px;
+  }
+}
 /*# sourceMappingURL=login.css.map */
