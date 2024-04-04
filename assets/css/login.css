@@ -2791,7 +2791,7 @@ header.active * {
     font-size: 12px;
   }
   .login .layer:last-child h4 {
-    font-size: 22px;
+    font-size: 24px;
   }
   .login .layer:last-child form button {
     font-size: 12px;
@@ -2805,14 +2805,17 @@ header.active * {
     font-size: 12px;
   }
   .login .layer:last-child form .form-group input {
-    font-size: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    font-size: 12px;
   }
   .login .layer:last-child form .form-group.check input {
-    width: 9px;
-    height: 9px;
+    width: 12px;
+    height: 12px;
   }
   .login .layer:last-child form .form-group.check label {
-    font-size: 10px;
+    font-size: 12px;
   }
   .login .layer:last-child .login-box {
     margin: unset;
@@ -2858,7 +2861,7 @@ header.active * {
     height: 100px;
   }
   .login .layer:first-child .boxcolor .components img {
-    width: 120px;
+    width: 135px;
   }
   .login .layer:first-child .boxcolor .detail {
     left: 15px;

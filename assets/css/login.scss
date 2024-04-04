@@ -372,7 +372,7 @@
             span {
                 font-size: 12px; 
             } h4 {
-                font-size: 22px; 
+                font-size: 24px; 
             }
             form {
                 button {
@@ -386,14 +386,17 @@
                     label {
                         font-size: 12px; 
                     } input {
-                        font-size: 10px; 
+                        padding-top: 7px;
+                        padding-bottom: 7px;
+                        padding-left: 10px;
+                        font-size: 12px; 
                     }
                 } .form-group.check {
                     input {
-                        width: 9px; 
-                        height: 9px;
+                        width: 12px; 
+                        height: 12px;
                     } label {
-                        font-size: 10px; 
+                        font-size: 12px; 
                     }
                 }
             }
@@ -475,7 +478,7 @@
             .boxcolor {
                 .components {
                     img {
-                        width: 120px; 
+                        width: 135px; 
                     }
                 } .detail {
                     left: 15px; 
