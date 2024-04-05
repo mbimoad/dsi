@@ -24,6 +24,8 @@
 //     bottom: 0; 
 //     background:rgba(0, 0, 0, 0.507);
 // }
+
+
 .container {
     display: flex;
     justify-content: center;
@@ -256,7 +258,18 @@
     }
 }
 
+footer {
+    display:none; 
+}
+
 @media screen and (max-width: 785px) {
+    .container {
+        display:flex; 
+        flex-direction:column;
+    }
+    
+
+
     .login {
         .layer:last-child {
             span {
@@ -355,6 +368,26 @@
 }
 
 @media screen and (max-width: 600px) {
+    footer {
+        padding: 10px; 
+        display:flex; 
+        text-align:center; 
+        justify-content:center; 
+        align-items: center;
+        background: $red2; 
+        color:white; 
+        width: 100;
+        font-size: 12px;
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+    } .container {
+        .login {
+            gap: unset;
+        }
+    }
+
     .login {
         flex-direction:column; 
         gap: 10px;
@@ -362,13 +395,16 @@
             box-shadow: 0 0 5px #bbb;
             flex: unset; 
             height: 150px; 
-            width: 95%;
-            margin: 7px auto; 
-            border-radius: 10px;  
+            width: 100%;
+            margin: unset; 
+            border-radius: unset;  
             .boxcolor {
-                border-radius: 10px;  
+                border-radius: unset;  
             }
         } .layer:last-child {
+            .login-box {
+                padding: 45px 20px;
+            }
             span {
                 font-size: 12px; 
             } h4 {
@@ -381,7 +417,6 @@
                     width: 100%;
                     padding: 8px;
                     border-radius: 5px;
-                    font-size: 10px;
                 } .form-group {
                     label {
                         font-size: 12px; 
@@ -402,11 +437,11 @@
             }
             border-radius: 10px;  
             box-shadow: 0 0 5px #bbb;
-            width: 92%;
-            padding: 20px;
-            margin: 0px auto; 
-            margin-bottom: 13px;
-            border-radius: 8px;  
+            width: 100%;
+            padding: unset;
+            margin: unset; 
+            margin-bottom: unset;
+            border-radius: unset;  
             justify-content: flex-start;
             align-items: flex-start;
             .login-box {
@@ -473,12 +508,15 @@
 
 @media screen and (max-width: 450px) {
     .login {
+        .layer .boxcolor::before {
+            background-size: 80vw;
+        }
         .layer:first-child {
-            height: 100px; 
+            height: 150px; 
             .boxcolor {
                 .components {
                     img {
-                        width: 135px; 
+                        width: 145px; 
                     }
                 } .detail {
                     left: 15px; 

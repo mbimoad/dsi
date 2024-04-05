@@ -2683,7 +2683,20 @@ header.active * {
   }
 }
 
+footer {
+  display: none;
+}
+
 @media screen and (max-width: 785px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .login .layer:last-child span {
     font-size: 14px;
   }
@@ -2750,6 +2763,30 @@ header.active * {
 }
 
 @media screen and (max-width: 600px) {
+  footer {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #C42A37;
+    color: white;
+    width: 100;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .container .login {
+    gap: unset;
+  }
   .login {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2764,28 +2801,31 @@ header.active * {
         -ms-flex: unset;
             flex: unset;
     height: 150px;
-    width: 95%;
-    margin: 7px auto;
-    border-radius: 10px;
+    width: 100%;
+    margin: unset;
+    border-radius: unset;
   }
   .login .layer:first-child .boxcolor {
-    border-radius: 10px;
+    border-radius: unset;
   }
   .login .layer:last-child {
     border-radius: 10px;
     -webkit-box-shadow: 0 0 5px #bbb;
             box-shadow: 0 0 5px #bbb;
-    width: 92%;
-    padding: 20px;
-    margin: 0px auto;
-    margin-bottom: 13px;
-    border-radius: 8px;
+    width: 100%;
+    padding: unset;
+    margin: unset;
+    margin-bottom: unset;
+    border-radius: unset;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .login .layer:last-child .login-box {
+    padding: 45px 20px;
   }
   .login .layer:last-child span {
     font-size: 12px;
@@ -2799,7 +2839,6 @@ header.active * {
     width: 100%;
     padding: 8px;
     border-radius: 5px;
-    font-size: 10px;
   }
   .login .layer:last-child form .form-group label {
     font-size: 12px;
@@ -2857,11 +2896,14 @@ header.active * {
 }
 
 @media screen and (max-width: 450px) {
+  .login .layer .boxcolor::before {
+    background-size: 80vw;
+  }
   .login .layer:first-child {
-    height: 100px;
+    height: 150px;
   }
   .login .layer:first-child .boxcolor .components img {
-    width: 135px;
+    width: 145px;
   }
   .login .layer:first-child .boxcolor .detail {
     left: 15px;
