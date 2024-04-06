@@ -1,4 +1,20 @@
 @import './main';
+.banner-hero {
+    h1 {
+        font-weight: bold;
+
+    }
+}
+
+.plan__container.section {
+    padding-bottom: 40px; 
+    .components {
+        .section__header {
+            font-weight: bold; 
+        }
+    }
+}
+
 
 .carousel-bod {
     display:flex; 
@@ -137,6 +153,7 @@
 @media screen and (max-width: 1340px) {
     .carousel-bod {
         justify-content:center;
+        margin-top: unset; 
         .carousel {
 
         }

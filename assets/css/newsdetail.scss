@@ -13,10 +13,45 @@ header {
             img {
                 filter: unset; 
             }
+        } .navigation {
+            li:nth-child(1), 
+            li:nth-child(2) {
+                .sub-menu.active {
+                    bottom: -142px;
+                }
+            }
+            li:nth-child(3) {
+                .sub-menu.active {
+                    bottom: -107px;
+                }
+            }
+            li {
+                svg {
+                    filter: brightness(0);
+                } 
+
+                .sub-menu {
+                    background:white; 
+                    border-radius: 0 0 30px 30px; 
+                    a {
+                        color:black; 
+                        svg {
+                            filter: brightness(0);
+                        }
+                    }
+                }
+             
+               
+            }
         }
     }
+    background:white; 
+    backdrop-filter: unset;
+    // background-image: linear-gradient(-180deg, $red1, $red2, $red3);
+    * {
+        color:#333; 
+    }
 }
-
 .news {
     .layer:last-child {
         .menu.mysosmed {

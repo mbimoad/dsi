@@ -2,24 +2,53 @@
 
 
 header {
-    // background: $red1; 
-    background:white;
     .nav-bar {
-        .navigation {
-            li {
-                a {
-                    color:black;
-                } svg {
-                    filter: brightness(1);
+        .logo {
+            img {
+                filter: unset; 
+            }
+        } .navigation {
+            li:nth-child(1), 
+            li:nth-child(2) {
+                .sub-menu.active {
+                    bottom: -142px;
                 }
+            }
+            li:nth-child(3) {
+                .sub-menu.active {
+                    bottom: -107px;
+                }
+            }
+            li {
+                svg {
+                    filter: brightness(0);
+                } 
+
+                .sub-menu {
+                    background:white; 
+                    border-radius: 0 0 30px 30px; 
+                    a {
+                        color:black; 
+                        svg {
+                            filter: brightness(0);
+                        }
+                    }
+                }
+             
+               
             }
         }
     }
+    background:white; 
+    backdrop-filter: unset;
+    // background-image: linear-gradient(-180deg, $red1, $red2, $red3);
+    * {
+        color:#333; 
+    }
 }
-header.active {
-    background: white;
-    // box-shadow: 0 5px 5px #eee;
-}
+
+
+
 .banner-news {
     margin-top: 80px; 
     padding: 100px 0; 

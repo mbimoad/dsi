@@ -174,6 +174,7 @@ window.onload = function() {
         document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
     }
 
+    // debug
     if(window.innerWidth > 785) {
         document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
         this.querySelector('.sub-menu').classList.add('active');
@@ -185,6 +186,7 @@ window.onload = function() {
             this.querySelector('svg').classList.remove('active');
         }))
     } 
+    // debug
 
     
 }
@@ -195,15 +197,15 @@ window.onload = function() {
 document.querySelector('.navigation li:first-child .sub-menu a:first-child').setAttribute('href', './about.html');
 document.querySelector('.navigation li:first-child .sub-menu a:nth-child(2)').setAttribute('href', './mission.html');
 document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './bod.html');
-document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './news.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(4)').setAttribute('href', './news.html');
 
 
 document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './business.html');
 document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(2)').setAttribute('href', './project.html');
 document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './project.html');
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './services.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(4)').setAttribute('href', './services.html');
 
 
 document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './careers.html');
 document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(2)').setAttribute('href', './contactus.html');
-document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(3)').setAttribute('href', './login.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(4)').setAttribute('href', './login.html');
