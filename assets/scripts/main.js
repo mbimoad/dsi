@@ -1,3 +1,55 @@
+console.log("sini");
+
+if(window.innerWidth <= 550) {
+    $('.owlproject').owlCarousel({
+        center: true,
+        items:1,
+        loop:true,
+        autoplay: true,
+        slideTransition: 'linear',
+        autoplayTimeout: 3000,
+        autoplaySpeed: 3000,
+        autoplayHoverPause: true,
+        // nav:true,
+        // dots:true,
+    })
+}
+
+if(window.innerWidth <= 785) {
+    document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
+}
+
+// debug
+if(window.innerWidth > 785) {
+
+    document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
+    this.querySelector('.sub-menu').classList.add('active');
+    this.querySelector('svg').classList.add('active');
+    }))
+
+    document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
+        this.querySelector('.sub-menu').classList.remove('active');
+        this.querySelector('svg').classList.remove('active');
+    }))
+} 
+// debug
+
+
+document.querySelector('.navigation li:first-child .sub-menu a:first-child').setAttribute('href', './about.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(2)').setAttribute('href', './mission.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './bod.html');
+document.querySelector('.navigation li:first-child .sub-menu a:nth-child(4)').setAttribute('href', './news.html');
+
+
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './business.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(2)').setAttribute('href', './project.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './services.html');
+
+
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './careers.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(2)').setAttribute('href', './contactus.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(3)').setAttribute('href', './login.html');
+
 //Swiper slider
 var swiper = new Swiper(".bg-slider-thumbs", {
     loop: true,
@@ -40,28 +92,7 @@ let isfilled = false;
 
 
 
-// else {
-  
-//     document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('click', function() {
-        
-//         if(this.querySelector('.sub-menu').classList.contains('active')) {
-//             this.querySelector('.sub-menu').classList.remove('active');
-//             this.querySelector('svg').classList.remove('active');
-//         } else {
-//             document.querySelectorAll('header ul li').forEach(item => {
-//                 item.querySelector('.sub-menu').classList.remove('active');
-//                 item.querySelector('svg').classList.remove('active');
-//             })
-    
-//             this.querySelector('.sub-menu').classList.add('active');
-//             this.querySelector('svg').classList.add('active');
-//         }
 
-     
-//     }))
-// }
-
-console.log($(document))
 
 
 $('.owl1').owlCarousel({
@@ -154,58 +185,3 @@ $('.owl3').owlCarousel({
 })
 
 
-window.onload = function() {
-    if(window.innerWidth <= 550) {
-        $('.owlproject').owlCarousel({
-            center: true,
-            items:1,
-            loop:true,
-            autoplay: true,
-            slideTransition: 'linear',
-            autoplayTimeout: 3000,
-            autoplaySpeed: 3000,
-            autoplayHoverPause: true,
-            // nav:true,
-            // dots:true,
-        })
-    }
-
-    if(window.innerWidth <= 785) {
-        document.querySelectorAll('.sub-menu').forEach(item => item.classList.add('active'));
-    }
-
-    // debug
-    if(window.innerWidth > 785) {
-        document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseover', function() {
-        this.querySelector('.sub-menu').classList.add('active');
-        this.querySelector('svg').classList.add('active');
-        }))
-    
-        document.querySelectorAll('header ul li').forEach((item, index) => item.addEventListener('mouseout', function() {
-            this.querySelector('.sub-menu').classList.remove('active');
-            this.querySelector('svg').classList.remove('active');
-        }))
-    } 
-    // debug
-
-    
-}
-
-
-
-
-document.querySelector('.navigation li:first-child .sub-menu a:first-child').setAttribute('href', './about.html');
-document.querySelector('.navigation li:first-child .sub-menu a:nth-child(2)').setAttribute('href', './mission.html');
-document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').setAttribute('href', './bod.html');
-document.querySelector('.navigation li:first-child .sub-menu a:nth-child(4)').setAttribute('href', './news.html');
-
-
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './business.html');
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(2)').setAttribute('href', './project.html');
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './project.html');
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(4)').setAttribute('href', './services.html');
-
-
-document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './careers.html');
-document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(2)').setAttribute('href', './contactus.html');
-document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(4)').setAttribute('href', './login.html');

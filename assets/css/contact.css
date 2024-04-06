@@ -2442,10 +2442,6 @@ header.active * {
   border-radius: 15px;
 }
 
-.contactus {
-  margin-top: 50px;
-}
-
 .contactus .twolayer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2584,6 +2580,9 @@ header.active * {
 }
 
 @media screen and (max-width: 1100px) {
+  .contactus.section {
+    margin-top: 50px;
+  }
   .parent-box .frame-box {
     margin-top: -90px;
   }
@@ -2612,6 +2611,9 @@ header.active * {
 }
 
 @media screen and (max-width: 785px) {
+  .contactus.section {
+    margin-top: unset;
+  }
   .mobilemode.section {
     display: -webkit-box;
     display: -ms-flexbox;
