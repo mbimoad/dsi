@@ -259,6 +259,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   -webkit-transition-property: height, background;
   transition-property: height, background;
   background: rgba(255, 255, 255, 0.1);
@@ -279,6 +281,8 @@ header .nav-bar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 90px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 header .nav-bar .logo img {
@@ -1382,7 +1386,7 @@ header.active * {
   }
 }
 
-@media screen and (max-width: 1000px) and (min-height: 0px) {
+@media screen and (max-width: 1000px) and (max-width: 1288px) and (min-height: 0px) {
   header.active .nav-bar .navigation li:nth-child(1) .sub-menu.active,
   header .nav-bar .navigation li:nth-child(1) .sub-menu.active {
     bottom: -123px;
@@ -1392,6 +1396,19 @@ header.active * {
   header .nav-bar .navigation li:nth-child(2) .sub-menu.active,
   header .nav-bar .navigation li:nth-child(3) .sub-menu.active {
     bottom: -91px;
+  }
+}
+
+@media screen and (max-width: 1299px) and (min-height: 600px) {
+  header.active .nav-bar .navigation li:nth-child(1) .sub-menu.active,
+  header .nav-bar .navigation li:nth-child(1) .sub-menu.active {
+    bottom: -130px;
+  }
+  header.active .nav-bar .navigation li:nth-child(2) .sub-menu.active,
+  header.active .nav-bar .navigation li:nth-child(3) .sub-menu.active,
+  header .nav-bar .navigation li:nth-child(2) .sub-menu.active,
+  header .nav-bar .navigation li:nth-child(3) .sub-menu.active {
+    bottom: -97px;
   }
 }
 
@@ -1715,6 +1732,8 @@ header.active * {
     font-size: 1.3em;
     margin: 10px;
     cursor: pointer;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .nav-bar .navigation {
     -webkit-transition: all 200ms ease 0s;
@@ -1750,6 +1769,8 @@ header.active * {
             transform: translate(100%, 0);
     gap: 25px;
     background: white;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .nav-bar .navigation li {
     height: unset;
@@ -1831,11 +1852,15 @@ header.active * {
             box-shadow: var(--box-shadow);
     -webkit-transform: translateY(-200px);
             transform: translateY(-200px);
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .nav-bar .navigation .nav-items a {
     color: var(--text-light);
     font-size: 1em;
     margin: 15px 50px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
   }
   header .nav-bar .navigation .nav-items a:hover {
     color: var(--white);

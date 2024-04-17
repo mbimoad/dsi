@@ -191,7 +191,7 @@ header {
 	left: 0;
 	display: flex;
 	justify-content: center;
-	// bimo transition: 0.5s ease;
+	 transition: 0.5s ease;
 	transition-property: height, background;
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(4px);
@@ -202,7 +202,7 @@ header {
 		align-items: center;
 		justify-content: space-between;
 	    padding: 0 90px;
-        // bimo transition: 0.3s ease; 
+         transition: 0.3s ease; 
         .logo {
             img {
                 filter: brightness(100); 
@@ -1163,7 +1163,7 @@ $background-color_3: #ffcca3;
 }
 
 
-@media screen and (max-width: 1000px) and (min-height: 0px) {
+@media screen and (max-width: 1000px) and (max-width: 1288px) and (min-height: 0px) {
     header.active,
     header {
         .nav-bar {
@@ -1178,6 +1178,29 @@ $background-color_3: #ffcca3;
                 li:nth-child(3) {
                     .sub-menu.active {
                         bottom: -91px; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1299px) and (min-height: 600px) {
+    header.active,
+    header {
+        .nav-bar {
+            .navigation {
+                li:nth-child(1) {
+                    .sub-menu.active {
+                        bottom: -130px;
+                    }
+                } 
+                
+                li:nth-child(2),
+                li:nth-child(3) {
+                    .sub-menu.active {
+                        bottom: -97px; 
                     }
                 }
             }
@@ -1622,7 +1645,7 @@ $background-color_3: #ffcca3;
 				font-size: 1.3em;
 				margin: 10px;
 				cursor: pointer;
-				// bimo transition: 0.3s ease;
+				 transition: 0.3s ease;
 			}
 
 			.navigation {
@@ -1648,7 +1671,7 @@ $background-color_3: #ffcca3;
 				transform: translate(100%, 0);
                 gap: 25px; 
                 background:white; 
-				// bimo transition: 0.3s ease;
+				 transition: 0.3s ease;
 				// li:hover {
 			
 				// }
@@ -1718,13 +1741,13 @@ $background-color_3: #ffcca3;
 					border-radius: 20px;
 					box-shadow: var(--box-shadow);
 					transform: translateY(-200px);
-					// bimo transition: 0.3s ease;
+					 transition: 0.3s ease;
 					a {
 						
 						color: $color_2;
 						font-size: 1em;
 						margin: 15px 50px;
-						// bimo transition: 0.3s ease;
+						 transition: 0.3s ease;
 						&:hover {
 							color: $color_3;
 						}

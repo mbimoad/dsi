@@ -1,4 +1,19 @@
-console.log("sini");
+document.onreadystatechange = function () {
+    var state = document.readyState
+    if (state == 'interactive') {
+        console.log("Still load");
+        //  document.getElementById('contents').style.visibility="hidden";
+    } else if (state == 'complete') {
+        console.log("Kesini");
+        // setTimeout(function(){
+        // //    document.getElementById('interactive');
+        // //    document.getElementById('load').style.visibility="hidden";
+        // //    document.getElementById('contents').style.visibility="visible";
+        // },1000);
+    } else {
+        console.log("Still load");
+    }
+  }
 
 if(window.innerWidth <= 550) {
     $('.owlproject').owlCarousel({
@@ -79,7 +94,7 @@ navmenu.addEventListener('click', function() {
 window.addEventListener("scroll", (event) => {
     if(window.innerWidth >= 785) {
         let scroll = this.scrollY;
-        if(scroll > 530) {
+        if(scroll > 400) {
             document.querySelector('header').classList.add('active');
         } else {
             document.querySelector('header').classList.remove('active');
