@@ -57,12 +57,12 @@ document.querySelector('.navigation li:first-child .sub-menu a:nth-child(3)').se
 document.querySelector('.navigation li:first-child .sub-menu a:nth-child(4)').setAttribute('href', './news.html');
 
 
-document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './business.html');
+document.querySelector('.navigation li:nth-child(2) .sub-menu a:first-child').setAttribute('href', './organization.html');
 document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(2)').setAttribute('href', './project.html');
 document.querySelector('.navigation li:nth-child(2) .sub-menu a:nth-child(3)').setAttribute('href', './services.html');
 
 
-document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './careers.html');
+document.querySelector('.navigation li:nth-child(3) .sub-menu a:first-child').setAttribute('href', './brochures.html');
 document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(2)').setAttribute('href', './contactus.html');
 document.querySelector('.navigation li:nth-child(3) .sub-menu a:nth-child(3)').setAttribute('href', './login.html');
 

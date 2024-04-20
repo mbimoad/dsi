@@ -469,7 +469,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 65px 90px;
+  padding: 30px 90px;
 }
 
 .section .section-title h2 {
@@ -2850,7 +2850,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 65px 90px;
+  padding: 30px 90px;
 }
 
 .section .section-title h2 {
@@ -4827,6 +4827,37 @@ header.active * {
   }
 }
 
+footer.section {
+  margin-top: 100px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 1100px) {
+  footer.section {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  footer.section {
+    margin-top: 55px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer.section {
+    margin-top: 40px;
+  }
+}
+
 header {
   background: white;
   -webkit-backdrop-filter: unset;
@@ -6041,6 +6072,37 @@ header * {
 
 .news.section {
   overflow: unset;
+}
+
+footer.section {
+  margin-top: 100px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 1100px) {
+  footer.section {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  footer.section {
+    margin-top: 55px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer.section {
+    margin-top: 40px;
+  }
 }
 
 header {

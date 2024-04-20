@@ -15,6 +15,42 @@
     }
 }
 
+footer.section  {
+    margin-top: 120px; 
+    .footer__container {
+        padding-top: 45px; 
+        margin-bottom: 34px;
+    
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    footer.section {
+        margin-top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 785px) {
+    footer.section  {
+        margin-top: 55px; 
+        .footer__container {
+            padding-top: unset; 
+            margin-bottom: 34px;
+        
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
+    footer.section {
+        margin-top: 40px;
+    }
+
+}
+
 
 .carousel-bod {
     display:flex; 
