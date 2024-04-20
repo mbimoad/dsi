@@ -468,7 +468,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 100px 90px;
+  padding: 65px 90px;
 }
 
 .section .section-title h2 {
@@ -512,7 +512,7 @@ header.active * {
   -ms-grid-columns: 370px 300px 300px;
       grid-template-columns: 370px 300px 300px;
   gap: unset;
-  margin: -35px 90px 70px;
+  margin: -60px 90px 35px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -637,7 +637,7 @@ header.active * {
 }
 
 .banner-hero {
-  height: 500px;
+  height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#C23440), to(#A81925));
   background-image: linear-gradient(to bottom, #C23440, #A81925);
   display: -webkit-box;
@@ -677,7 +677,7 @@ header.active * {
 .banner-hero .bottom {
   left: 0;
   right: 0;
-  bottom: -120px;
+  bottom: -150px;
 }
 
 .banner-hero .bottom svg {
@@ -689,8 +689,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 0s infinite alternate;
@@ -698,8 +698,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -728,8 +728,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 2s infinite alternate;
@@ -737,8 +737,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -2445,6 +2445,49 @@ header.active * {
   }
 }
 
+footer.section {
+  margin-top: 55px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow: auto;
+}
+
+.table-responsive::-webkit-scrollbar {
+  display: none;
+  height: 3px;
+  width: 11px;
+  background: var(--scroll-bar-color);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  display: none;
+  height: 3px;
+  width: 100%;
+  background: var(--scroll-thumb-color);
+  border-radius: 2em;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover-color);
+}
+
+@media screen and (max-width: 785px) {
+  footer.section {
+    margin-top: 55px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
+  }
+}
+
 @-webkit-keyframes pinAnimate {
   from {
     -webkit-transform: translate(0, 0);
@@ -2595,6 +2638,20 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   font-size: 18px;
 }
 
+#myTable thead tr th a, #myTable thead tr td a, #myTable tbody tr th a, #myTable tbody tr td a,
+#myTable2 thead tr th a,
+#myTable2 thead tr td a,
+#myTable2 tbody tr th a,
+#myTable2 tbody tr td a {
+  padding: 4px 10px;
+  background: #8E1B2F;
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
 #myTable thead tr th:nth-child(odd), #myTable tbody tr th:nth-child(odd),
 #myTable2 thead tr th:nth-child(odd),
 #myTable2 tbody tr th:nth-child(odd) {
@@ -2655,6 +2712,8 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   #myTable2 {
     width: 785px;
     border: unset;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
   }
   #myTable_wrapper > div.dt-layout-row.dt-layout-table > div,
   #myTable2_wrapper > div.dt-layout-row.dt-layout-table > div {
@@ -2751,6 +2810,13 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   #myTable2 tbody tr td {
     padding: 15px;
     font-size: 11px;
+  }
+  #myTable thead tr th a, #myTable thead tr td a, #myTable tbody tr th a, #myTable tbody tr td a,
+  #myTable2 thead tr th a,
+  #myTable2 thead tr td a,
+  #myTable2 tbody tr th a,
+  #myTable2 tbody tr td a {
+    font-size: 9px;
   }
 }
 

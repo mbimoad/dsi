@@ -1,2 +1,45 @@
 @import './main';
 
+.structure {
+    margin-top: 70px; 
+    position:relative;
+    img {
+        width: 100%; 
+    }
+
+    .magnifier-preview {
+        position:absolute; 
+        top: 0; 
+        right: 0; 
+        width: 200px; 
+        height: 200px; 
+        border: 2px solid;
+        object-fit: cover;
+        background-size:cover; 
+    }
+    
+}
+
+footer.section  {
+    margin-top: 55px; 
+    .footer__container {
+        padding-top: 45px; 
+        margin-bottom: 34px;
+    
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .structure {
+        margin-top: 40px;
+    }
+    footer.section  {
+        margin-top: 55px; 
+        .footer__container {
+            padding-top: unset; 
+            margin-bottom: 34px;
+        
+        }
+    }
+
+}

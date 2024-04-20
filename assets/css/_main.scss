@@ -357,7 +357,7 @@ header.active {
 $titlefont: 50px; 
 .section {
 	position:relative;
-	padding: 100px 90px; 
+	padding: 65px 90px; 
 	.section-title {
 		
 		h2 {
@@ -402,7 +402,7 @@ $iconbg : #383B3F;
 	display: grid;
 	grid-template-columns: 370px 300px 300px;
     gap: unset;
-	margin: -35px 90px 70px;
+    margin: -60px 90px 35px;
     justify-content: space-between;
 
 }
@@ -485,7 +485,7 @@ $iconbg : #383B3F;
 
 
 .banner-hero {
-    height: 500px; 
+    height: 350px; 
     background-image: linear-gradient(to bottom, #C23440, #A81925);
     display: flex;
     justify-content: center;
@@ -511,23 +511,24 @@ $iconbg : #383B3F;
     .bottom {
         left: 0;
         right: 0;
-        bottom: -120px;
+        bottom: -150px;
 
         svg {
             width: 100%;
         }
     }
-
+    $changed: 43px;
+    $changed2: 30px; 
     .left-triangle {
         left: 0;
         svg:nth-child(3) {
-            width: 150px; 
-            height: 150px; 
+            width: 150px - $changed; 
+            height: 150px - $changed;
             transform: translate(0,-10px);
             animation: trianglebig1920 1s ease 0s infinite alternate;
         }  svg:nth-child(2) {
-            width: 70px; 
-            height: 70px; 
+            width: 70px - $changed2; 
+            height: 70px - $changed2;
             position: absolute;
             right: -90px;
             bottom: 40px;
@@ -551,13 +552,13 @@ $iconbg : #383B3F;
         -webkit-transform: scale(-1, -1);
         transform: scale(-1, -1);
         svg:nth-child(3) {
-            width: 150px; 
-            height: 150px;
+            width: 150px - $changed; 
+            height: 150px - $changed;
             transform: translate(0,-10px);
             animation: trianglebig1920 1s ease 2s infinite alternate; 
         }  svg:nth-child(2) {
-            width: 70px; 
-            height: 70px; 
+            width: 70px - $changed2; 
+            height: 70px - $changed2;
             position: absolute;
             right: -90px;
             bottom: 40px;

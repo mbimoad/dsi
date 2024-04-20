@@ -468,7 +468,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 100px 90px;
+  padding: 65px 90px;
 }
 
 .section .section-title h2 {
@@ -512,7 +512,7 @@ header.active * {
   -ms-grid-columns: 370px 300px 300px;
       grid-template-columns: 370px 300px 300px;
   gap: unset;
-  margin: -35px 90px 70px;
+  margin: -60px 90px 35px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -637,7 +637,7 @@ header.active * {
 }
 
 .banner-hero {
-  height: 500px;
+  height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#C23440), to(#A81925));
   background-image: linear-gradient(to bottom, #C23440, #A81925);
   display: -webkit-box;
@@ -677,7 +677,7 @@ header.active * {
 .banner-hero .bottom {
   left: 0;
   right: 0;
-  bottom: -120px;
+  bottom: -150px;
 }
 
 .banner-hero .bottom svg {
@@ -689,8 +689,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 0s infinite alternate;
@@ -698,8 +698,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -728,8 +728,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 2s infinite alternate;
@@ -737,8 +737,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -2454,6 +2454,25 @@ header.active * {
   padding-bottom: 50px;
 }
 
+footer.section {
+  margin-top: 55px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 785px) {
+  footer.section {
+    margin-top: 55px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
+  }
+}
+
 .nodata {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2516,7 +2535,7 @@ header.active * {
 
 .pagination .numbers span {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -2532,10 +2551,14 @@ header.active * {
 }
 
 .twolayer {
-  margin-top: 100px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 20px;
 }
 
@@ -2550,13 +2573,21 @@ header.active * {
   gap: 20px;
 }
 
-.twolayer .right .menu {
-  padding: 20px;
-  background: #efefef;
+.twolayer .right a {
+  color: #8E1B2F;
 }
 
-.twolayer .right .menu:last-child {
-  background: unset;
+.twolayer .right .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
 }
 
 .twolayer .right .relateds {
@@ -2584,7 +2615,7 @@ header.active * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: unset;
 }
 
 .twolayer .right .component img {
@@ -2701,7 +2732,7 @@ header.active * {
 }
 
 .twolayer .left .cards {
-  margin-top: 50px;
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2721,8 +2752,12 @@ header.active * {
 }
 
 .twolayer .left .cards .card:hover .main .left {
-  -webkit-filter: brightness(10.5);
-          filter: brightness(10.5);
+  border: 1px solid white;
+}
+
+.twolayer .left .cards .card:hover .main .left img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .twolayer .left .cards .card:hover .main .center .detail span {
@@ -2817,25 +2852,10 @@ header.active * {
 
 @media screen and (max-width: 1400px) {
   .twolayer .right.layer {
-    width: 400px;
+    width: 100%;
   }
   .twolayer .right.layer .search .jobname input {
     width: 90px;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  .twolayer .left .cards .card .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
   }
 }
 
@@ -2861,14 +2881,14 @@ header.active * {
 
 @media screen and (max-width: 1010px) {
   .twolayer.section {
-    margin-top: 60px;
+    margin-top: 20px;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .twolayer.section .left {
-    margin-top: 35px;
+    margin-top: unset;
   }
   .twolayer.section .left .job-found * {
     font-size: 22px;
@@ -2893,17 +2913,17 @@ header.active * {
   .twolayer.section .right.layer .search .location input,
   .twolayer.section .right.layer .search .location select {
     padding: unset;
-    font-size: 20px;
+    font-size: 14px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
   }
   .twolayer.section .right.layer .search .jobname svg,
   .twolayer.section .right.layer .search .location svg {
-    width: 30px;
+    width: 21px;
   }
   .twolayer.section .right.layer .search button {
-    font-size: 18px;
+    font-size: 14px;
   }
   .twolayer.section .right.layer .component h3 {
     font-size: 25px;
@@ -2923,6 +2943,31 @@ header.active * {
 }
 
 @media screen and (max-width: 785px) {
+  .pagination svg {
+    width: 16px;
+    height: auto;
+  }
+  .pagination .numbers span {
+    font-size: 16px;
+  }
+  .twolayer .left {
+    margin-top: 10px;
+  }
+  .twolayer .left .cards {
+    margin-top: unset;
+  }
+  .twolayer .left .cards .card .main {
+    gap: 20px;
+  }
+  .twolayer .right.layer .search button {
+    font-size: 14px;
+  }
+  .twolayer .right.layer .search .location select {
+    font-size: 14px;
+  }
+  .twolayer .right.layer .search .jobname svg {
+    width: 21px;
+  }
   .mobilemode.section {
     padding-top: unset;
     padding-bottom: 20px;
@@ -2968,7 +3013,7 @@ header.active * {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 590px) {
   .nodata img {
     width: 100%;
   }
@@ -2988,7 +3033,7 @@ header.active * {
     border-radius: 50%;
   }
   .twolayer.section .left {
-    margin-top: 75px;
+    margin-top: 10px;
   }
   .twolayer.section .left .job-found * {
     font-size: 17px;
@@ -3015,6 +3060,18 @@ header.active * {
     width: 8px;
     height: auto;
   }
+  .twolayer.section .right.layer .menu:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   .twolayer.section .right.layer .component h3 {
     font-size: 20px;
   }
@@ -3022,10 +3079,11 @@ header.active * {
     width: 40px;
   }
   .twolayer.section .right.layer .search {
+    margin-top: 25px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
   .twolayer.section .right.layer .search .jobname input, .twolayer.section .right.layer .search .jobname select,
   .twolayer.section .right.layer .search .location input,
@@ -3037,15 +3095,7 @@ header.active * {
     width: 15px;
   }
   .twolayer.section .right.layer .search button {
-    position: absolute;
-    border-radius: 30px;
-    -webkit-transform: translate(0px, 60px);
-            transform: translate(0px, 60px);
-    left: 0;
-    right: 0;
-    width: 93%;
-    margin: auto;
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=careers.css.map */

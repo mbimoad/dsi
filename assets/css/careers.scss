@@ -9,6 +9,27 @@
     padding-bottom: 50px; 
 }
 
+footer.section  {
+    margin-top: 55px; 
+    .footer__container {
+        padding-top: 45px; 
+        margin-bottom: 34px;
+    
+    }
+}
+
+@media screen and (max-width: 785px) {
+    footer.section  {
+        margin-top: 55px; 
+        .footer__container {
+            padding-top: unset; 
+            margin-bottom: 34px;
+        
+        }
+    }
+
+}
+
 .nodata {
     display:flex; 
     flex-direction:column; 
@@ -49,7 +70,7 @@
         align-items:center; 
         span {
             cursor: pointer; 
-            font-size: 20px; 
+            font-size: 18px; 
             display:inline-block; 
             width: 40px; 
             height: 40px; 
@@ -63,17 +84,21 @@
     }
 }
 .twolayer {
-    margin-top: 100px; 
-    display:flex; 
+    margin-top:30px; 
+    display:flex;
+    flex-direction: column; 
     gap: 20px;
+    // padding: unset; 
     .right {
-       
+        a {
+            color:$red3;
+        }
         .menu {
-         
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
             padding: 20px; 
-            background: #efefef;
-        } .menu:last-child {
-            background:unset;
+            // background: #efefef;
         }
         display:flex; 
         flex-direction:column;
@@ -95,7 +120,7 @@
             display:flex; 
             gap: 10px; 
             align-items:center; 
-            margin-bottom: 20px;
+            margin-bottom: unset;
             img {
                 width: 50px; 
             }       h3 {
@@ -162,7 +187,7 @@
                 font-size: 22px; 
             }
         } .cards {
-            margin-top: 50px; 
+            margin-top: 15px; 
             display:flex; 
             flex-direction:column;
             gap: 20px; 
@@ -171,8 +196,15 @@
                 * {
                     color:white; 
                 } .main {
+                    .right {
+                    
+                    }
                     .left {
-                        filter: brightness(10.5);
+                        // filter: brightness(10.5);
+                        border: 1px solid white; 
+                        img {
+                            object-fit: cover;
+                        }
                     }
                     .center {
                         .detail {
@@ -214,6 +246,8 @@
                             border-radius: 7px; 
 
                         }
+                    } .right {
+                    
                     }
                     .left {
                         img {
@@ -249,7 +283,7 @@
 @media screen and (max-width: 1400px) {
     .twolayer {
         .right.layer {
-            width: 400px; 
+            width: 100%; 
             .search {
                 .jobname {
                     input {
@@ -267,9 +301,9 @@
             .cards {
                 .card {
                     .main {
-                        flex-direction: column;
-                        justify-content: flex-start;
-                        align-items: flex-start;
+                        // flex-direction: column;
+                        // justify-content: flex-start;
+                        // align-items: flex-start;
                     }
                 }
             }
@@ -315,10 +349,10 @@
 
 @media screen and (max-width: 1010px) {
     .twolayer.section {
-        margin-top: 60px; 
-        flex-direction: column-reverse;
+        margin-top: 20px; 
+        flex-direction: column;
         .left {
-            margin-top: 35px;
+            margin-top: unset;
             .job-found {
                 * {
                     font-size: 22px; 
@@ -345,13 +379,13 @@
                     flex: 1; 
                     input,select {
                         padding: unset;
-                        font-size: 20px;
+                        font-size: 14px;
                         flex:1;
                     } svg {
-                        width: 30px; 
+                        width: 21px; 
                     }
                 } button {
-                    font-size: 18px;
+                    font-size: 14px;
 
                 }
             }
@@ -381,6 +415,45 @@
 
 
 @media screen and (max-width: 785px) {
+    .pagination {
+        svg {
+            width: 16px;
+            height: auto;
+        }
+        .numbers {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+    .twolayer {
+        .left {
+            margin-top:10px;
+            .cards {
+                margin-top:unset;
+                .card {
+                    .main {
+                        gap: 20px; 
+                    }
+                }
+            }
+        } .right.layer {
+            .search {
+                button {
+                    font-size: 14px; 
+                } .location {
+                    select {
+                        font-size: 14px; 
+                    }
+                } .jobname {
+                    svg {
+                        width: 21px; 
+                    }
+                }
+            }
+        }
+    }
+
     .mobilemode.section {
         padding-top: unset; 
         padding-bottom: 20px;
@@ -418,7 +491,7 @@
 }
 
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 590px) {
 
     .nodata {
         img {
@@ -443,7 +516,7 @@
     }
     .twolayer.section {
         .left {
-            margin-top : 75px;
+            margin-top : 10px;
             .job-found {
                 * {
                     font-size: 17px;
@@ -486,6 +559,11 @@
             }
         }
         .right.layer {
+            .menu:last-child {
+                flex-direction: column;
+                align-items:flex-start;
+                justify-content: flex-start;
+            }
             .component {
                 h3 {
                     font-size: 20px; 
@@ -494,8 +572,9 @@
                 }
             }
             .search {
+                margin-top: 25px;
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 .jobname,
                 .location {
                     input, select {
@@ -505,14 +584,15 @@
                     }
                 }
                 button {
-                    position: absolute;
-                    border-radius: 30px; 
-                    transform: translate(0px, 60px);
-                    left: 0;
-                    right: 0;
-                    width: 93%;
-                    margin: auto;
-                    font-size: 13px;
+                    // position: absolute;
+                    // border-radius: 30px; 
+                    // transform: translate(0px, 60px);
+                    // left: 0;
+                    // right: 0;
+                    // width: 93%;
+                    // margin: auto;
+                    // font-size: 13px;
+                    font-size: 12px; 
                 }
             }
         }

@@ -5,140 +5,82 @@ $color_1: white;
 $color_2: var(--cardColor);
 $font-family_1: sans-serif;
 $background-color_1: var(--cardColor);
+.text-center {
+    text-align:center; 
+    margin:auto; 
+    display:flex !important; 
+} .bold {
+    font-weight: bold; 
+}
+
+.missionvalues {
+    p.visidsi {
+        margin-top: 50px; 
+        font-size: 18px; 
+        font-weight: bold ;
+        text-align:center; 
+        line-height: 2; 
+        color: #333;
+    } .misi-item {
+        margin-top: 50px;
+        column-gap: 50px;
+        row-gap: 30px;
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        .separate {
+            display:grid; 
+            grid-template-columns: 50px 1fr;
+
+            .text {
+                font-size: 18px;
+                line-height: 2;
+            } h1 {
+                font-size: 35px; 
+            }
+        }
+    }
+}
+
+footer.section  {
+    margin-top: 100px; 
+    .footer__container {
+        padding-top: 45px; 
+        margin-bottom: 34px;
+    
+    }
+}
+
+@media screen and (max-width: 785px) {
+    footer.section  {
+        margin-top: 60px; 
+        .footer__container {
+            padding-top: unset; 
+            margin-bottom: 34px;
+        
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 960px) {
+
+    .misiul {
+        font-size: 16px; 
+    }
+
+}
 
 .missionvalues {
     margin-top: 50px; 
     padding: 0 90px; 
     
 
-    .olcards {
-        margin-top: 50px; 
-        list-style: none;
-        counter-reset: cardCount;
-        font-family: sans-serif;
-        display: flex;
-        --cardsGap: 1rem;
-        gap: var(--cardsGap);
-        padding-bottom: var(--cardsGap);
-        flex-direction: row;
-        flex-wrap:wrap; 
-        justify-content: space-between;
-      }
-      .olcards li {
-        counter-increment: cardCount;
-        display: flex;
-        color: white;
-        --labelOffset: 1rem;
-        --arrowClipSize: 1.5rem;
-        margin-top: var(--labelOffset);
-        width: 48%; 
-      }
-
-      .olcards li:last-child {
-        width: 100%; 
-      }
-      
-      .olcards li::before {
-        content: counter(cardCount, decimal-leading-zero);
-        background: $red3;
-        color: white;
-        font-size: 2em;
-        font-weight: 700;
-        transform: translateY(calc(-1 * var(--labelOffset)));
-        margin-right: calc(-1 * var(--labelOffset));
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-inline: 0.5em;
-        width: 50px;
-        height: 80px;
-        flex: 0 0 50px;
-        box-shadow: -8px 6px 5px gray;
-      }
-      
-      .olcards li .content {
-        width: 100%; 
-  
-        background-color: $red1; 
-        --inlinePadding: 1em;
-        --boxPadding: 0.5em;
-        display: grid;
-        padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
-          var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
-        grid-template-areas:
-          "text text"
-          "text text";
-        gap: 0.25em 1em;
-        clip-path: polygon(
-          0 0,
-          calc(100% - var(--arrowClipSize)) 0,
-          100% 50%,
-          calc(100% - var(--arrowClipSize)) 100%,
-          calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
-          0 calc(100% + var(--cardsGap))
-        );
-        position: relative;
-        align-items: center; 
-        justify-content: flex-start;
-      }
-      .olcards li .content::before {
-        content: "";
-        position: absolute;
-        width: var(--labelOffset);
-        height: var(--labelOffset);
-        background: var(--cardColor);
-        left: 0;
-        bottom: 0;
-        clip-path: polygon(0 0, 100% 0, 0 100%);
-        filter: brightness(0.75);
-      }
-      .olcards li .content::after {
-        content: "";
-        position: absolute;
-        height: var(--cardsGap);
-        width: var(--cardsGap);
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
-        left: 0;
-        top: 100%;
-      }
- 
-      .olcards li .content .text {
-        grid-area: text;
-        font-size: 15px;
-        text-align:left; 
-      }
 
 
 }
 
 
-.visi {
-    margin-top: 50px; 
-    padding: 100px 0 65px;
-    background: $red1; 
-    color:white; 
-    .inner-box {
-        position: relative;
-        width: 75%;
-        margin: auto;
-        svg {
-            position: absolute; 
-            width: 50px; 
-            height: 50px; 
-        } h5 {
-            font-size: 35px; 
-            text-align: justify; 
-        } p {
-            margin-top: 15px; 
-            font-size: 25px; 
-            text-align: right;
-        } svg:first-child {
-            left: -70px;
-            top: -40px;
-        } 
-    }
-}
 
 .cards {
     margin-top: 50px; 
@@ -179,11 +121,11 @@ $background-color_1: var(--cardColor);
 
     .card {
         display: flex;
-        flex-direction:row-reverse;
+        flex-direction:row;
         justify-content:flex-end;
         align-items:center; 
         padding: 30px;
-        gap: 40px;
+        gap: 10px;
         height: 110px;
         transition: 
         opacity 1s ease 1s,
@@ -209,27 +151,29 @@ $background-color_1: var(--cardColor);
             position:relative; 
             z-index: 1;
         } &-body {
-            // width: 800px; 
-            height: 53px; 
-            width: 0; 
-            opacity: 0; 
+            width: 800px; 
+            // height: 53px; 
+            // width: 0; 
+            // opacity: 0; 
        
 
     
             p {
-                text-align:right;
+                text-align:left;
                 font-size: 18px; 
             }
             position:relative; 
             z-index: 1;
         } 
-    } .card:hover {
-        .card-body {
-            height: unset; 
-            opacity: 1; 
-            width: 800px; 
-        }
-    }
+    } 
+    
+    // .card:hover {
+    //     .card-body {
+    //         height: unset; 
+    //         opacity: 1; 
+    //         width: 800px; 
+    //     }
+    // }
 
 
     // cards
@@ -254,6 +198,23 @@ $background-color_1: var(--cardColor);
 
 
 @media screen and (max-width: 1200px) {
+    .cards {
+        .card {
+            &-header {
+                h2 {
+                    font-size: 26px; 
+                }
+            } &-body {
+                width: 640px;
+                p {
+                    text-align: left;
+                    font-size: 18px;
+                    // border: 2px solid white;
+                    width: unset;
+                }
+            }
+        }
+    }
     .olcards li::before {
         font-size: 1.5em;
         width: 40px; 
@@ -271,13 +232,75 @@ $background-color_1: var(--cardColor);
     .missionvalues {
         margin-top: 50px; 
         padding: 0 50px; 
+
+        p.visidsi {
+            margin-top: 50px; 
+            font-size: 18px; 
+            font-weight: bold ;
+            text-align:center; 
+            line-height: 2; 
+            color: #333;
+        } .misi-item {
+            margin-top: 50px;
+            column-gap: 30px;
+            row-gap: 30px;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            .separate {
+                display:grid; 
+                grid-template-columns: 40px 1fr;
+    
+                .text {
+                    font-size: 18px;
+                    line-height: 2;
+                } h1 {
+                    font-size: 35px; 
+                }
+            }
+        }
         
     }
+
+
+    
     
  
  }
 
  @media screen and (max-width: 1000px) {
+
+    .missionvalues {
+        margin-top: 50px; 
+        padding: 0 50px; 
+
+        p.visidsi {
+            margin-top: 50px; 
+            font-size: 16px; 
+            font-weight: bold ;
+            text-align:center; 
+            line-height: 2; 
+            color: #333;
+        } .misi-item {
+            margin-top: 50px;
+            column-gap: 30px;
+            row-gap: 30px;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            .separate {
+                display:grid; 
+                grid-template-columns: 40px 1fr;
+    
+                .text {
+                    font-size: 16px;
+                    line-height: 2;
+                } h1 {
+                    font-size: 28px; 
+                }
+            }
+        }
+        
+    }
+
      .cards {
          .card {
              gap: 15px; 
@@ -288,18 +311,18 @@ $background-color_1: var(--cardColor);
                  }
              }
              &-body {
-                
+                width: 440px;
                 p {
                     font-size: 15px; 
                 }
              }
          }
 
-         .card:hover {
-             .card-body {
-                width: 440px;
-             }
-         }
+        //  .card:hover {
+        //      .card-body {
+        //         width: 440px;
+        //      }
+        //  }
      
      }
  
@@ -352,7 +375,7 @@ $background-color_1: var(--cardColor);
             width: pxToVw(40, 1000); 
             height: pxToVw(70, 1000); 
             flex: 0 0 pxToVw(50, 1000); 
-            box-shadow: pxToVw(-8, 1000) pxToVw(6, 1000) pxToVw(5, 1000) gray; 
+            // box-shadow: pxToVw(-8, 1000) pxToVw(6, 1000) pxToVw(5, 1000) gray; 
         } .olcards li .content {
            padding: pxToVw(10, 1000) pxToVw(30, 1000);
            gap:unset; 
@@ -387,6 +410,39 @@ $background-color_1: var(--cardColor);
 
 
  @media screen and (max-width: 785px) {
+
+    .missionvalues {
+        margin-top: 50px; 
+        padding: 0 50px; 
+
+        p.visidsi {
+            margin-top: 30px; 
+            font-size: 16px; 
+            font-weight: bold ;
+            text-align:center; 
+            line-height: 2; 
+            color: #333;
+        } .misi-item {
+            margin-top: 30px;
+            column-gap: 30px;
+            row-gap: 30px;
+            display:grid;
+            grid-template-columns: 1fr;
+            .separate {
+                display:grid; 
+                grid-template-columns: 40px 1fr;
+    
+                .text {
+                    font-size: 16px;
+                    line-height: 2;
+                } h1 {
+                    font-size: 28px; 
+                }
+            }
+        }
+        
+    }
+
   
     .visi {
         padding: 50px 0 40px;
@@ -470,11 +526,13 @@ $background-color_1: var(--cardColor);
                      font-size: 14px; 
                  }
              }
-         } .card:hover {
-             .card-body {
-                 width: unset; 
-             }
-         }
+         } 
+         
+        //  .card:hover {
+        //      .card-body {
+        //          width: unset; 
+        //      }
+        //  }
      }
 
  }
@@ -490,7 +548,26 @@ $background-color_1: var(--cardColor);
          } .olcards li .content .text {
              font-size: 13px; 
          }
-     }
+
+         p.visidsi {
+            font-size: 14px; 
+        } .misi-item {
+            row-gap: 15px; 
+            .separate {
+                h1 {
+                    font-size: 21px; 
+                }
+                .text {
+                    font-size: 14px;
+                    line-height: 2;
+                } 
+            }
+        }
+
+
+     }  .misiul {
+        font-size: 13px; 
+    }
 
      .visi {
         padding: 75px 0 40px;
@@ -539,3 +616,22 @@ $size: 400;
 
 }
 
+
+@media screen and (max-width: 400px) {
+    .missionvalues {
+        p.visidsi {
+            font-size: 12px; 
+        } .misi-item {
+            .separate {
+                h1 {
+                    font-size: 18px;
+                }
+                .text {
+                    font-size: 12px;
+                    line-height: 2;
+                } 
+            }
+        }
+    }
+
+}

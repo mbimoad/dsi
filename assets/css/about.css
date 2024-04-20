@@ -468,7 +468,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 100px 90px;
+  padding: 65px 90px;
 }
 
 .section .section-title h2 {
@@ -512,7 +512,7 @@ header.active * {
   -ms-grid-columns: 370px 300px 300px;
       grid-template-columns: 370px 300px 300px;
   gap: unset;
-  margin: -35px 90px 70px;
+  margin: -60px 90px 35px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -637,7 +637,7 @@ header.active * {
 }
 
 .banner-hero {
-  height: 500px;
+  height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#C23440), to(#A81925));
   background-image: linear-gradient(to bottom, #C23440, #A81925);
   display: -webkit-box;
@@ -677,7 +677,7 @@ header.active * {
 .banner-hero .bottom {
   left: 0;
   right: 0;
-  bottom: -120px;
+  bottom: -150px;
 }
 
 .banner-hero .bottom svg {
@@ -689,8 +689,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 0s infinite alternate;
@@ -698,8 +698,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -728,8 +728,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 2s infinite alternate;
@@ -737,8 +737,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -2442,6 +2442,49 @@ header.active * {
     height: 9px;
     bottom: 3px;
     left: -1px;
+  }
+}
+
+.structure {
+  margin-top: 70px;
+  position: relative;
+}
+
+.structure img {
+  width: 100%;
+}
+
+.structure .magnifier-preview {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  border: 2px solid;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+footer.section {
+  margin-top: 55px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 785px) {
+  .structure {
+    margin-top: 40px;
+  }
+  footer.section {
+    margin-top: 55px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
   }
 }
 /*# sourceMappingURL=about.css.map */

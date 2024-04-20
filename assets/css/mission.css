@@ -468,7 +468,7 @@ header.active * {
 
 .section {
   position: relative;
-  padding: 100px 90px;
+  padding: 65px 90px;
 }
 
 .section .section-title h2 {
@@ -512,7 +512,7 @@ header.active * {
   -ms-grid-columns: 370px 300px 300px;
       grid-template-columns: 370px 300px 300px;
   gap: unset;
-  margin: -35px 90px 70px;
+  margin: -60px 90px 35px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -637,7 +637,7 @@ header.active * {
 }
 
 .banner-hero {
-  height: 500px;
+  height: 350px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#C23440), to(#A81925));
   background-image: linear-gradient(to bottom, #C23440, #A81925);
   display: -webkit-box;
@@ -677,7 +677,7 @@ header.active * {
 .banner-hero .bottom {
   left: 0;
   right: 0;
-  bottom: -120px;
+  bottom: -150px;
 }
 
 .banner-hero .bottom svg {
@@ -689,8 +689,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 0s infinite alternate;
@@ -698,8 +698,8 @@ header.active * {
 }
 
 .banner-hero .left-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -728,8 +728,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(3) {
-  width: 150px;
-  height: 150px;
+  width: 107px;
+  height: 107px;
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
   -webkit-animation: trianglebig1920 1s ease 2s infinite alternate;
@@ -737,8 +737,8 @@ header.active * {
 }
 
 .banner-hero .right-triangle svg:nth-child(2) {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: -90px;
   bottom: 40px;
@@ -2445,167 +2445,82 @@ header.active * {
   }
 }
 
+.text-center {
+  text-align: center;
+  margin: auto;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.missionvalues p.visidsi {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2;
+  color: #333;
+}
+
+.missionvalues .misi-item {
+  margin-top: 50px;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+  row-gap: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.missionvalues .misi-item .separate {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 1fr;
+      grid-template-columns: 50px 1fr;
+}
+
+.missionvalues .misi-item .separate .text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.missionvalues .misi-item .separate h1 {
+  font-size: 35px;
+}
+
+footer.section {
+  margin-top: 100px;
+}
+
+footer.section .footer__container {
+  padding-top: 45px;
+  margin-bottom: 34px;
+}
+
+@media screen and (max-width: 785px) {
+  footer.section {
+    margin-top: 60px;
+  }
+  footer.section .footer__container {
+    padding-top: unset;
+    margin-bottom: 34px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .misiul {
+    font-size: 16px;
+  }
+}
+
 .missionvalues {
   margin-top: 50px;
   padding: 0 90px;
-}
-
-.missionvalues .olcards {
-  margin-top: 50px;
-  list-style: none;
-  counter-reset: cardCount;
-  font-family: sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  --cardsGap: 1rem;
-  gap: var(--cardsGap);
-  padding-bottom: var(--cardsGap);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.missionvalues .olcards li {
-  counter-increment: cardCount;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: white;
-  --labelOffset: 1rem;
-  --arrowClipSize: 1.5rem;
-  margin-top: var(--labelOffset);
-  width: 48%;
-}
-
-.missionvalues .olcards li:last-child {
-  width: 100%;
-}
-
-.missionvalues .olcards li::before {
-  content: counter(cardCount, decimal-leading-zero);
-  background: #8E1B2F;
-  color: white;
-  font-size: 2em;
-  font-weight: 700;
-  -webkit-transform: translateY(calc(-1 * var(--labelOffset)));
-          transform: translateY(calc(-1 * var(--labelOffset)));
-  margin-right: calc(-1 * var(--labelOffset));
-  z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-inline: 0.5em;
-  width: 50px;
-  height: 80px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50px;
-          flex: 0 0 50px;
-  -webkit-box-shadow: -8px 6px 5px gray;
-          box-shadow: -8px 6px 5px gray;
-}
-
-.missionvalues .olcards li .content {
-  width: 100%;
-  background-color: #C9313A;
-  --inlinePadding: 1em;
-  --boxPadding: 0.5em;
-  display: -ms-grid;
-  display: grid;
-  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
-      grid-template-areas: "text text" "text text";
-  gap: 0.25em 1em;
-  -webkit-clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
-          clip-path: polygon(0 0, calc(100% - var(--arrowClipSize)) 0, 100% 50%, calc(100% - var(--arrowClipSize)) 100%, calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)), 0 calc(100% + var(--cardsGap)));
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.missionvalues .olcards li .content::before {
-  content: "";
-  position: absolute;
-  width: var(--labelOffset);
-  height: var(--labelOffset);
-  background: var(--cardColor);
-  left: 0;
-  bottom: 0;
-  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 0 100%);
-  -webkit-filter: brightness(0.75);
-          filter: brightness(0.75);
-}
-
-.missionvalues .olcards li .content::after {
-  content: "";
-  position: absolute;
-  height: var(--cardsGap);
-  width: var(--cardsGap);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), color-stop(50%, transparent));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
-  left: 0;
-  top: 100%;
-}
-
-.missionvalues .olcards li .content .text {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: text;
-  font-size: 15px;
-  text-align: left;
-}
-
-.visi {
-  margin-top: 50px;
-  padding: 100px 0 65px;
-  background: #C9313A;
-  color: white;
-}
-
-.visi .inner-box {
-  position: relative;
-  width: 75%;
-  margin: auto;
-}
-
-.visi .inner-box svg {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-}
-
-.visi .inner-box h5 {
-  font-size: 35px;
-  text-align: justify;
-}
-
-.visi .inner-box p {
-  margin-top: 15px;
-  font-size: 25px;
-  text-align: right;
-}
-
-.visi .inner-box svg:first-child {
-  left: -70px;
-  top: -40px;
 }
 
 .cards {
@@ -2666,9 +2581,9 @@ header.active * {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -2676,7 +2591,7 @@ header.active * {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px;
-  gap: 40px;
+  gap: 10px;
   height: 110px;
   -webkit-transition: opacity 1s ease 1s, width 1s ease 0s;
   transition: opacity 1s ease 1s, width 1s ease 0s;
@@ -2710,22 +2625,14 @@ header.active * {
 }
 
 .cards .card-body {
-  height: 53px;
-  width: 0;
-  opacity: 0;
+  width: 800px;
   position: relative;
   z-index: 1;
 }
 
 .cards .card-body p {
-  text-align: right;
+  text-align: left;
   font-size: 18px;
-}
-
-.cards .card:hover .card-body {
-  height: unset;
-  opacity: 1;
-  width: 800px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -2745,6 +2652,17 @@ header.active * {
 }
 
 @media screen and (max-width: 1200px) {
+  .cards .card-header h2 {
+    font-size: 26px;
+  }
+  .cards .card-body {
+    width: 640px;
+  }
+  .cards .card-body p {
+    text-align: left;
+    font-size: 18px;
+    width: unset;
+  }
   .olcards li::before {
     font-size: 1.5em;
     width: 40px;
@@ -2763,9 +2681,75 @@ header.active * {
     margin-top: 50px;
     padding: 0 50px;
   }
+  .missionvalues p.visidsi {
+    margin-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    color: #333;
+  }
+  .missionvalues .misi-item {
+    margin-top: 50px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .missionvalues .misi-item .separate {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px 1fr;
+        grid-template-columns: 40px 1fr;
+  }
+  .missionvalues .misi-item .separate .text {
+    font-size: 18px;
+    line-height: 2;
+  }
+  .missionvalues .misi-item .separate h1 {
+    font-size: 35px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .missionvalues {
+    margin-top: 50px;
+    padding: 0 50px;
+  }
+  .missionvalues p.visidsi {
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    color: #333;
+  }
+  .missionvalues .misi-item {
+    margin-top: 50px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .missionvalues .misi-item .separate {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px 1fr;
+        grid-template-columns: 40px 1fr;
+  }
+  .missionvalues .misi-item .separate .text {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .missionvalues .misi-item .separate h1 {
+    font-size: 28px;
+  }
   .cards .card {
     gap: 15px;
     height: 130px;
@@ -2773,11 +2757,11 @@ header.active * {
   .cards .card-header h2 {
     font-size: 24px;
   }
+  .cards .card-body {
+    width: 440px;
+  }
   .cards .card-body p {
     font-size: 15px;
-  }
-  .cards .card:hover .card-body {
-    width: 440px;
   }
 }
 
@@ -2800,8 +2784,6 @@ header.active * {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 5vw;
             flex: 0 0 5vw;
-    -webkit-box-shadow: -0.8vw 0.6vw 0.5vw gray;
-            box-shadow: -0.8vw 0.6vw 0.5vw gray;
   }
   .missionvalues .olcards li .content {
     padding: 1vw 3vw;
@@ -2837,6 +2819,41 @@ header.active * {
 }
 
 @media screen and (max-width: 785px) {
+  .missionvalues {
+    margin-top: 50px;
+    padding: 0 50px;
+  }
+  .missionvalues p.visidsi {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    color: #333;
+  }
+  .missionvalues .misi-item {
+    margin-top: 30px;
+    -webkit-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .missionvalues .misi-item .separate {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40px 1fr;
+        grid-template-columns: 40px 1fr;
+  }
+  .missionvalues .misi-item .separate .text {
+    font-size: 16px;
+    line-height: 2;
+  }
+  .missionvalues .misi-item .separate h1 {
+    font-size: 28px;
+  }
   .visi {
     padding: 50px 0 40px;
   }
@@ -2936,9 +2953,6 @@ header.active * {
     text-align: center;
     font-size: 14px;
   }
-  .cards .card:hover .card-body {
-    width: unset;
-  }
 }
 
 @media screen and (max-width: 550px) {
@@ -2952,6 +2966,22 @@ header.active * {
     margin-right: -20px;
   }
   .missionvalues .olcards li .content .text {
+    font-size: 13px;
+  }
+  .missionvalues p.visidsi {
+    font-size: 14px;
+  }
+  .missionvalues .misi-item {
+    row-gap: 15px;
+  }
+  .missionvalues .misi-item .separate h1 {
+    font-size: 21px;
+  }
+  .missionvalues .misi-item .separate .text {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .misiul {
     font-size: 13px;
   }
   .visi {
@@ -3006,6 +3036,19 @@ header.active * {
   }
   .missionvalues .olcards li .content .text {
     font-size: 3.25vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .missionvalues p.visidsi {
+    font-size: 12px;
+  }
+  .missionvalues .misi-item .separate h1 {
+    font-size: 18px;
+  }
+  .missionvalues .misi-item .separate .text {
+    font-size: 12px;
+    line-height: 2;
   }
 }
 /*# sourceMappingURL=mission.css.map */

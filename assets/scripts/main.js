@@ -25,6 +25,7 @@ if(window.innerWidth <= 550) {
         autoplayTimeout: 3000,
         autoplaySpeed: 3000,
         autoplayHoverPause: true,
+        margin: 10,
         // nav:true,
         // dots:true,
     })
@@ -200,3 +201,40 @@ $('.owl3').owlCarousel({
 })
 
 
+if(window.innerWidth <= 400) {
+    $('.img-patner').css({
+        'display': 'flex', 
+        'align-items': 'center',
+    })
+    $('.img-patner img').css({
+        'margin': 'auto', 
+        'align-self': 'center',
+    })
+    $('.owl10').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        center: true,
+        dots:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+}
+
+
+document.addEventListener('click', function(e) {
+    console.log(e.target);
+    if(e.target.classList.contains('swiper-slide-active')) {
+        let textcontent = e.target.querySelector('.text-content'); 
+        textcontent.classList.toggle('none');
+    }
+})
