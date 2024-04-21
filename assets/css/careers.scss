@@ -42,6 +42,20 @@ footer.section  {
 
 }
 
+@media screen and (max-width: 400px) {
+    .mobilemode.section {
+        margin-top: 90px;
+        .components {
+            margin-bottom: 20px; 
+            .section__header {
+                line-height: unset; 
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}
+
 .nodata {
     display:flex; 
     flex-direction:column; 

@@ -1467,7 +1467,7 @@ header.active * {
     font-size: 12px;
   }
   .plan__container .section__description {
-    width: 71%;
+    width: 100%;
   }
   .section .section-title h2 {
     font-size: 40px;
@@ -2868,6 +2868,11 @@ footer.section .footer__container {
 }
 
 @media screen and (max-width: 550px) {
+  .plan__container.section {
+    padding: 0 20px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
   .business .boxs:nth-child(even) .box .detail {
     margin-bottom: 20px;
   }

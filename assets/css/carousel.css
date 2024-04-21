@@ -1467,7 +1467,7 @@ header.active * {
     font-size: 12px;
   }
   .plan__container .section__description {
-    width: 71%;
+    width: 100%;
   }
   .section .section-title h2 {
     font-size: 40px;
@@ -2485,6 +2485,9 @@ footer.section .footer__container {
 @media screen and (max-width: 550px) {
   footer.section {
     margin-top: 40px;
+  }
+  .plan__container .components .section__header {
+    line-height: 2rem;
   }
 }
 

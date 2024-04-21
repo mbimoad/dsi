@@ -1595,6 +1595,35 @@ $p785: 20px;
 
 
 @media screen and (max-width: 785px) {
+	header {
+		background:unset;
+		background: rgba(255, 255, 255, 0.1);
+		.nav-bar {
+			.logo {
+				img {
+					filter: brightness(100); 
+				}
+			}
+			.nav-menu-btn {
+				color:white; 
+			}
+		}
+	}
+
+
+	header.active {
+		background:white; 
+		.nav-bar {
+			.logo {
+				img {
+					filter: unset; 
+				}
+			}
+			.nav-menu-btn {
+				color:$red3; 
+			}
+		}
+	}
 	.footer.section {
 		padding-top: 25px; 
 	}
