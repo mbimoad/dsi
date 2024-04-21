@@ -52,6 +52,35 @@
 
         .login-box {
             margin: 0 40px; 
+            .alert-danger.active {
+                display:flex;
+            }
+            .alert-danger {
+                display:none;
+                margin-top: 10px; 
+                margin-bottom: 5px; 
+                border-radius: 5px;
+                background: rgb(199, 85, 85); 
+                align-items:center;
+                padding: 8px 10px;
+                gap: 10px; 
+                .icon {
+                    background: #D77D7D; 
+                    border-radius: 50%; 
+                    width: 25px; 
+                    height: 25px; 
+                    display:grid;
+                    place-content:center;
+                    svg {
+                        width: 15px; 
+                        height: 15px;
+                    }
+                    
+                } span {
+                    font-size: 14px; 
+                    color:white; 
+                }
+            }
         }
         form {
             margin-top: 30px; 
@@ -277,6 +306,21 @@ footer {
             }
             .login-box {
                 margin: 0 25px;
+                .alert-danger {
+                    padding: 6px 8px; 
+                    margin-bottom:unset;
+                    .icon {
+                        width: 20px; 
+                        height: 20px; 
+                        svg {
+                            width: 10px; 
+                            height: 10px; 
+                        }
+                    }
+                    span {
+                        font-size: 12px; 
+                    }
+                }
             }
             h4 {
                 font-size: 25px; 
@@ -402,8 +446,22 @@ footer {
                 border-radius: unset;  
             }
         } .layer:last-child {
+
             .login-box {
                 padding: 45px 20px;
+                .alert-danger {
+                    border-radius:3px;
+                    .icon {
+                        width: 17px; 
+                        height: 17px; 
+                        svg {
+                            width: 8px; 
+                            height: 8px; 
+                        }
+                    } span {
+                        font-size: 11px; 
+                    }
+                } 
             }
             span {
                 font-size: 12px; 
