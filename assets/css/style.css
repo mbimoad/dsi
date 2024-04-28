@@ -1441,7 +1441,7 @@ header.active * {
 @media screen and (max-width: 1000px) and (min-height: 641px) {
   header.active .nav-bar .navigation li:nth-child(1) .sub-menu.active,
   header .nav-bar .navigation li:nth-child(1) .sub-menu.active {
-    bottom: -126px;
+    bottom: -115px;
   }
   header.active .nav-bar .navigation li:nth-child(2) .sub-menu.active,
   header.active .nav-bar .navigation li:nth-child(3) .sub-menu.active,
@@ -2998,7 +2998,7 @@ header.active * {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   text-shadow: var(--text-shadow);
-  padding: 20px;
+  padding: 5px 20px 20px 20px;
   border-radius: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   border-right: 1px solid rgba(255, 255, 255, 0.1);

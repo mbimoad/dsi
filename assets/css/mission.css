@@ -1441,7 +1441,7 @@ header.active * {
 @media screen and (max-width: 1000px) and (min-height: 641px) {
   header.active .nav-bar .navigation li:nth-child(1) .sub-menu.active,
   header .nav-bar .navigation li:nth-child(1) .sub-menu.active {
-    bottom: -126px;
+    bottom: -115px;
   }
   header.active .nav-bar .navigation li:nth-child(2) .sub-menu.active,
   header.active .nav-bar .navigation li:nth-child(3) .sub-menu.active,
@@ -2852,6 +2852,32 @@ footer.section .footer__container {
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        grid-template-areas: '1' '2' '3' '4' '5';
+  }
+  .missionvalues .misi-item .separate:first-child {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: 1;
+  }
+  .missionvalues .misi-item .separate:nth-child(2) {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: 4;
+  }
+  .missionvalues .misi-item .separate:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: 2;
+  }
+  .missionvalues .misi-item .separate:nth-child(4) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: 5;
+  }
+  .missionvalues .misi-item .separate:last-child {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: 3;
   }
   .missionvalues .misi-item .separate {
     display: -ms-grid;

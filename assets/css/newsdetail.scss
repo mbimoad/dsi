@@ -15,6 +15,8 @@ footer.section  {
     
     }
 }
+
+
 @media screen and (max-width: 1100px) {
     footer.section {
         margin-top: 60px;
@@ -47,15 +49,20 @@ header {
                 filter: unset; 
             }
         } .navigation {
-            li:nth-child(1), 
+        
             li:nth-child(2) {
                 .sub-menu.active {
-                    bottom: -142px;
+                    bottom: -100px;
+                }
+            }
+            li:nth-child(1) {
+                .sub-menu.active {
+                    bottom: -135px; 
                 }
             }
             li:nth-child(3) {
                 .sub-menu.active {
-                    bottom: -107px;
+                    bottom: -100px;
                 }
             }
             li {
@@ -115,6 +122,7 @@ header {
         display:flex; 
         flex-direction: column;
         gap: 30px; 
+        margin-top: 50px; 
         .articles {
             display:flex; 
             flex-direction:column; 
@@ -388,6 +396,31 @@ header {
             }
         }
     }
+}
+@media screen and (max-width: 1000px) {
+    header {
+
+        .nav-bar {
+            .navigation {
+                li:nth-child(2) {
+                    .sub-menu.active {
+                        bottom: -100px;
+                    }
+                }
+                li:nth-child(1) {
+                    .sub-menu.active {
+                        bottom: -135px; 
+                    }
+                }
+                li:nth-child(3) {
+                    .sub-menu.active {
+                        bottom: -100px;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
