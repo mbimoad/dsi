@@ -9,7 +9,7 @@ $darkblue: #043349;
 $black: #000000;
 
 
-
+// #00000036
 @function pxToVw($px, $baseWidth) {
     @return #{$px / $baseWidth * 100}vw;
 }
@@ -193,8 +193,10 @@ header {
 	justify-content: center;
 	 transition: 0.5s ease;
 	transition-property: height, background;
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(4px);
+	background: rgba(0,0,0, 0.5);
+    backdrop-filter: blur(4px);
+    
+   
 	.nav-bar {
 		position: relative;
 		width: 100%;

@@ -263,7 +263,7 @@ header {
   transition: 0.5s ease;
   -webkit-transition-property: height, background;
   transition-property: height, background;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -2925,6 +2925,17 @@ header.active * {
 
 .home {
   min-height: 100vh;
+  position: relative;
+}
+
+.home .spanclick {
+  position: absolute;
+  bottom: 0;
+  z-index: 9999;
+  color: white;
+  right: 20px;
+  bottom: 17px;
+  font-size: 16px;
 }
 
 .bg-slider {
