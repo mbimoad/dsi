@@ -378,7 +378,7 @@ header .nav-bar .navigation li .sub-menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -2929,6 +2929,7 @@ header.active * {
 }
 
 .home .spanclick {
+  display: none;
   position: absolute;
   bottom: 0;
   z-index: 9999;
@@ -2936,6 +2937,10 @@ header.active * {
   right: 20px;
   bottom: 17px;
   font-size: 16px;
+}
+
+.home .spanclick.show {
+  display: unset;
 }
 
 .bg-slider {
@@ -3114,13 +3119,13 @@ header.active * {
 }
 
 .thumbs-container {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   padding: 10px 3px;
   border-radius: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   display: -webkit-box;
@@ -3142,6 +3147,7 @@ header.active * {
   margin: 0 5px;
   border-radius: 5px;
   cursor: pointer;
+  border: 1px solid white;
 }
 
 .swiper-slide-thumb-active {
@@ -4226,6 +4232,9 @@ header.active * {
   header .nav-bar .nav-menu-btn {
     color: white;
   }
+  .home .spanclick {
+    font-size: 14px;
+  }
   header.active {
     background: white;
   }
@@ -4691,6 +4700,9 @@ header.active * {
 }
 
 @media screen and (max-width: 550px) {
+  .home .spanclick {
+    font-size: 12px;
+  }
   .clients.section .images img {
     width: 80px;
   }

@@ -232,9 +232,20 @@ if(window.innerWidth <= 400) {
 
 
 document.addEventListener('click', function(e) {
-    console.log(e.target);
+    if(e.target.classList.contains('imgclick')) {
+        document.querySelector('.spanclick').classList.add('show');
+    } else if(e.target.classList.contains('videoclick')) {
+        document.querySelector('.spanclick').classList.remove('show');
+    } 
+
+
+    
     if(e.target.classList.contains('swiper-slide-active')) {
         let textcontent = e.target.querySelector('.text-content'); 
-        textcontent.classList.toggle('none');
+        if(textcontent) textcontent.classList.toggle('none');
     }
+
+    
+
+
 })
